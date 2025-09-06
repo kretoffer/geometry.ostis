@@ -78,7 +78,7 @@ class GetNextQuestionAgent(ScAgentClassic):
             first_question = self.get_first_question(test)
             return first_question
         
-        next_question: ScAddr = self.get_next_question(user, test, question, self.is_question_answer_correct(question_answer, question))
+        next_question: ScAddr = self.get_next_question(user, test, question, is_question_answer_correct(question_answer, question))
 
         if next_question.is_valid(): 
             # добавление вопроса в историю прохождения теста
@@ -96,7 +96,8 @@ class GetNextQuestionAgent(ScAgentClassic):
                 delete_elements(search_result.get("_arc_to_last_arc"))
 
                 question_arc: ScAddr = generate_connector(sc_type.CONST_PERM_POS_ARC, test, next_question)
-                generate_connector(sc_type.VAR_COMMON_ARC, search_result.get("_last_arc"), question_arc)
+                arc = generate_connector(sc_type.VAR_COMMON_ARC, search_result.get("_last_arc"), question_arc)
+                generate_connector(sc_type.VAR_PERM_POS_ARC, ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE), arc)
                 generate_connector(sc_type.VAR_ACTUAL_TEMP_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.CONST_NODE_ROLE), question_arc)
         else:
             ... # TODO Завершение теста, должно тригерить агента finish_test

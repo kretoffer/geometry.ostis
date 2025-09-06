@@ -8,6 +8,6 @@ class TestingModule(ScModule):
     def __init__(self):
         super().__init__(
             GetNextQuestionAgent(),
-            AnswerAgent()
-            #FinishTestAgent()
+            AnswerAgent(),
+            FinishTestAgent()
         )
