@@ -141,7 +141,7 @@ class GetNextQuestionAgent(ScAgentClassic):
     #     }
     # >;;
 
-    def get_user_question_answer(passing_test_history: ScAddr, question: ScAddr) -> ScAddr:
+    def get_user_question_answer(self, passing_test_history: ScAddr, question: ScAddr) -> ScAddr:
          # passing_test_history -> {rrel_test_question: question, rrel_question_answer: answer, rrel_passer: user};;
         templ = ScTemplate()
         # passing_test_history -> user_question_answer_set
@@ -174,7 +174,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         return ScAddr()
 
 
-    def initialize_user_passing_test_history(user: ScAddr, test: ScAddr) -> ScAddr:
+    def initialize_user_passing_test_history(self, user: ScAddr, test: ScAddr) -> ScAddr:
         # nrel_user_passing_test_history -> ((user => test) => user_passing_test_history);;
         templ = ScTemplate()
         # nrel_user_passing_test_history -> ((=>) => user_passing_test_history)
@@ -219,18 +219,91 @@ class GetNextQuestionAgent(ScAgentClassic):
         if search_results:
             return search_results.get("_first_question")
         return ScAddr()
+    
+
+    def get_simplier_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
+        templ = ScTemplate()
+        # ищем дугу, связывающую вопрос с тестом
+        templ.quintuple(
+            test,
+            (sc_type.VAR_PERM_POS_ARC, "_arc_of_this_question"),
+            question,
+            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_NODE_ROLE
+        )
+
+        # ищем дугу, связывающую следующий вопрос проще этого
+        templ.quintuple(
+            (sc_type.VAR_PERM_POS_ARC, "_arc_of_simpler_question"),
+            sc_type.VAR_COMMON_ARC,
+            "_arc_of_this_question",
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes("nrel_basic_sequence", sc_type.VAR_NODE_NON_ROLE)
+        )
+
+        # ищем вопрос теста, связанный этой дугой
+        templ.quintuple(
+            test,
+            "_arc_of_simpler_question",
+            sc_type.VAR_NODE, "_simpler_question",
+            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_NODE_ROLE
+        )
+
+        search_results = search_by_template(templ)
+        if search_results:
+            return search_results[0]
+        return ScAddr()
+    
+
+    def get_harder_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
+        templ = ScTemplate()
+        # ищем дугу, связывающую вопрос с тестом
+        templ.quintuple(
+            test,
+            (sc_type.VAR_PERM_POS_ARC, "_arc_of_this_question"),
+            question,
+            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_NODE_ROLE
+        )
+
+        # ищем дугу, связывающую следующий вопрос сложнее этого
+        templ.quintuple(
+            "_arc_of_this_question",
+            sc_type.VAR_COMMON_ARC,
+            (sc_type.VAR_PERM_POS_ARC, "_arc_of_harder_question"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes("nrel_basic_sequence", sc_type.VAR_NODE_NON_ROLE)
+        )
+
+        # ищем вопрос теста, связанный этой дугой
+        templ.quintuple(
+            test,
+            "_arc_of_harder_question",
+            sc_type.VAR_NODE, "_harder_question",
+            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_NODE_ROLE
+        )
+
+        search_results = search_by_template(templ)
+        if search_results:
+            return search_results[0]
+        return ScAddr()
 
 
-    def get_next_question(user: ScAddr, test: ScAddr, question: ScAddr, question_is_correct: bool) -> ScAddr:
+    def get_next_question(self, user: ScAddr, test: ScAddr, question: ScAddr, question_is_correct: bool) -> ScAddr:
         
         new_question = generate_node(sc_type.NODE)
         user_connector = generate_connector(sc_type.CONST_PERM_POS_ARC, new_question, user)
         generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_passer", sc_type.CONST_NODE_ROLE), user_connector)
 
-        if question_is_correct: # TODO нахождение подходящего вопроса right_question
-            ...
+        if question_is_correct:
+            right_question = self.get_harder_question(test, question)
         else: 
-            ...
+            right_question = self.get_simplier_question(test, question)
+
+        if not right_question.is_valid():
+            return ScAddr()
 
         arc = generate_connector(sc_type.VAR_PERM_POS_ARC, new_question, right_question)
         generate_connector(sc_type.VAR, ScKeynodes.resolve("rrel_test_question", sc_type.CONST_NODE_ROLE), arc)

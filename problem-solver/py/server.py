@@ -6,7 +6,8 @@ Distributed under the MIT License
 
 import argparse
 from sc_kpm import ScServer
-from modules.example_module.example_module import ExampleModule
+#from modules.reflection_module.reflection_module import ReflectionModule
+from modules.testing_module.testing_module import TestingModule
 
 SC_SERVER_PROTOCOL = "protocol"
 SC_SERVER_HOST = "host"
@@ -23,7 +24,8 @@ def main(args: dict):
 
     with server.connect():
         modules = [
-            ExampleModule()
+            TestingModule(),
+            #ReflectionModule()
         ]
         server.add_modules(*modules)
         with server.register_modules():
