@@ -44,6 +44,11 @@ theme_1
     (*
         <- lang_ru;;
     *);
+=> nrel_name:
+    [any string]
+    (*
+        <- lang_ru;;
+    *);
 => nrel_difficulty:
    [0];
 <= nrel_themes_before_this: {
@@ -364,6 +369,8 @@ misha
     concept_underrated_themes;;
 => nrel_overrated_themes:
     concept_overrated_themes;;
+=> nrel_self_rating_level:
+    normal_self_rating;;
 *]
 <= nrel_self_rating_and_system_rating_comparison:
     misha;;
@@ -381,6 +388,17 @@ achievement_1
     *);
 => nrel_icon:
     [icon];; // файл типа img
+
+// нумеруются от 0 (низкий) до 3 (олимпиадный)
+bad_knowledge_level
+=> nrel_level_as_num:
+    [0];;
+
+
+underrated_self_rating
+=> nrel_discription:
+    ['Вы недооцениваете себя и свои возможности.']
+
 
 // 1. Какие индивидуальные особенности будут учитываться в системе?
 // 2. Как они будут привязываться к учащемуся? (а)
