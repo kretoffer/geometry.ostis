@@ -391,6 +391,11 @@ achievement_1
 
 // нумеруются от 0 (низкий) до 3 (олимпиадный)
 bad_knowledge_level
+=> nrel_main_idtf:
+    [any string]
+    (*
+        <- lang_ru;;
+    *);
 => nrel_level_as_num:
     [0];;
 
