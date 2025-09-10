@@ -250,6 +250,9 @@ misha
 => nrel_personal_characteristics: {
     color_vision_disorder
 };
+// сложность вопросов в тесте; устанавливается пользователем
+=> nrel_difficulty_of_questions:
+    low_difficulty
 => nrel_solved_tasks: { // множество решённых задач учащимся
     (nrel_user_solution ~> (task_1 => ..task_1_solution_1));
     (nrel_user_solution ~> (task_3 => ..task_3_solution_1))
@@ -402,7 +405,16 @@ bad_knowledge_level
 
 underrated_self_rating
 => nrel_discription:
-    ['Вы недооцениваете себя и свои возможности.']
+    ['Вы недооцениваете себя и свои возможности.'];
+;;
+
+
+medium_difficulty
+=> nrel_more_simple_level:
+    low_difficulty;;
+=> nrel_more_hard_difficulty:
+    hard_difficulty;;
+;;
 
 
 // 1. Какие индивидуальные особенности будут учитываться в системе?
