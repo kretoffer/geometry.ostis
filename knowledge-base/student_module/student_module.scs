@@ -265,6 +265,14 @@ misha
     ..theme_1;
     ..theme_3
 };
+// все тесты для повышения уровня сложности
+=> nrel_solved_level_up_tests: {
+    level_up_tests_1
+    (*
+        <- rrel_for_what_difficulty:
+            medium_difficulty
+    *)
+}
 => nrel_achievements: {
     achievement_1;
     achievement_2;
