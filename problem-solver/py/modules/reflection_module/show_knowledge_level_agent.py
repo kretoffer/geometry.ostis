@@ -39,7 +39,7 @@ class ShowKnowledgeLevelAgent(ScAgentClassic):
     
 
     def run(self, action_node: ScAddr) -> ScResult:
-        self.logger.info("CompareRatingOfProgressAgent started")
+        self.logger.info("ShowKnowledgeLevelAgent started")
 
         user = get_action_arguments(action_node, 1)
 

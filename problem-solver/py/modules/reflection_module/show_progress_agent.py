@@ -37,7 +37,7 @@ class ShowProgressAgent(ScAgentClassic):
         return result
     
     def run(self, action_node: ScAddr) -> ScResult:
-        self.logger.info("CompareRatingOfProgressAgent started")
+        self.logger.info("ShowProgressAgent started")
 
         user = get_action_arguments(action_node, 1)
 
