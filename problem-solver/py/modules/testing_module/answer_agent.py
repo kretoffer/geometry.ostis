@@ -54,8 +54,8 @@ class AnswerAgent(ScAgentClassic):
         search_results = search_by_template(templ)
         if search_results:
             search_result = search_results[0]
-            arc = generate_connector(sc_type.VAR_PERM_POS_ARC, search_result.get("_last_question"), user_answer)
-            generate_connector(sc_type.VAR_PERM_POS_ARC, ScKeynodes.resolve("rrel_question_answer", sc_type.CONST_NODE_ROLE), arc)
+            arc = generate_connector(sc_type.CONST_PERM_POS_ARC, search_result.get("_last_question"), user_answer)
+            generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_question_answer", sc_type.CONST_NODE_ROLE), arc)
     
         self.logger.info("AnswerAgent: finished successfully")
         return ScResult.OK
