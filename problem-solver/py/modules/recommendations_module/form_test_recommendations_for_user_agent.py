@@ -80,6 +80,11 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("nrel_themes", sc_type.CONST_NODE_NON_ROLE)
         )
+        templ.triple(
+            "_test",
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("concept_test", sc_type.CONST_NODE_CLASS)
+        )
 
         search_results = search_by_template(templ)
         tests = []
