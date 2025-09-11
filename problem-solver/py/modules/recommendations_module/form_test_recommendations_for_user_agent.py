@@ -172,4 +172,31 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
 
     # TODO
     def get_recommendations_for_this_test(user: ScAddr, test: ScAddr) -> float:
-        pass
+        templ = ScTemplate()
+        templ.quintuple(
+            (sc_type.VAR_NODE, "_test_difficulty_info"),
+            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+            test,
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("rrel_test", sc_type.CONST_NODE_ROLE)
+        )
+        templ.quintuple(
+            "_test_difficulty_info",
+            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+            (sc_type.VAR_NODE_LINK, "_link"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("rrel_expected_difficulty", sc_type.CONST_NODE_ROLE)
+        )
+        templ.quintuple(
+            "_test_difficulty_info",
+            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+            user,
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("rrel_student", sc_type.CONST_NODE_ROLE)
+        )
+
+        search_results = search_by_template(templ)
+        if search_results:
+            return float(1.0 - get_link_content(search_results[0].get("_link")))
+        return -100.0
+        
