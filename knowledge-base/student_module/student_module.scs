@@ -88,6 +88,18 @@ task_1
     task_1_correct_solution_2;
     task_1_correct_solution_3
 };;
+=> nrel_themes: {
+    theme_1,
+    theme_2
+};;
+<~ rrel_task:
+    ...
+    (*
+        ~> rrel_expected_difficulty:
+            [expected_difficulty];; // числовое значение, выражающее сложность темы для конкретного пользователя (2.6)
+        ~> rrel_student:
+            misha;;
+    *);;
 
 task_1_correct_solution_1
 <- concept_plan;
@@ -298,6 +310,30 @@ misha
     *)
 *]
 <= nrel_test_recommendations_for_user:
+    misha;
+;;
+
+
+[*
+misha
+~> rrel_task_recommendations:
+    ...
+    (*
+        => nrel_good_tasks: {
+            test_1,
+            test_2
+        };
+        => nrel_bad_tasks: {
+            test_3,
+            test_4
+        };
+        => nrel_other_tasks: {
+            test_5,
+            test_6
+        };
+    *)
+*]
+<= nrel_task_recommendations_for_user:
     misha;
 ;;
 
