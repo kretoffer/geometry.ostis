@@ -1,0 +1,68 @@
+import logging
+from typing import List
+from sc_client.models import ScAddr, ScTemplate, ScLinkContent, ScLinkContentType
+from sc_client.constants import sc_type
+from sc_client.client import search_by_template, generate_by_template, delete_elements
+
+from sc_kpm import ScAgentClassic, ScResult
+from sc_kpm.sc_sets import ScSet
+from sc_kpm.utils import (
+    generate_connector,
+    generate_node,
+    get_link_content
+)
+from sc_kpm.utils.action_utils import (
+    finish_action_with_status,
+    get_action_arguments
+)
+from sc_kpm import ScKeynodes
+
+
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"
+)
+
+
+from .additions import get_middle_tasks_solutions, get_all_stidied_themes, get_all_not_stidied_themes
+
+
+class FormThemeRecommendationsForUserToSolveTestOrProblemAgent(ScAgentClassic):
+    def __init__(self):
+        super().__init__("action_form_theme_recommendations_for_user_to_solve_test_or_problem")
+    
+    def on_event(self, event_element: ScAddr, event_edge: ScAddr, action_element: ScAddr) -> ScResult:
+        result = self.run(action_element)
+        is_successful = result == ScResult.OK
+        finish_action_with_status(action_element, is_successful)
+        self.logger.info("FormThemeRecommendationsForUserToSolveTestOrProblemAgent finished %s",
+                         "successfully" if is_successful else "unsuccessfully")
+        return result
+
+
+    def run(self, action_node: ScAddr) -> ScResult:
+        self.logger.info("FormThemeRecommendationsForUserToSolveTestOrProblemAgent started")
+
+        user = get_action_arguments(action_node, 1)
+
+        all_stidied_themes = get_all_stidied_themes(user)
+        all_stidied_themes_results = {}
+        for theme in all_stidied_themes:
+            middle_tasks_solutions = get_middle_tasks_solutions(user, theme)
+            all_stidied_themes_results[theme] = middle_tasks_solutions
+
+        
+        good_themes = []
+        other_themes = []
+
+
+        good_themes.extend(get_all_not_stidied_themes(user))
+
+        for theme in all_stidied_themes_results:
+            knowledge_level = all_stidied_themes_results[theme]
+            if knowledge_level < 0.8 and knowledge_level > 0.4:
+                good_themes.append(theme)
+                continue
+            other_themes.append(theme)
+        
+        return ScResult.OK

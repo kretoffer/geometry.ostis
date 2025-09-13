@@ -42,6 +42,31 @@ def get_all_stidied_themes(user: ScAddr) -> list[ScAddr]:
         return themes
 
 
+def get_all_not_stidied_themes(user: ScAddr) -> list[ScAddr]:
+    templ = ScTemplate()
+    templ.quintuple(
+        user,
+        sc_type.VAR_COMMON_ARC,
+        (sc_type.VAR_NODE, "_not_stidied_themes_set"),
+        sc_type.VAR_PERM_POS_ARC,
+        ScKeynodes.resolve("nrel_not_studied_themes", sc_type.CONST_NODE_NON_ROLE)
+    )
+    templ.triple(
+        "_not_stidied_themes_set",
+        sc_type.VAR_PERM_POS_ARC,
+        (sc_type.VAR_NODE, "_theme")
+    )
+
+    search_results = search_by_template(templ)
+    themes = []
+    if search_results:
+        for result in search_results:
+            themes.append(result.get("_theme"))
+
+    return themes
+     
+
+
 
 def get_middle_tasks_solutions(user: ScAddr, theme: ScAddr) -> float:
         templ = ScTemplate()

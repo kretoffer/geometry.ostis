@@ -17,7 +17,7 @@ from sc_kpm.utils.action_utils import (
 )
 from sc_kpm import ScKeynodes
 
-from .additions import get_middle_tasks_solutions, get_all_stidied_themes
+from .additions import get_middle_tasks_solutions, get_all_stidied_themes, get_all_not_stidied_themes
 
 
 logging.basicConfig(
@@ -51,7 +51,7 @@ class FormThemeRecommendationsForUserToStudyAgent(ScAgentClassic):
             middle_tasks_solutions = get_middle_tasks_solutions(user, theme)
             all_stidied_themes_results[theme] = middle_tasks_solutions
             if middle_tasks_solutions <= 0.5:
-                all_stidied_themes.append(theme)
+                all_low_stidied_themes.append(theme)
 
 
         good_themes = []
@@ -64,6 +64,7 @@ class FormThemeRecommendationsForUserToStudyAgent(ScAgentClassic):
 
         other_themes = [el for el in all_stidied_themes if el not in good_themes and el not in bad_themes]
 
+        good_themes.extend(get_all_not_stidied_themes(user))
         
         return ScResult.OK
     
