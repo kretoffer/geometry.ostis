@@ -129,3 +129,9 @@ def get_middle_tasks_solutions(user: ScAddr, theme: ScAddr) -> float:
             return sum(all_tasks_solutions) / len(all_tasks_solutions)
         
         return -1.0
+
+
+def create_sc_set(elements: list[ScAddr]) -> ScAddr:
+    sc_set = ScSet()
+    sc_set.add(elements)
+    return sc_set  

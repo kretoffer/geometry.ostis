@@ -282,14 +282,18 @@ misha
     ..theme_1;
     ..theme_3
 };
+=> nrel_not_studied_themes: {
+    ..theme_2;
+    ..theme_4
+}
 // все тесты для повышения уровня сложности
 => nrel_solved_level_up_tests: {
     level_up_tests_1
     (*
         <- rrel_for_what_difficulty:
-            medium_difficulty
+            medium_difficulty;;
     *)
-}
+};
 => nrel_achievements: {
     achievement_1;
     achievement_2;
@@ -297,49 +301,92 @@ misha
 };;
 [*
 misha
-~> rrel_test_recommendations:
+=> nrel_test_recommendations:
     ...
     (*
-        => nrel_good_tests: {
-            test_1,
+        -> rrel_good_tests: {
+            test_1;
             test_2
-        };
-        => nrel_bad_tests: {
-            test_3,
+        };;
+        -> rrel_bad_tests: {
+            test_3;
             test_4
-        };
-        => nrel_other_tests: {
-            test_5,
+        };;
+        -> rrel_other_tests: {
+            test_5;
             test_6
-        };
-    *)
+        };;
+    *);;
 *]
 <= nrel_test_recommendations_for_user:
-    misha;
+    misha
 ;;
 
 
 [*
 misha
-~> rrel_task_recommendations:
+=> nrel_task_recommendations:
     ...
     (*
-        => nrel_good_tasks: {
-            test_1,
+        -> rrel_good_tasks: {
+            test_1;
             test_2
-        };
-        => nrel_bad_tasks: {
-            test_3,
+        };;
+        -> rrel_bad_tasks: {
+            test_3;
             test_4
-        };
-        => nrel_other_tasks: {
-            test_5,
+        };;
+        -> rrel_other_tasks: {
+            test_5;
             test_6
-        };
-    *)
+        };;
+    *);;
 *]
 <= nrel_task_recommendations_for_user:
-    misha;
+    misha
+;;
+
+[*
+misha
+=> nrel_user_theme_recommendations:
+    ...
+    (*
+        -> rrel_good_themes: {
+            theme_1;
+            theme_2
+        };;
+        -> rrel_bad_themes: {
+            theme_3;
+            theme_4
+        };;
+        -> rrel_other_themes: {
+            theme_5;
+            theme_6
+        };;
+    *);;
+*]
+<= nrel_user_theme_recommendations_for_study:
+    misha
+;;
+
+
+[*
+misha
+=> nrel_user_theme_recommendations:
+    ...
+    (*
+        -> rrel_good_themes: {
+            theme_1;
+            theme_2
+        };;
+        -> rrel_other_themes: {
+            theme_5;
+            theme_6
+        };;
+    *);;
+*]
+<= nrel_user_theme_recommendations_to_solve_test_or_problem:
+    misha
 ;;
 
 
