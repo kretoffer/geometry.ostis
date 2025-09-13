@@ -237,7 +237,7 @@ class FinishTestAgent(ScAgentClassic):
             "_knowledge_level_info",
             (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_arc_to_knowledge_level"),
             (sc_type.VAR_NODE, "_knowledge_level"),
-            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
             ScKeynodes("rrel_knowledge_level", sc_type.CONST_NODE_ROLE)
         )
         search_results = search_by_template(templ)
