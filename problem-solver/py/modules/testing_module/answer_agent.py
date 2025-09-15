@@ -13,7 +13,7 @@ from sc_kpm.utils.action_utils import (
 )
 from sc_kpm import ScKeynodes
 
-from additions import get_user_passing_test_history
+from .additions import get_user_passing_test_history
 
 
 logging.basicConfig(

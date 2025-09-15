@@ -16,7 +16,7 @@ from sc_kpm import ScKeynodes
 
 from typing import Tuple, List
 
-from additions import get_user_passing_test_history, is_question_answer_correct
+from .additions import get_user_passing_test_history, is_question_answer_correct
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"

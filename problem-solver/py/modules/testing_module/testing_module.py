@@ -1,7 +1,8 @@
 from sc_kpm import ScModule
-from .testing_agent import GetNextQuestionAgent
+from .get_next_question_agent import GetNextQuestionAgent
 from .finish_test_agent import FinishTestAgent
 from .answer_agent import AnswerAgent
+from .start_test_agent import StartTestAgent
 
 
 class TestingModule(ScModule):
@@ -9,5 +10,6 @@ class TestingModule(ScModule):
         super().__init__(
             GetNextQuestionAgent(),
             AnswerAgent(),
-            FinishTestAgent()
+            FinishTestAgent(),
+            StartTestAgent()
         )
