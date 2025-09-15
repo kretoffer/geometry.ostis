@@ -45,8 +45,9 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
 
 
         preferable_content_types = self.get_user_preferable_content_types(user)
+        personal_characteristics = self.get_user_personal_characteristics(user)
         if self.delete_previous_lessons(user, theme):
-            self.set_user_prefering_lesson_materials(theme, preferable_content_types)
+            self.set_user_prefering_lesson_materials(user, theme, preferable_content_types, personal_characteristics)
 
         return ScResult.OK
 
@@ -72,6 +73,29 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
             for content_type_element in content_types:
                 content_types.append(content_type_element.get("_content_type"))
         return content_types
+    
+
+    def get_user_personal_characteristics(user: ScAddr) -> list[ScAddr]:
+        templ = ScTemplate()
+        templ.quintuple(
+            user,
+            sc_type.VAR_COMMON_ARC,
+            (sc_type.VAR_NODE, "_characteristics_set"),
+            sc_type.VAR_PERM_POS_ARC, 
+            ScKeynodes.resolve("nrel_personal_characteristics", sc_type.CONST_NODE_NON_ROLE)
+        )
+        templ.triple(
+            "_characteristics_set",
+            sc_type.VAR_PERM_POS_ARC,
+            (sc_type.CONST_NODE_CLASS, "_characteristic")
+        )
+
+        search_results = search_by_template(templ)
+        characteristic = []
+        if search_results:
+            for content_type_element in characteristic:
+                characteristic.append(content_type_element.get("_characteristic"))
+        return characteristic
     
 
     def delete_previous_lessons(user: ScAddr, theme: ScAddr) -> bool:
@@ -104,7 +128,8 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         return True
     
 
-    def set_user_prefering_lesson_materials(user: ScAddr, content_types: list[ScAddr], theme: ScAddr) -> bool:
+    def set_user_prefering_lesson_materials(user: ScAddr, theme: ScAddr, 
+            content_types: list[ScAddr], personal_characteristics: list[ScAddr]) -> bool:
         templ = ScTemplate()
         templ.quintuple(
             theme,
@@ -121,7 +146,7 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         
         lesson_formats_set = search_results[0].get("_lesson_formats_set")
         lessons = ScSet()
-        for lesson_format in lesson_formats_set:
+        for lesson_format in content_types:
             templ = ScTemplate()
             templ.triple(
                 lesson_formats_set, 
@@ -133,12 +158,21 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
                 sc_type.VAR_PERM_POS_ARC,
                 "_lesson"
             )
-            search_results = search_by_template(templ)
-            if not search_results:
-                continue   
-            
-            for result in search_results:
-                lessons.add(result.get("_lesson"))
+            for characteristic in personal_characteristics:
+                templ.quintuple(
+                    "_lesson",
+                    sc_type.VAR_PERM_POS_ARC,
+                    characteristic,
+                    sc_type.VAR_PERM_POS_ARC,
+                    ScKeynodes.resolve("rrel_is_available_for", sc_type.CONST_NODE_ROLE)
+                )   
+
+        search_results = search_by_template(templ)
+        if not search_results:
+            return False   
+        
+        for result in search_results:
+            lessons.add(result.get("_lesson"))
         
         templ = ScTemplate()
         templ.quintuple(
