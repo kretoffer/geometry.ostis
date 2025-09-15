@@ -28,21 +28,21 @@ from .additions import get_middle_tasks_solutions, get_all_stidied_themes, get_a
 from .additions import create_sc_set
 
 
-class FormThemeRecommendationsForUserToSolveTestOrProblemAgent(ScAgentClassic):
+class FormThemeRecommendationsForUserToSolveTestOrTaskAgent(ScAgentClassic):
     def __init__(self):
-        super().__init__("action_form_theme_recommendations_for_user_to_solve_test_or_problem")
+        super().__init__("action_form_theme_recommendations_for_user_to_solve_test_or_task")
     
     def on_event(self, event_element: ScAddr, event_edge: ScAddr, action_element: ScAddr) -> ScResult:
         result = self.run(action_element)
         is_successful = result == ScResult.OK
         finish_action_with_status(action_element, is_successful)
-        self.logger.info("FormThemeRecommendationsForUserToSolveTestOrProblemAgent finished %s",
+        self.logger.info("FormThemeRecommendationsForUserToSolveTestOrTaskAgent finished %s",
                          "successfully" if is_successful else "unsuccessfully")
         return result
 
 
     def run(self, action_node: ScAddr) -> ScResult:
-        self.logger.info("FormThemeRecommendationsForUserToSolveTestOrProblemAgent started")
+        self.logger.info("FormThemeRecommendationsForUserToSolveTestOrTaskAgent started")
 
         user = get_action_arguments(action_node, 1)
 
@@ -66,17 +66,15 @@ class FormThemeRecommendationsForUserToSolveTestOrProblemAgent(ScAgentClassic):
                 continue
             other_themes.append(theme)
 
-        good_themes_set = create_sc_set(good_themes)
-        other_themes_set = create_sc_set(other_themes)
 
-        recommendations_struct, recommendations_set = self.get_theme_recommendations_for_solve_test_or_problem(user)
-        self.set_theme_recommendations_for_solve_test_or_problem(user, [recommendations_struct, recommendations_set], good_themes, other_themes)
+        recommendations_struct, recommendations_set = self.get_theme_recommendations_for_solve_test_or_task(user)
+        self.set_theme_recommendations_for_solve_test_or_task(user, [recommendations_struct, recommendations_set], good_themes, other_themes)
         
         return ScResult.OK
     
 
 
-    def get_theme_recommendations_for_solve_test_or_problem(user: ScAddr) -> tuple[ScAddr, ScAddr]:
+    def get_theme_recommendations_for_solve_test_or_task(user: ScAddr) -> tuple[ScAddr, ScAddr]:
         templ = ScTemplate()
         templ.quintuple(
             user,
@@ -106,8 +104,8 @@ class FormThemeRecommendationsForUserToSolveTestOrProblemAgent(ScAgentClassic):
 
     
 
-    def set_theme_recommendations_for_solve_test_or_problem(user: ScAddr, recommendations: list[ScAddr], good_themes: ScAddr, other_themes: ScAddr) -> bool:
-        def delete_theme_recommendations_option_for_solve_test_or_problem(recommendations: list[ScAddr], relation: ScAddr) -> bool:
+    def set_theme_recommendations_for_solve_test_or_task(user: ScAddr, recommendations: list[ScAddr], good_themes: ScAddr, other_themes: ScAddr) -> bool:
+        def delete_theme_recommendations_option_for_solve_test_or_task(recommendations: list[ScAddr], relation: ScAddr) -> bool:
             recommendations_struct = recommendations[0]
             recommendations_set = recommendations[1]
             templ = ScTemplate()
@@ -137,11 +135,11 @@ class FormThemeRecommendationsForUserToSolveTestOrProblemAgent(ScAgentClassic):
         other_themes_set = create_sc_set(other_themes)
 
 
-        delete_theme_recommendations_option_for_solve_test_or_problem(
+        delete_theme_recommendations_option_for_solve_test_or_task(
             recommendations,
             ScKeynodes.resolve("rrel_good_themes", sc_type.CONST_NODE_ROLE)
         )
-        delete_theme_recommendations_option_for_solve_test_or_problem(
+        delete_theme_recommendations_option_for_solve_test_or_task(
             recommendations,
             ScKeynodes.resolve("rrel_other_themes", sc_type.CONST_NODE_ROLE)
         )

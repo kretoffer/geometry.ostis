@@ -35,6 +35,14 @@ discipline_1
 >;;
 
 
+concept_video
+<- concept_format;
+=> nrel_ru_idtf:
+    [any string]
+    (*
+        <- lang_ru;;
+    *);;
+
 theme_1
 <- concept_theme;
 ~> rrel_user_knowledge_level:
@@ -44,6 +52,13 @@ theme_1
     (*
         <- lang_ru;;
     *);
+=> nrel_formats: {
+    theme_1_video_lesson
+    (*
+        -> concept_video;;
+    *);
+    theme_1_audio_lesson
+};
 => nrel_name:
     [any string]
     (*
@@ -299,6 +314,17 @@ misha
     achievement_2;
     achievement_3
 };;
+[*
+misha
+=> nrel_stiding_theme:
+    theme_1
+=> nrel_lessons_on_theme: {
+    theme_1_lesson_1;
+    theme_1_lesson_2
+}
+*]
+
+
 [*
 misha
 => nrel_test_recommendations:
