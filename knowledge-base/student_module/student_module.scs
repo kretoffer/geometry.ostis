@@ -93,6 +93,18 @@ theme_1_video_lesson
 }
 
 
+task_n
+<- concept_task_from_centralized_testing;
+<- concept_task;
+=> nrel_themes: {
+    theme_1;
+    theme_2;
+    theme_3
+}
+=> nrel_year: // год, откуда было взято
+    [];
+;;
+
 task_1
 <- concept_task;
 => nrel_condition:
@@ -288,6 +300,13 @@ misha
 => nrel_personal_characteristics: {
     color_vision_disorder
 };
+=> nrel_target: {
+    pass_centralized_testing
+    (*
+        => nrel_tasks:
+            centralized_testing_tasks;;
+    *);;
+};
 // сложность вопросов в тесте; устанавливается пользователем
 => nrel_difficulty_of_questions:
     low_difficulty
@@ -377,6 +396,31 @@ misha
 <= nrel_task_recommendations_for_user:
     misha
 ;;
+
+
+[*
+misha
+=> nrel_task_recommendations:
+    ...
+    (*
+        -> rrel_good_tasks: {
+            test_1;
+            test_2
+        };;
+        -> rrel_bad_tasks: {
+            test_3;
+            test_4
+        };;
+        -> rrel_other_tasks: {
+            test_5;
+            test_6
+        };;
+    *);;
+*]
+<= nrel_task_from_centralized_testing_recommendations_for_user:
+    misha
+;;
+
 
 [*
 misha
