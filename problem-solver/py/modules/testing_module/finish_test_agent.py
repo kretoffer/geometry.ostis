@@ -241,6 +241,7 @@ class FinishTestAgent(ScAgentClassic):
             ScKeynodes("rrel_knowledge_level", sc_type.CONST_NODE_ROLE)
         )
         search_results = search_by_template(templ)
-        delete_elements(search_results[0].get("_arc_to_knowledge_level"))
+        if search_results:
+            delete_elements(search_results[0].get("_arc_to_knowledge_level"))
         arc = generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, search_results[0].get("_knowledge_level_info"), knowledge_level)
         generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes("rrel_knowledge_level", sc_type.CONST_NODE_ROLE), arc)
