@@ -105,6 +105,26 @@ task_n
     [];
 ;;
 
+
+task_m
+<- concept_task_from_olimpiad;
+<- concept_task;
+=> nrel_themes: {
+    theme_1;
+    theme_2;
+    theme_3
+};
+=> nrel_olimpiad:
+    belarussial_republic_olimpiad;
+=> nrel_stage:
+    second_stage_of_republic_olimpiad;
+=> nrel_class:
+    [];
+=> nrel_year:
+    [];
+;;
+
+
 task_1
 <- concept_task;
 => nrel_condition:
@@ -458,6 +478,30 @@ misha
 <= nrel_task_from_centralized_testing_recommendations_for_user:
     misha
 ;;
+
+[*
+misha
+=> nrel_task_recommendations:
+    ...
+    (*
+        -> rrel_good_tasks: {
+            test_1;
+            test_2
+        };;
+        -> rrel_bad_tasks: {
+            test_3;
+            test_4
+        };;
+        -> rrel_other_tasks: {
+            test_5;
+            test_6
+        };;
+    *);;
+*]
+<= nrel_task_from_olimpiad_recommendations_for_user:
+    misha
+;;
+
 
 
 [*
