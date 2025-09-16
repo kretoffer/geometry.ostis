@@ -105,7 +105,7 @@ class FormTestFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
             sc_type.VAR_COMMON_ARC,
             sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct",
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_test_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
+            ScKeynodes.resolve("nrel_test_from_centralized_testing_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
         )
         templ.quintuple(
             user,
@@ -136,7 +136,7 @@ class FormTestFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
             sc_type.VAR_COMMON_ARC,
             sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct",
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_test_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
+            ScKeynodes.resolve("nrel_test_from_centralized_testing_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
         )
         templ.quintuple(
             user,
