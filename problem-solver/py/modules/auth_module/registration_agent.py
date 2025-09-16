@@ -68,7 +68,7 @@ class RegistrationAgent(ScAgentClassic):
         ]
 
         for set_name in sets:
-            constr.generate_node(sc_type.CONST_NODE_STRUCTURE, set_name)
+            constr.generate_node(sc_type.CONST_NODE_TUPLE, set_name)
             constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", set_name, f"arc_to_{set_name}")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve(f"nrel_{set_name}", sc_type.VAR_NODE_NON_ROLE), f"arc_to_{set_name}")
 
@@ -83,7 +83,6 @@ class RegistrationAgent(ScAgentClassic):
             constr.generate_node(sc_type.CONST_NODE, f"{rating}_main")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_main", f"set2{rating}_main_arc")
             constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, f"{rating}_main", "user", f"{rating}_main2user_arc")
-            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"set2{rating}_main_arc")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_main2user_arc")
 
 
@@ -93,7 +92,7 @@ class RegistrationAgent(ScAgentClassic):
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_themes_set")
             constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, f"{rating}_main", f"{rating}_themes_set", f"main_{rating}2themes_set_arc")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"main_{rating}2themes_set_arc")
-            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_theme", sc_type.VAR_NODE_ROLE), f"{rating}_themes_set", f"arc_rrel_theme2themes_{rating}_set")
+            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_theme", sc_type.VAR_NODE_ROLE), f"main_{rating}2themes_set_arc", f"arc_rrel_theme2themes_{rating}_set")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"arc_rrel_theme2themes_{rating}_set")
 
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("rrel_student", sc_type.CONST_NODE_ROLE))
@@ -105,14 +104,14 @@ class RegistrationAgent(ScAgentClassic):
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"assser2arc2user_{rating}_arc")
 
             for theme_type in ["well", "worth"]:
-                constr.generate_node(sc_type.CONST_NODE_TUPLE, f"{theme_type}_themes_set")
-                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{theme_type}_themes_set")
-                constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", f"{theme_type}_themes_set", f"user2{theme_type}_set_arc")
-                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"user2{theme_type}_set_arc")
+                constr.generate_node(sc_type.CONST_NODE_TUPLE, f"{rating}_{theme_type}_themes_set")
+                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_{theme_type}_themes_set")
+                constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", f"{rating}_{theme_type}_themes_set", f"user2_{rating}_{theme_type}_set_arc")
+                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"user2_{rating}_{theme_type}_set_arc")
 
                 constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve(f"nrel_{theme_type}_studied_themes", sc_type.CONST_NODE_NON_ROLE))
-                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve(f"nrel_{theme_type}_studied_themes", sc_type.CONST_NODE_NON_ROLE), f"user2{theme_type}_set_arc", f"{theme_type}2set_arc_arc")
-                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{theme_type}2set_arc_arc")
+                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve(f"nrel_{theme_type}_studied_themes", sc_type.CONST_NODE_NON_ROLE), f"user2_{rating}_{theme_type}_set_arc", f"{rating}_{theme_type}2set_arc_arc")
+                constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_{theme_type}2set_arc_arc")
 
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE))
             constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE), f"{rating}_main", f"{rating}_kn_level2main")
