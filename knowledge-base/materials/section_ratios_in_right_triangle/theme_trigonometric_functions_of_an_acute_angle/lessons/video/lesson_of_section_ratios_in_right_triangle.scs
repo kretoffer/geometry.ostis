@@ -1,0 +1,10 @@
+lesson_of_section_ratios_in_right_triangle_video_1
+<- concept_video_lesson;
+<- concept_lesson;
+
+=> nrel_url:
+    [{}];;
+
+<- rrel_is_available_for: {
+    color_vision_disorder
+};;

@@ -1,0 +1,31 @@
+subtopic_trigonometric_functions_of_an_obtuse_angle
+=> nrel_main_idtf:
+    [Параграф 4. Синус, косинус, тангенс, котангенс тупого угла]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 4]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_ratios_in_right_triangle_topic;
+=> nrel_key_concepts: {
+    concept_sin;
+    concept_cos;
+    concept_tan;
+    concept_cotan;
+    concept_sin_of_an_obtuse_angle;
+    concept_cos_of_an_obtuse_angle;
+    concept_tan_of_an_obtuse_angle;
+    concept_cotan_of_an_obtuse_angle;
+    definition_of_sin;
+    definition_of_cos;
+    definition_of_tan;
+    definition_of_cotan
+};
+=> nrel_materials: {
+    subtopic_4_video_lesson_1;
+    subtopic_4_video_lesson_2;
+    subtopic_4_video_lesson_3
+};;

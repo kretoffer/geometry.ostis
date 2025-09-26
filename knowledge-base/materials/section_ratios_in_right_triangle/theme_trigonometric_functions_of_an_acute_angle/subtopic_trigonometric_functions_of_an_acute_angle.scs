@@ -1,0 +1,27 @@
+subtopic_trigonometric_functions_of_an_acute_angle
+=> nrel_main_idtf:
+    [Параграф 1. Синус, косинус, тангенс и котангенс острого угла]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 1]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_ratios_in_right_triangle_topic;
+=> nrel_key_concepts: {
+    concept_sin;
+    concept_cos;
+    concept_tan;
+    concept_cotan;
+    definition_of_sin;
+    definition_of_cos;
+    definition_of_tan;
+    definition_of_cotan
+};
+=> nrel_materials: {
+    subtopic_1_video_lesson_1;
+    subtopic_1_video_lesson_2;
+    subtopic_1_video_lesson_3
+};;

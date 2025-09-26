@@ -1,0 +1,24 @@
+subtopic_circumscribed_and_inscribed_circles_of_triangle
+=> nrel_main_idtf:
+    [Параграф 8. Описанная и вписанная окружности треугольника]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 8]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_inscriped_and_circumscribed_circles_topic;
+=> nrel_key_concepts: {
+    concept_inscriped_circle;
+    concept_circumscribed_circle;
+    theorem_of_the_circumcircle_of_triangle;
+    theorem_of_the_incircle_of_triangle
+};
+=> nrel_materials: {
+    subtopic_8_video_lesson_1;
+    subtopic_8_video_lesson_2;
+    subtopic_8_video_lesson_3
+}
+;;

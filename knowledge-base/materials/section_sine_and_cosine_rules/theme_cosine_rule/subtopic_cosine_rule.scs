@@ -1,0 +1,30 @@
+subtopic_cosine_rule
+=> nrel_main_idtf:
+    [Параграф 14. Теорема косинусов]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 14]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_sine_and_cosine_rules_topic;
+=> nrel_key_concepts: {
+    concept_cos;
+    concept_cos_of_an_obtuse_angle;
+    concept_triangle;
+    concept_parallelogram;
+    concept_median;
+    concept_cosine_theorem;
+    definition_of_cos;
+    corollary_for_determing_the_type_of_triangle; // следствие о виде треугольника
+    formula_for_the_cosine_of_an_angle; // следствие для нахождения косинуса угла через стороны
+    formula_for_the_length_of_median; // следствие для нахождения медианы треугольника
+    corollary_of_the_cosine_theorem_for_parallelogram_diagonals // теорема о диагоналях параллелограмма (следствие т. косинусов)
+};
+=> nrel_materials: {
+    subtopic_14_video_lesson_1;
+    subtopic_14_video_lesson_2;
+    subtopic_14_video_lesson_3
+};;

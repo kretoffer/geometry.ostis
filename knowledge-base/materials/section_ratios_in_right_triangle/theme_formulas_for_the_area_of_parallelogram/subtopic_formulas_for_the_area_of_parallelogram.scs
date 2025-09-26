@@ -1,0 +1,24 @@
+subtopic_formulas_for_the_area_of_parallelogram
+=> nrel_main_idtf:
+    [Параграф 5.2. Формула площади параллелограмма]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 5.2]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_ratios_in_right_triangle_topic;
+=> nrel_key_concepts: {
+    concept_sin;
+    concept_sin_of_an_obtuse_angle;
+    concept_parallelogram;
+    parallelogram_area_sine_formula; // S = (1/2)absinx
+    definition_of_sin
+};
+=> nrel_materials: {
+    subtopic_5_2_video_lesson_1;
+    subtopic_5_2_video_lesson_2;
+    subtopic_5_2_video_lesson_3
+};;
