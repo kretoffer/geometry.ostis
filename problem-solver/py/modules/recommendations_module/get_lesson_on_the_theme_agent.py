@@ -13,7 +13,8 @@ from sc_kpm.utils import (
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
-    get_action_arguments
+    get_action_arguments,
+    generate_action_result
 )
 from sc_kpm import ScKeynodes
 
@@ -46,13 +47,17 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
 
         preferable_content_types = self.get_user_preferable_content_types(user)
         personal_characteristics = self.get_user_personal_characteristics(user)
-        if self.delete_previous_lessons(user, theme):
-            self.set_user_prefering_lesson_materials(user, theme, preferable_content_types, personal_characteristics)
+        genereted_struct = self.set_user_prefering_lesson_materials(user, theme, preferable_content_types, personal_characteristics)
+
+        if genereted_struct.is_valid():
+            self.logger.info("GetLessonOnTheThemeAgent: recommendations are generated")
+            generate_action_result(action_node, genereted_struct)
+
 
         return ScResult.OK
 
 
-    def get_user_preferable_content_types(user: ScAddr) -> list[ScAddr]:
+    def get_user_preferable_content_types(self, user: ScAddr) -> list[ScAddr]:
         templ = ScTemplate()
         templ.quintuple(
             user,
@@ -75,7 +80,7 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         return content_types
     
 
-    def get_user_personal_characteristics(user: ScAddr) -> list[ScAddr]:
+    def get_user_personal_characteristics(self, user: ScAddr) -> list[ScAddr]:
         templ = ScTemplate()
         templ.quintuple(
             user,
@@ -98,7 +103,7 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         return characteristic
     
 
-    def delete_previous_lessons(user: ScAddr, theme: ScAddr) -> bool:
+    def delete_previous_lessons(self, user: ScAddr, theme: ScAddr) -> bool:
         templ = ScTemplate()
         templ.quintuple(
             user,
@@ -128,7 +133,7 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         return True
     
 
-    def set_user_prefering_lesson_materials(user: ScAddr, theme: ScAddr, 
+    def set_user_prefering_lesson_materials(self, theme: ScAddr, 
             content_types: list[ScAddr], personal_characteristics: list[ScAddr]) -> bool:
         templ = ScTemplate()
         templ.quintuple(
@@ -175,31 +180,10 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
             lessons.add(result.get("_lesson"))
         
         templ = ScTemplate()
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC 
+        templ.triple(
             (sc_type.VAR_NODE_STRUCTURE, "_lessons_structure"),
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_lessons_on_theme", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC, 
-            theme,
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_stiding_theme", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.triple(
-            "_lessons_structure",
-            sc_type.VAR_PERM_POS_ARC,
             theme
-        )
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            lessons,
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_lessons_on_theme", sc_type.CONST_NODE_NON_ROLE)
         )
         templ.triple(
             "_lessons_structure",
@@ -207,7 +191,12 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
             lessons
         )
 
-        return generate_by_template(templ)
+        generated_results = generate_by_template(templ)
+        if not generated_results:
+            return ScAddr()
+        
+        generated_struct = generated_results.get("_lessons_structure")
+        return generated_struct
 
 
 
