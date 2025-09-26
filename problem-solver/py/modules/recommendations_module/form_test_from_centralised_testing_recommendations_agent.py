@@ -13,7 +13,8 @@ from sc_kpm.utils import (
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
-    get_action_arguments
+    get_action_arguments,
+    generate_action_result
 )
 from sc_kpm import ScKeynodes
 
@@ -40,7 +41,7 @@ class FormTestFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
     def run(self, action_node: ScAddr) -> ScResult:
         self.logger.info("FormTestFromCentralizedTestingRecommendationsAgent started")
 
-        user, theme = get_action_arguments(action_node, 2)
+        [user, theme] = get_action_arguments(action_node, 2)
 
         all_tests = self.get_all_test_from_centralized_testing(theme)
         bad_tests = []
@@ -58,15 +59,19 @@ class FormTestFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
                     other_tests.append(test)
         
     
-        self.delete_previous_test_recommendations_for_user(user)
-        self.set_recommendations_for_user(user, bad_tests, good_tests, other_tests)
+        
+        generated_struct = self.set_recommendations_for_user(bad_tests, good_tests, other_tests)
+        if generated_struct.is_valid():
+            self.logger.info("FormTestFromCentralizedTestingRecommendationsAgent: recommendations are generated")
+            generate_action_result(action_node, generated_struct)
+
 
         return ScResult.OK
 
 
 
 
-    def get_all_test_from_centralized_testing(theme: ScAddr) -> list[ScAddr]:
+    def get_all_test_from_centralized_testing(self, theme: ScAddr) -> list[ScAddr]:
         templ = ScTemplate()
         templ.quintuple(
             (sc_type.VAR_NODE, "_test"),
@@ -98,57 +103,12 @@ class FormTestFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
         return tests
 
 
-    def delete_previous_test_recommendations_for_user(user: ScAddr) -> bool:
+    def set_recommendations_for_user(self, bad_tests: ScAddr, good_tests: ScAddr, other_tests: ScAddr) -> ScAddr:
         templ = ScTemplate()
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_test_from_centralized_testing_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_prevous_arc"),
-            (sc_type.VAR_NODE, "_previous_recommendations"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_test_recommendations", sc_type.CCONST_NODE_ROLE)
-        )
         templ.triple(
-            "_recommedation_struct",
+            (sc_type.VAR_NODE_STRUCTURE, "_recommedation_struct"),
             sc_type.VAR_PERM_POS_ARC,
-            "_previous_recommendations"
-        )
-
-        search_results = search_by_template(templ)
-        if search_results:
-            previous_arc = search_results[0].get("_previous_arc")
-            previous_recommendations_struct = search_results[0].get("_recommendations_struct")
-            delete_elements(previous_arc, previous_recommendations_struct)
-            return True
-        return False
-
-
-    def set_recommendations_for_user(user: ScAddr, bad_tests: ScAddr, good_tests: ScAddr, other_tests: ScAddr) -> bool:
-        templ = ScTemplate()
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_test_from_centralized_testing_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
-            (sc_type.VAR_NODE, "_recommendations"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_test_recommendations", sc_type.CCONST_NODE_ROLE)
-        )
-        templ.triple(
-            "_recommedation_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            "_recommendations"
+            (sc_type.VAR_NODE, "_recommendations")
         )
         templ.quintuple(
             "_recommendations",
@@ -174,12 +134,16 @@ class FormTestFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
 
 
         generating_results = generate_by_template(templ)
-        return generating_results
+        if not generating_results:
+            return ScAddr()
+        
+        generated_struct = generating_results.get("_recommendations_struct")
+        return generated_struct
 
         
 
 
-    def get_recommendations_for_this_test(user: ScAddr, test: ScAddr) -> float:
+    def get_recommendations_for_this_test(self, user: ScAddr, test: ScAddr) -> float:
         templ = ScTemplate()
         templ.quintuple(
             (sc_type.VAR_NODE, "_test_difficulty_info"),
