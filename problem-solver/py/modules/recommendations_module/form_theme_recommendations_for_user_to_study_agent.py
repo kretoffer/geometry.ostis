@@ -13,7 +13,8 @@ from sc_kpm.utils import (
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
-    get_action_arguments
+    get_action_arguments,
+    generate_action_result
 )
 from sc_kpm import ScKeynodes
 
@@ -41,7 +42,7 @@ class FormThemeRecommendationsForUserToStudyAgent(ScAgentClassic):
     def run(self, action_node: ScAddr) -> ScResult:
         self.logger.info("FormThemeRecommendationsForUserToStudyAgent started")
 
-        user = get_action_arguments(action_node, 1)
+        [user] = get_action_arguments(action_node, 1)
 
         all_stidied_themes = get_all_stidied_themes(user)
 
@@ -66,15 +67,17 @@ class FormThemeRecommendationsForUserToStudyAgent(ScAgentClassic):
 
         good_themes.extend(get_all_not_stidied_themes(user))
 
-        recommendations_struct, recommendations_set = self.get_theme_recommendations_for_study(user)
-        self.set_theme_recommendations_for_study(user, [recommendations_struct, recommendations_set], good_themes, bad_themes, other_themes)
-
+        
+        generated_struct = self.set_theme_recommendations_for_study(good_themes, bad_themes, other_themes)
+        if generated_struct.is_valid():
+            self.logger.info("FormThemeRecommendationsForUserToStudyAgent: recommendations are generated")
+            generate_action_result(action_node, generated_struct)
         
         return ScResult.OK
     
 
 
-    def is_recommended_theme(theme: ScAddr, themes_dict: dict) -> bool:
+    def is_recommended_theme(self, theme: ScAddr, themes_dict: dict) -> bool:
         def get_requirements_of_this_theme(theme: ScAddr) -> List[ScAddr]:
             templ = ScTemplate()
             templ.quintuple(
@@ -102,114 +105,50 @@ class FormThemeRecommendationsForUserToStudyAgent(ScAgentClassic):
             if themes_el not in themes_dict or themes_dict[themes_el] <= 0.5:
                 return False
         return True
-    
-
-    def get_theme_recommendations_for_study(user: ScAddr) -> tuple[ScAddr, ScAddr]:
-        templ = ScTemplate()
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_user_theme_recommendations_for_study", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_NODE, "_recommendations"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_user_theme_recommendations", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.triple(
-            "_recommendations_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            "_recommendations"
-        )
-        
-        search_results = search_by_template(templ)
-        if search_results:
-            return search_results[0].get("_recommendations_struct"), search_results[0].get("_recommendations")
-        return ScAddr(), ScAddr()
-    
 
     
 
-    def set_theme_recommendations_for_study(user: ScAddr, recommendations: list[ScAddr], good_themes: ScAddr, bad_themes: ScAddr, other_themes: ScAddr) -> bool:
-        def delete_theme_recommendations_option_for_study(recommendations: list[ScAddr], relation: ScAddr) -> bool:
-            recommendations_struct = recommendations[0]
-            recommendations_set = recommendations[1]
-            templ = ScTemplate()
-            templ.quintuple(
-                recommendations_set,
-                (sc_type.VAR_PERM_POS_ARC, "_previous_arc"), 
-                (sc_type.VAR_NODE, "_previous_theme_set"),
-                sc_type.VAR_PERM_POS_ARC,
-                relation
-            )
-            templ.triple(
-                recommendations_struct,
-                sc_type.VAR_PERM_POS_ARC,
-                "_previous_theme_set"
-            )
-
-            search_results = search_by_template(templ)
-            if not search_results:
-                return True
-            
-            previous_arc = search_results[0].get("_previous_arc")
-            previous_themes = search_results[0].get("_previous_theme_set")
-            return delete_elements(previous_arc, previous_themes)
+    def set_theme_recommendations_for_study(self, good_themes: ScAddr, bad_themes: ScAddr, other_themes: ScAddr) -> ScAddr:
         
 
         good_themes_set = create_sc_set(good_themes)
         bad_themes_set = create_sc_set(bad_themes)
         other_themes_set = create_sc_set(other_themes)
 
-
-        delete_theme_recommendations_option_for_study(
-            recommendations,
-            ScKeynodes.resolve("rrel_good_themes", sc_type.CONST_NODE_ROLE)
-        )
-        delete_theme_recommendations_option_for_study(
-            recommendations,
-            ScKeynodes.resolve("rrel_bad_themes", sc_type.CONST_NODE_ROLE)
-        )
-        delete_theme_recommendations_option_for_study(
-            recommendations,
-            ScKeynodes.resolve("rrel_other_themes", sc_type.CONST_NODE_ROLE)
-        )
-
-        recommendations_struct = recommendations[0]
-        recommendations_set = recommendations[1]
         templ = ScTemplate()
         templ.triple(
-            recommendations_struct,
+            (sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct"),
             sc_type.VAR_PERM_POS_ARC,
-            recommendations_set
+            (sc_type.VAR_NODE, "_recommendations_set")
         )
         templ.quintuple(
-            recommendations_set,
+            "_recommendations_set",
             sc_type.VAR_PERM_POS_ARC,
             good_themes_set,
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("rrel_good_themes", sc_type.CONST_NODE_ROLE)
         )
         templ.quintuple(
-            recommendations_set,
+            "_recommendations_set",
             sc_type.VAR_PERM_POS_ARC,
             bad_themes_set,
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("rrel_bad_themes", sc_type.CONST_NODE_ROLE)
         )
         templ.quintuple(
-            recommendations_set,
+            "_recommendations_set",
             sc_type.VAR_PERM_POS_ARC,
             other_themes_set,
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("rrel_other_themes", sc_type.CONST_NODE_ROLE)
         )
 
-        return generate_by_template(templ)
+        generating_results = generate_by_template(templ)
+        if not generating_results:
+            return ScAddr()
+        
+        generated_struct = generating_results.get("_recommendations_struct")
+        return generated_struct
 
 
 
