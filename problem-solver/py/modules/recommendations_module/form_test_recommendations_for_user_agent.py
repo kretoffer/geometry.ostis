@@ -59,7 +59,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
                     other_tests.append(test)
         
     
-        generated_struct = self.set_recommendations_for_user(action_node, bad_tests, good_tests, other_tests)
+        generated_struct = self.set_recommendations_for_user(bad_tests, good_tests, other_tests)
         if generated_struct.is_valid():
             self.logger.info("FormTestRecommendationsForUserAgent: recommendations are generated")
             generate_action_result(action_node, generated_struct)
@@ -69,7 +69,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
 
 
 
-    def get_all_test_on_this_theme(theme: ScAddr) -> List[ScAddr]:
+    def get_all_test_on_this_theme(self, theme: ScAddr) -> List[ScAddr]:
         templ = ScTemplate()
         templ.triple(
             (sc_type.VAR_NODE, "_theme_set_of_test"),
@@ -97,7 +97,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
         return tests
     
 
-    def set_recommendations_for_user(bad_tests: ScAddr, good_tests: ScAddr, other_tests: ScAddr) -> bool:
+    def set_recommendations_for_user(self, bad_tests: ScAddr, good_tests: ScAddr, other_tests: ScAddr) -> bool:
         templ = ScTemplate()
         templ.triple(
             (sc_type.VAR_NODE_STRUCTURE, "_recommedation_struct"),
@@ -138,7 +138,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
         
 
 
-    def get_recommendations_for_this_test(user: ScAddr, test: ScAddr) -> float:
+    def get_recommendations_for_this_test(self, user: ScAddr, test: ScAddr) -> float:
         templ = ScTemplate()
         templ.quintuple(
             (sc_type.VAR_NODE, "_test_difficulty_info"),
