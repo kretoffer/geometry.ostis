@@ -13,7 +13,8 @@ from sc_kpm.utils import (
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
-    get_action_arguments
+    get_action_arguments,
+    generate_action_results
 )
 from sc_kpm import ScKeynodes
 
@@ -40,7 +41,7 @@ class FormTaskFromOlimpiadRecommendationsAgent(ScAgentClassic):
     def run(self, action_node: ScAddr) -> ScResult:
         self.logger.info("FormTaskFromOlimpiadRecommendationsAgent started")
 
-        user, theme = get_action_arguments(action_node, 2)
+        [user, theme] = get_action_arguments(action_node, 2)
 
         all_tests = self.get_all_tasks_from_olimpiads(theme)
         bad_problems = []
@@ -58,13 +59,16 @@ class FormTaskFromOlimpiadRecommendationsAgent(ScAgentClassic):
                     other_problems.append(test)
         
     
-        self.delete_previous_task_recommendations_for_user(user)
-        self.set_recommendations_for_user(user, bad_problems, good_problems, other_problems)
+        
+        generated_struct = self.set_recommendations_for_user(bad_problems, good_problems, other_problems)
+        if generated_struct.is_valid():
+            self.logger.info("FormTaskFromOlimpiadRecommendationsAgent: recommmendations are generated")
+            generate_action_results(action_node, generated_struct)
 
         return ScResult.OK
     
 
-    def get_all_tasks_from_olimpiads(theme: ScAddr) -> list[ScAddr]:
+    def get_all_tasks_from_olimpiads(self, theme: ScAddr) -> list[ScAddr]:
         templ = ScTemplate()
         templ.quintuple(
             (sc_type.VAR_NODE, "_task"),
@@ -98,7 +102,7 @@ class FormTaskFromOlimpiadRecommendationsAgent(ScAgentClassic):
 
     
 
-    def get_recommendations_for_this_task(user: ScAddr, task: ScAddr) -> float:
+    def get_recommendations_for_this_task(self, user: ScAddr, task: ScAddr) -> float:
         templ = ScTemplate()
         templ.quintuple(
             (sc_type.VAR_NODE, "_task_difficulty_info"),
@@ -126,59 +130,15 @@ class FormTaskFromOlimpiadRecommendationsAgent(ScAgentClassic):
         if search_results:
             return float(1.0 - get_link_content(search_results[0].get("_link")))
         return -100.0
-    
 
-    def delete_previous_task_recommendations_for_user(user: ScAddr) -> bool:
+
+
+    def set_recommendations_for_user(self, bad_tasks: ScAddr, good_tasks: ScAddr, other_tasks: ScAddr) -> ScAddr:
         templ = ScTemplate()
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_task_from_olimpiad_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_prevous_arc"),
-            (sc_type.VAR_NODE, "_previous_recommendations"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_task_recommendations", sc_type.CCONST_NODE_ROLE)
-        )
         templ.triple(
-            "_recommedation_struct",
+            (sc_type.VAR_NODE_STRUCTURE, "_recommedation_struct"),
             sc_type.VAR_PERM_POS_ARC,
-            "_previous_recommendations"
-        )
-
-        search_results = search_by_template(templ)
-        if search_results:
-            previous_arc = search_results[0].get("_previous_arc")
-            previous_recommendations_struct = search_results[0].get("_recommendations_struct")
-            delete_elements(previous_arc, previous_recommendations_struct)
-            return True
-        return False
-
-
-    def set_recommendations_for_user(user: ScAddr, bad_tasks: ScAddr, good_tasks: ScAddr, other_tasks: ScAddr) -> bool:
-        templ = ScTemplate()
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            sc_type.VAR_NODE_STRUCTURE, "_recommendations_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_task_from_olimpiad_recommendations_for_user", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
-            (sc_type.VAR_NODE, "_recommendations"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_task_recommendations", sc_type.CCONST_NODE_ROLE)
-        )
-        templ.triple(
-            "_recommedation_struct",
-            sc_type.VAR_PERM_POS_ARC,
-            "_recommendations"
+            (sc_type.VAR_NODE, "_recommendations")
         )
         templ.quintuple(
             "_recommendations",
@@ -204,4 +164,8 @@ class FormTaskFromOlimpiadRecommendationsAgent(ScAgentClassic):
 
 
         generating_results = generate_by_template(templ)
-        return generating_results
+        if not generating_results:
+            return ScAddr()
+        
+        generated_struct = generating_results.get("_recommendations_struct")
+        return generated_struct
