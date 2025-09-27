@@ -47,7 +47,7 @@ class StartDiagnosticTestAgent(ScAgentClassic):
     def search_test(self):
         templ = ScTemplate()
         templ.triple(
-            ScKeynodes.resolve("concept_test", sc_type.VAR_NODE_CLASS),
+            ScKeynodes.resolve("concept_diagnostic_test", sc_type.VAR_NODE_CLASS),
             sc_type.VAR_PERM_POS_ARC,
             (sc_type.VAR_NODE, "test")
         )
