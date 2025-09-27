@@ -14,6 +14,7 @@ from sc_kpm.utils.action_utils import (
 from sc_kpm import ScKeynodes
 
 from .additions import get_user_passing_test_history
+from utils.create_action import create_action
 
 
 logging.basicConfig(
@@ -56,6 +57,8 @@ class AnswerAgent(ScAgentClassic):
             search_result = search_results[0]
             arc = generate_connector(sc_type.CONST_PERM_POS_ARC, search_result.get("_last_question"), user_answer)
             generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_question_answer", sc_type.CONST_NODE_ROLE), arc)
+
+            create_action("action_get_next_question", user, test, search_result.get("_last_question"))
     
         self.logger.info("AnswerAgent: finished successfully")
         return ScResult.OK

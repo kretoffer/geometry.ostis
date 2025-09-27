@@ -15,6 +15,7 @@ from sc_kpm.utils.action_utils import (
 from sc_kpm import ScKeynodes
 
 from .additions import get_user_passing_test_history, is_question_answer_correct
+from utils.create_action import create_action
 
 
 
@@ -100,7 +101,7 @@ class GetNextQuestionAgent(ScAgentClassic):
                 generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_basic_sequence", sc_type.VAR_NODE_NON_ROLE), arc)
                 generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), question_arc)
         else:
-            ... # TODO Завершение теста, должно тригерить агента finish_test
+            create_action("action_finish_test", user, test)
 
     
         self.logger.info("GetNextQuestionAgent: finished successfully")
