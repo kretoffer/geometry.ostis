@@ -72,7 +72,7 @@ class GetNextQuestionAgent(ScAgentClassic):
 
         if question.is_valid():
             passing_test_history = get_user_passing_test_history(user, test)
-            question_answer = self.get_user_question_answer(passing_test_history, question)
+            question_answer = self.get_user_question_answer(question)
 
         else:
             passing_test_history = self.initialize_user_passing_test_history(user, test)
@@ -148,25 +148,11 @@ class GetNextQuestionAgent(ScAgentClassic):
     #     }
     # >;;
 
-    def get_user_question_answer(self, passing_test_history: ScAddr, question: ScAddr) -> ScAddr:
+    def get_user_question_answer(self, question: ScAddr) -> ScAddr:
          # passing_test_history -> {rrel_test_question: question, rrel_question_answer: answer, rrel_passer: user};;
         templ = ScTemplate()
-        # passing_test_history -> user_question_answer_set
-        templ.triple(
-            passing_test_history,                                   #   passing_test_history
-            sc_type.VAR_PERM_POS_ARC,                               #         |
-                                                                    #        \/
-            (sc_type.VAR_NODE, "_user_question_answer_set"),        #  user_question_answer_set
-        )
         templ.quintuple(
-            passing_test_history,
-            sc_type.VAR_PERM_POS_ARC,
             question,
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_test_question", sc_type.CONST_NODE_ROLE)
-        )
-        templ.quintuple(
-            passing_test_history,
             sc_type.VAR_PERM_POS_ARC,
             (sc_type.VAR_NODE, "_question_answer"),
             sc_type.VAR_PERM_POS_ARC,
@@ -250,7 +236,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         templ.triple(
             test,
             "_arc_of_simpler_question",
-            sc_type.VAR_NODE, "_simpler_question"
+            (sc_type.VAR_NODE, "_simpler_question")
         )
 
         search_results = search_by_template(templ)
@@ -281,7 +267,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         templ.triple(
             test,
             "_arc_of_harder_question",
-            sc_type.VAR_NODE, "_harder_question"
+            (sc_type.VAR_NODE, "_harder_question")
         )
 
         search_results = search_by_template(templ)

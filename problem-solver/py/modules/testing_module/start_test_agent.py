@@ -36,13 +36,12 @@ class StartTestAgent(ScAgentClassic):
 
         # rrel_1 -> (action -> user);;
         # rrel_2 -> (action -> test);;
-        [user, test] = get_action_arguments(action, 1)
+        [user, test] = get_action_arguments(action, 2)
         
-        test = self.search_test()
         templ = ScTemplate()
         templ.quintuple(
             test,
-            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_COMMON_ARC,
             (sc_type.VAR_NODE_TUPLE, "questions_set"),
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("nrel_decomposition", sc_type.VAR_NODE_NON_ROLE)
@@ -62,14 +61,19 @@ class StartTestAgent(ScAgentClassic):
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_current_test", sc_type.VAR_NODE_NON_ROLE), "arc_to_test")
 
         constr.generate_node(sc_type.CONST_NODE, "passing_test_history")
-        constr.generate_connector(sc_type.CONST_COMMON_ARC, "arc_to_test", "passing_test_history")
+        constr.generate_connector(sc_type.CONST_COMMON_ARC, "arc_to_test", "passing_test_history", "arc_to_passing_test_history")
+
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_user_passing_test_history", sc_type.VAR_NODE_NON_ROLE), "arc_to_passing_test_history")
 
         constr.generate_node(sc_type.CONST_NODE, "question")
-        constr.generate_node(sc_type.CONST_PERM_POS_ARC, "question", first_question, "arc_to_first_question")
-        constr.generate_node(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_test_question", sc_type.VAR_NODE_ROLE), "arc_to_first_question")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "question", first_question, "arc_to_first_question")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_test_question", sc_type.VAR_NODE_ROLE), "arc_to_first_question")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "passing_test_history", "question", "arc_from_pth2q")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.rrel_index(1), "arc_from_pth2q")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), "arc_from_pth2q")
 
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "question", user, "arc_to_user")
-        constr.generate_node(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_passer", sc_type.VAR_NODE_ROLE), "arc_to_user")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_passer", sc_type.VAR_NODE_ROLE), "arc_to_user")
 
         generate_elements(constr)
 

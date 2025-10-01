@@ -32,7 +32,7 @@ def get_user_passing_test_history(user: ScAddr, test: ScAddr) -> ScAddr:
 
 def is_question_answer_correct(question_answer: ScAddr, question: ScAddr) -> bool:
     templ = ScTemplate()
-    templ.triple(
+    templ.quintuple(
         question,
         sc_type.VAR_COMMON_ARC,
         question_answer,

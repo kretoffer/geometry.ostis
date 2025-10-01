@@ -3,6 +3,7 @@ from .get_next_question_agent import GetNextQuestionAgent
 from .finish_test_agent import FinishTestAgent
 from .answer_agent import AnswerAgent
 from .start_test_agent import StartTestAgent
+from .start_diagnostic_test_agent import StartDiagnosticTestAgent
 
 
 class TestingModule(ScModule):
@@ -11,5 +12,6 @@ class TestingModule(ScModule):
             GetNextQuestionAgent(),
             AnswerAgent(),
             FinishTestAgent(),
-            StartTestAgent()
+            StartTestAgent(),
+            StartDiagnosticTestAgent()
         )
