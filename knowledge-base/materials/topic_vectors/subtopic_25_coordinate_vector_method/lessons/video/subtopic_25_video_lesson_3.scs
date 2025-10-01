@@ -1,0 +1,13 @@
+subtopic_25_video_lesson_3
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["координатно-векторный метод в решении задач (15 мин) && https://youtu.be/ZPPghGOwBKU?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_25_task_1; 
+=> nrel_test: subtopic_25_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

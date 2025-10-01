@@ -1,0 +1,13 @@
+subtopic_1_video_lesson_7
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: < 
+    [синус, косинус, тангенс, котангенс острого прямоугольного треугольника (2 мин)]; 
+    [https://youtu.be/us-FPIgSrCg?feature=shared]; 
+    [синус, косинус, тангенс, котангенс острого прямоугольного треугольника (2 мин) && https://youtu.be/us-FPIgSrCg?feature=shared] 
+>;
+=> nrel_task: task_1; 
+=> nrel_test: test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

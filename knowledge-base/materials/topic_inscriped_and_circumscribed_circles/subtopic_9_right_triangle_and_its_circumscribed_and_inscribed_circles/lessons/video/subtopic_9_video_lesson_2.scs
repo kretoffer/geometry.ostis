@@ -1,0 +1,13 @@
+subtopic_9_video_lesson_2
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["прямоугольный треугольник со вписанной окружностью (2 мин) && https://youtu.be/SFSlsMN7N5M?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_9_task_1; 
+=> nrel_test: subtopic_9_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

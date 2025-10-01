@@ -1,0 +1,13 @@
+subtopic_13_video_lesson_7
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["теорема косинусов (1 мин) && https://youtu.be/e5R8is28DnI?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_13_task_1; 
+=> nrel_test: subtopic_13_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

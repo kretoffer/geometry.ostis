@@ -1,0 +1,13 @@
+subtopic_8_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["окружность вписанная в треугольник и описанная около треугольника (11 мин) && https://youtu.be/wLNfX07T2Qw?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_8_task_1; 
+=> nrel_test: subtopic_8_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

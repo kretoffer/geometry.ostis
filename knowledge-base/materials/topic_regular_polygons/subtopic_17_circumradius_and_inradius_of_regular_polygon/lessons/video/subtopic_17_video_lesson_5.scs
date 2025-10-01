@@ -1,0 +1,13 @@
+subtopic_17_video_lesson_5
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["вписанные многоугольники и окружность (9 мин) && https://youtu.be/9JiB5pQ5zZY?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_17_task_1; 
+=> nrel_test: subtopic_17_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

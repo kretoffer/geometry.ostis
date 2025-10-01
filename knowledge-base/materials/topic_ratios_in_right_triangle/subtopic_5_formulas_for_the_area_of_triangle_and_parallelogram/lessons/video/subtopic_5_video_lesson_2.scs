@@ -1,0 +1,13 @@
+subtopic_5_video_lesson_2
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["теорема о площади треугольника (3 мин) && https://youtu.be/iQ22tKhxV1w?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_5_task_1; 
+=> nrel_test: subtopic_5_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

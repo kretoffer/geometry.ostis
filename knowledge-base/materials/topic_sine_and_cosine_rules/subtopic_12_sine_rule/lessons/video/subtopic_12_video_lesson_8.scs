@@ -1,0 +1,13 @@
+subtopic_12_video_lesson_8
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["доказательство теоремы синусов (5 мин) && https://youtu.be/GGxeMQrQe7c?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_12_task_1; 
+=> nrel_test: subtopic_12_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

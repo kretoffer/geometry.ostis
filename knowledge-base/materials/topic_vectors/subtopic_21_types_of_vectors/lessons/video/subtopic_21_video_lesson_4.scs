@@ -1,0 +1,13 @@
+subtopic_21_video_lesson_4
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["понятие вектора (7 мин) && https://youtu.be/bkOEUfexg2I?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_21_task_1; 
+=> nrel_test: subtopic_21_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

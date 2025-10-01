@@ -1,0 +1,30 @@
+subtopic_herons_formula_and_solving_triangles
+=> nrel_main_idtf:
+    [Параграф 14. Формула Герона. Решение треугольников]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 14]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_sine_and_cosine_rules_topic;
+=> nrel_key_concepts: {
+    concept_cos;
+    concept_sin;
+    concept_cos_of_an_obtuse_angle;
+    concept_sin_of_an_obtuse_angle;
+    concept_triangle;
+    concept_cosine_theorem;
+    concept_sine_theorem;
+    definition_of_cos;
+    definition_of_sin;
+    formula_for_the_cosine_of_an_angle; // следствие для нахождения косинуса угла через стороны
+    herons_formula
+};
+=> nrel_materials: {
+    subtopic_15_video_lesson_1;
+    subtopic_15_video_lesson_2;
+    subtopic_15_video_lesson_3
+};;

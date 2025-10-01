@@ -1,0 +1,13 @@
+subtopic_2_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["разбор по учебнику (6 мин) && https://youtu.be/LrBMk2C539M?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_2_task_1; 
+=> nrel_test: subtopic_2_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

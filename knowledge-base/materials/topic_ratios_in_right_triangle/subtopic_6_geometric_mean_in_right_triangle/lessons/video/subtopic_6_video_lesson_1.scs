@@ -1,0 +1,13 @@
+subtopic_6_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["среднее пропорциональное (среднее геометрическое) в прямоугольном треугольнике (18 мин) && https://youtu.be/muTAmFiVokQ?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_6_task_1; 
+=> nrel_test: subtopic_6_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

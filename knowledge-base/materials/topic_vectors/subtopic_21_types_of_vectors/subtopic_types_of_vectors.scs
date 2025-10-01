@@ -1,0 +1,29 @@
+subtopic_types_of_vectors
+=> nrel_main_idtf:
+    [Параграф 21. Вектор. Виды векторов]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 21]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_vector_topic;
+=> nrel_key_concepts: {
+    concept_vector;
+    definition_of_vector;
+    concept_collinear_vector;
+    definition_of_angle_between_vectors;
+    definition_of_zero_vector;
+    definition_of_vector_length;
+    definition_of_codirectional_vectors;
+    definition_of_opposite_vectors;
+    definition_of_magnitude_of_vector;
+    definition_of_equal_vectors
+};
+=> nrel_materials: {
+    subtopic_21_video_lesson_1;
+    subtopic_21_video_lesson_2;
+    subtopic_21_video_lesson_3
+};;

@@ -1,0 +1,13 @@
+subtopic_6_video_lesson_2
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["пропорциональные отрезки в прямоугольном треугольнике (10 мин) && https://youtu.be/8sDcsi1OQZU?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_6_task_1; 
+=> nrel_test: subtopic_6_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

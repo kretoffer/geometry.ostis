@@ -1,0 +1,13 @@
+subtopic_{{subtopic_name}}_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: < 
+    [разбор по учебнику: часть первая (13 мин)]; 
+    [https://youtu.be/oaAzvsisgMY?feature=shared]; 
+    [разбор по учебнику: часть первая (13 мин) && https://youtu.be/oaAzvsisgMY?feature=shared] 
+>;
+=> nrel_task: task_1; 
+=> nrel_test: test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

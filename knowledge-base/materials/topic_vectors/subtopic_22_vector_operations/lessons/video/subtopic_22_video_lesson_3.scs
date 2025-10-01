@@ -1,0 +1,13 @@
+subtopic_22_video_lesson_3
+<- concept_lesson;
+<- concept_video_lesson; 
+=> nrel_lesson_content: 
+    ["сложение векторов (13 мин) && https://youtu.be/CXMwhg8Sf-4?feature=shared"]
+    (*
+        <- lang_ru;;
+    *);; 
+=> nrel_task: subtopic_22_task_1; 
+=> nrel_test: subtopic_22_test_1;
+<= nrel_is_available_for: { 
+    visibitlity_disorder;
+};;

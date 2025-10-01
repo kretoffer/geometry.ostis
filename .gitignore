@@ -19,3 +19,6 @@ __pycache__
 
 ConanPresets.json
 .venv
+
+lessons_by_template_generator.py
+lessons_template.scs
