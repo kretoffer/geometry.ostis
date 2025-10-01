@@ -81,27 +81,30 @@ class GetNextQuestionAgent(ScAgentClassic):
         
         next_question: ScAddr = self.get_next_question(user, test, question, is_question_answer_correct(question_answer, question))
 
-        if next_question.is_valid(): 
-            # добавление вопроса в историю прохождения теста
-            templ = ScTemplate()
-            templ.quintuple(
-                passing_test_history,
-                (sc_type.VAR_PERM_POS_ARC, "_last_arc"),
-                question,
-                (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_arc_to_last_arc"),
-                ScKeynodes.resolve("rrel_last", sc_type.CONST_NODE_ROLE)
-            )
-            search_results = search_by_template(templ)
-            if search_results:
-                search_result = search_results[0]
-                delete_elements(search_result.get("_arc_to_last_arc"))
 
+        templ = ScTemplate()
+        templ.quintuple(
+            passing_test_history,
+            (sc_type.VAR_PERM_POS_ARC, "_last_arc"),
+            question,
+            (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_arc_to_last_arc"),
+            ScKeynodes.resolve("rrel_last", sc_type.CONST_NODE_ROLE)
+        )
+        search_results = search_by_template(templ)
+        if search_results:
+            search_result = search_results[0]
+            delete_elements(search_result.get("_arc_to_last_arc"))
+
+            if next_question.is_valid(): 
                 question_arc: ScAddr = generate_connector(sc_type.CONST_PERM_POS_ARC, test, next_question)
                 arc = generate_connector(sc_type.CONST_COMMON_ARC, search_result.get("_last_arc"), question_arc)
                 generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_basic_sequence", sc_type.VAR_NODE_NON_ROLE), arc)
                 generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), question_arc)
+            else:
+                create_action("action_finish_test", user, test)
+
         else:
-            create_action("action_finish_test", user, test)
+            return ScResult.ERROR
 
     
         self.logger.info("GetNextQuestionAgent: finished successfully")
