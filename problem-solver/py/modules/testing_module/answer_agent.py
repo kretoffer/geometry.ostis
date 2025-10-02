@@ -49,7 +49,7 @@ class AnswerAgent(ScAgentClassic):
             passing_test_history,
             sc_type.VAR_PERM_POS_ARC,
             (sc_type.NODE, "_last_question"),
-            sc_type.VAR_PERM_POS_ARC,
+            sc_type.VAR_ACTUAL_TEMP_POS_ARC,
             ScKeynodes.resolve("rrel_last", sc_type.CONST_NODE_ROLE)
         )
         search_results = search_by_template(templ)

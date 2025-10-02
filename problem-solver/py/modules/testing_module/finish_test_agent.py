@@ -13,6 +13,7 @@ from sc_kpm.utils.action_utils import (
     get_action_arguments
 )
 from sc_kpm import ScKeynodes
+from sc_kpm.utils.action_utils import generate_action_result
 
 from typing import Tuple, List
 
@@ -56,9 +57,12 @@ class FinishTestAgent(ScAgentClassic):
 
         score, middle_question_difficulty, worth_studied_themes, well_studied_themes = self.calculate_test_results(i, passing_test_history)
 
-        self.set_user_knowledge_level(user, self.define_user_knowledge_level(score, middle_question_difficulty, worth_studied_themes, well_studied_themes))
+        kn_level = self.define_user_knowledge_level(score, middle_question_difficulty, worth_studied_themes, well_studied_themes)
+        self.set_user_knowledge_level(user, kn_level)
         self.set_user_well_studied_themes(user, well_studied_themes)
         self.set_user_worth_studied_themes(user, worth_studied_themes)
+
+        generate_action_result(action, kn_level)
     
         self.logger.info("FinishTestAgent: finished successfully")
         return ScResult.OK
@@ -74,51 +78,52 @@ class FinishTestAgent(ScAgentClassic):
         score = 0
 
         while True:
+            print(i)
             templ = ScTemplate()
             templ.triple(
                 passing_test_history,
                 i,
                 (sc_type.VAR_NODE, "_question")
             )
-            search_results = search_by_template(templ)
-
-            question = search_results[0].get("_question")
             templ.quintuple(
-                question,
+                "_question",
                 sc_type.VAR_PERM_POS_ARC,
-                (sc_type.VAR_NODE, "_question"),
+                (sc_type.VAR_NODE, "_question_ref"),
                 sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("rrel_test_question", sc_type.CONST_NODE_ROLE)
+                ScKeynodes.resolve("rrel_test_question", sc_type.VAR_NODE_ROLE)
             )
-            question_ref = search_by_template(templ)[0].get("_question")
 
             templ.quintuple(
-                question,
+                "_question",
                 sc_type.VAR_PERM_POS_ARC,
                 (sc_type.VAR_NODE, "_answer"),
                 sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("rrel_question_answer", sc_type.CONST_NODE_ROLE)
+                ScKeynodes.resolve("rrel_question_answer", sc_type.VAR_NODE_ROLE)
             )
-            user_answer = search_by_template(templ)[0].get("_answer")
-
 
             # Получение необходимых значений для оценивания
             templ.quintuple(
-                question_ref,
+                "_question_ref",
                 sc_type.VAR_COMMON_ARC,
                 (sc_type.VAR_NODE, "_theme"),
                 sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("nrel_theme", sc_type.CONST_NODE_NON_ROLE)
+                ScKeynodes.resolve("nrel_theme", sc_type.VAR_NODE_NON_ROLE)
             )
-            theme = search_by_template(templ)[0].get("_theme")
             templ.quintuple(
-                question_ref,
+                "_question_ref",
                 sc_type.VAR_COMMON_ARC,
-                (sc_type.VAR_NODE, "_difficulty"),
+                (sc_type.VAR_NODE_LINK, "_difficulty"),
                 sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("nrel_difficulty", sc_type.CONST_NODE_NON_ROLE)
+                ScKeynodes.resolve("nrel_difficulty", sc_type.VAR_NODE_NON_ROLE)
             )
-            difficulty = int(get_link_content_data(search_by_template(templ)[0].get("_difficulty")))
+            search_results = search_by_template(templ)
+
+            question = search_results[0].get("_question")
+            diff = search_results[0].get("_difficulty")
+            user_answer = search_results[0].get("_answer")
+            theme = search_results[0].get("_theme")
+
+            difficulty = int(get_link_content_data(diff))
 
 
             is_correct = is_question_answer_correct(user_answer, question)

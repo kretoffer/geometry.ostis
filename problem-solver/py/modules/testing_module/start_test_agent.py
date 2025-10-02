@@ -73,7 +73,7 @@ class StartTestAgent(ScAgentClassic):
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_test_question", sc_type.VAR_NODE_ROLE), "arc_to_first_question")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "passing_test_history", "question", "arc_from_pth2q")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.rrel_index(1), "arc_from_pth2q")
-        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), "arc_from_pth2q")
+        constr.generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), "arc_from_pth2q")
 
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "question", user, "arc_to_user")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_passer", sc_type.VAR_NODE_ROLE), "arc_to_user")
