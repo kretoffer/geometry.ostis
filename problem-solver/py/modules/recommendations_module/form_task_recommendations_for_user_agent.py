@@ -9,7 +9,7 @@ from sc_kpm.sc_sets import ScSet
 from sc_kpm.utils import (
     generate_connector,
     generate_node,
-    get_link_content
+    get_link_content_data
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
@@ -167,6 +167,6 @@ class FormTaskRecommendationsForUserAgent(ScAgentClassic):
 
         search_results = search_by_template(templ)
         if search_results:
-            return float(1.0 - get_link_content(search_results[0].get("_link")))
+            return float(1.0 - get_link_content_data(search_results[0].get("_link")))
         return -100.0
         

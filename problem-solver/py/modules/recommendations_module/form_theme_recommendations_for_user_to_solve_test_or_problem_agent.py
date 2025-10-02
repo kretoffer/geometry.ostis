@@ -9,7 +9,7 @@ from sc_kpm.sc_sets import ScSet
 from sc_kpm.utils import (
     generate_connector,
     generate_node,
-    get_link_content
+    get_link_content_data
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,

@@ -9,7 +9,7 @@ from sc_kpm.sc_sets import ScSet
 from sc_kpm.utils import (
     generate_connector,
     generate_node,
-    get_link_content
+    get_link_content_data
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
@@ -91,7 +91,7 @@ def get_middle_tasks_solutions(user: ScAddr, theme: ScAddr) -> float:
         )
         templ.triple(
             "_solution_info",
-            sc_type.VAR_UNCOMMON_ARC,
+            sc_type.VAR_COMMON_EDGE,
             (sc_type.VAR_NODE_STRUCTURE, "_solution_struct")
         )
         templ.triple(
@@ -124,7 +124,7 @@ def get_middle_tasks_solutions(user: ScAddr, theme: ScAddr) -> float:
         all_tasks_solutions = []
         if search_results:
             for result in search_results:
-                all_tasks_solutions.append(float(get_link_content(result.get("_correctness"))))
+                all_tasks_solutions.append(float(get_link_content_data(result.get("_correctness"))))
 
             return sum(all_tasks_solutions) / len(all_tasks_solutions)
         

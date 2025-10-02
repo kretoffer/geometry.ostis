@@ -7,6 +7,7 @@ Distributed under the MIT License
 import argparse
 from sc_kpm import ScServer
 from modules.example_module.example_module import ExampleModule
+from modules.recommendations_module.recommendations_module import RecommendationsModule
 
 SC_SERVER_PROTOCOL = "protocol"
 SC_SERVER_HOST = "host"
@@ -23,6 +24,7 @@ def main(args: dict):
 
     with server.connect():
         modules = [
+            RecommendationsModule(),
             ExampleModule()
         ]
         server.add_modules(*modules)

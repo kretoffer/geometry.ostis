@@ -1,6 +1,6 @@
 import logging
 from typing import List
-from sc_client.models import ScAddr, ScTemplate, ScSet
+from sc_client.models import ScAddr, ScTemplate
 from sc_client.constants import sc_type
 from sc_client.client import search_by_template, generate_by_template, delete_elements
 
@@ -9,7 +9,7 @@ from sc_kpm.sc_sets import ScSet
 from sc_kpm.utils import (
     generate_connector,
     generate_node,
-    get_link_content
+    get_link_content_data
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
