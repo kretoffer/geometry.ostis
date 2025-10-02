@@ -133,5 +133,5 @@ def get_middle_tasks_solutions(user: ScAddr, theme: ScAddr) -> float:
 
 def create_sc_set(elements: list[ScAddr]) -> ScAddr:
     sc_set = ScSet()
-    sc_set.add(elements)
-    return sc_set  
+    sc_set.add(*elements)
+    return sc_set.set_node
