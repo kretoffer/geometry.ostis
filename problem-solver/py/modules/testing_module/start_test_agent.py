@@ -2,6 +2,7 @@ import logging
 from sc_client.models import ScAddr, ScTemplate, ScConstruction
 from sc_client.constants import sc_type
 from sc_client.client import search_by_template, generate_elements
+from sc_client.client import delete_elements
 
 from sc_kpm import ScAgentClassic, ScResult
 from sc_kpm.utils.action_utils import (
@@ -37,6 +38,8 @@ class StartTestAgent(ScAgentClassic):
         # rrel_1 -> (action -> user);;
         # rrel_2 -> (action -> test);;
         [user, test] = get_action_arguments(action, 2)
+
+        self.remove_current_test(user)
         
         templ = ScTemplate()
         templ.quintuple(
@@ -80,3 +83,16 @@ class StartTestAgent(ScAgentClassic):
 
         self.logger.info("StartTestAgent: finished successfully")
         return ScResult.OK
+    
+    def remove_current_test(self, user: ScAddr):
+        templ = ScTemplate()
+        templ.quintuple(
+            user,
+            (sc_type.VAR_COMMON_ARC, "arc_to_test"),
+            sc_type.VAR_NODE,
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("nrel_current_test", sc_type.VAR_NODE_NON_ROLE)
+        )
+        search_results = search_by_template(templ)
+        for search_result in search_results:
+            delete_elements(search_result.get("arc_to_test"))
