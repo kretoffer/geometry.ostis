@@ -47,14 +47,14 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
 
         preferable_content_types = self.get_user_preferable_content_types(user)
         personal_characteristics = self.get_user_personal_characteristics(user)
-        genereted_struct = self.set_user_prefering_lesson_materials(user, theme, preferable_content_types, personal_characteristics)
+        lessons = self.set_user_prefering_lesson_materials(theme, preferable_content_types, personal_characteristics)
 
-        if genereted_struct.is_valid():
+        if lessons:
             self.logger.info("GetLessonOnTheThemeAgent: recommendations are generated")
-            generate_action_result(action_node, genereted_struct)
+            generate_action_result(action_node, lessons)
+            return ScResult.OK
 
-
-        return ScResult.OK
+        return ScResult.NO
 
 
     def get_user_preferable_content_types(self, user: ScAddr) -> list[ScAddr]:
@@ -69,14 +69,13 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         templ.triple(
             "_preferencies_set",
             sc_type.VAR_PERM_POS_ARC,
-            (sc_type.CONST_NODE_CLASS, "_content_type")
+            (sc_type.VAR_NODE_CLASS, "_content_type")
         )
 
         search_results = search_by_template(templ)
         content_types = []
-        if search_results:
-            for content_type_element in content_types:
-                content_types.append(content_type_element.get("_content_type"))
+        for el in search_results:
+            content_types.append(el.get("_content_type"))
         return content_types
     
 
@@ -92,69 +91,43 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
         templ.triple(
             "_characteristics_set",
             sc_type.VAR_PERM_POS_ARC,
-            (sc_type.CONST_NODE_CLASS, "_characteristic")
+            (sc_type.VAR_NODE_CLASS, "_characteristic")
         )
 
         search_results = search_by_template(templ)
         characteristic = []
-        if search_results:
-            for content_type_element in characteristic:
-                characteristic.append(content_type_element.get("_characteristic"))
+        for el in search_results:
+            characteristic.append(el.get("_characteristic"))
         return characteristic
     
 
-    def delete_previous_lessons(self, user: ScAddr, theme: ScAddr) -> bool:
-        templ = ScTemplate()
-        templ.quintuple(
-            user,
-            (sc_type.VAR_COMMON_ARC, "_previous_arc") 
-            (sc_type.VAR_NODE_STRUCTURE, "_lessons_structure"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_lessons_on_theme", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC, 
-            theme,
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_stiding_theme", sc_type.CONST_NODE_NON_ROLE)
-        )
-        templ.triple(
-            "_lessons_structure",
-            sc_type.VAR_PERM_POS_ARC,
-            theme
-        )
-
-        search_results = search_by_template(templ)
-        if search_results:
-            struct = search_results[0].get("_lessons_structure"),
-            previous_arc = search_results[0].get("_previous_arc"),
-            return delete_elements(struct, previous_arc)
-        return True
-    
-
     def set_user_prefering_lesson_materials(self, theme: ScAddr, 
-            content_types: list[ScAddr], personal_characteristics: list[ScAddr]) -> bool:
+            content_types: list[ScAddr], personal_characteristics: list[ScAddr]) -> ScAddr:
         templ = ScTemplate()
         templ.quintuple(
             theme,
             sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_NODE, "_lesson_formats_set"),
+            (sc_type.VAR_NODE, "_lessons_set"),
             sc_type.VAR_PERM_POS_ARC, 
-            ScKeynodes("nrel_formats", sc_type.CONST_NODE_NON_ROLE)
+            ScKeynodes.resolve("nrel_lessons", sc_type.CONST_NODE_NON_ROLE)
         )
-
-        search_results = search_by_template(templ)
-        
-        if not search_results:
+        templ.triple(
+            "_lessons_set",
+            sc_type.VAR_PERM_POS_ARC,
+            (sc_type.VAR_NODE, "_lesson")
+        )
+        search_results_without_format = search_by_template(templ)
+        if not search_results_without_format:
             return ScAddr()
-        
-        lesson_formats_set = search_results[0].get("_lesson_formats_set")
-        lessons = ScSet()
+        search_results_without_characteristic = []
+        ideal_search_results = []
+
+        lessons_set = search_results_without_format[0].get("_lessons_set")
+
         for lesson_format in content_types:
             templ = ScTemplate()
             templ.triple(
-                lesson_formats_set, 
+                lessons_set,
                 sc_type.VAR_PERM_POS_ARC,
                 (sc_type.VAR_NODE, "_lesson")
             )
@@ -163,6 +136,12 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
                 sc_type.VAR_PERM_POS_ARC,
                 "_lesson"
             )
+
+            search_results = search_by_template(templ)
+            if not search_results:
+                search_results_without_characteristic.extend(search_results)
+                continue
+
             for characteristic in personal_characteristics:
                 templ.quintuple(
                     "_lesson",
@@ -170,33 +149,24 @@ class GetLessonOnTheThemeAgent(ScAgentClassic):
                     characteristic,
                     sc_type.VAR_PERM_POS_ARC,
                     ScKeynodes.resolve("rrel_is_available_for", sc_type.CONST_NODE_ROLE)
-                )   
+                )
 
-        search_results = search_by_template(templ)
-        if not search_results:
-            return False   
-        
-        for result in search_results:
-            lessons.add(result.get("_lesson"))
-        
-        templ = ScTemplate()
-        templ.triple(
-            (sc_type.VAR_NODE_STRUCTURE, "_lessons_structure"),
-            sc_type.VAR_PERM_POS_ARC,
-            theme
-        )
-        templ.triple(
-            "_lessons_structure",
-            sc_type.VAR_PERM_POS_ARC,
-            lessons
-        )
+            ideal_search_results.extend(search_by_template(templ))
 
-        generated_results = generate_by_template(templ)
-        if not generated_results:
+        if ideal_search_results:
+            search_results = ideal_search_results
+        elif search_results_without_characteristic:
+            search_results = search_results_without_characteristic
+        elif search_results_without_format:
+            search_results = search_results_without_format
+        else:
             return ScAddr()
         
-        generated_struct = generated_results.get("_lessons_structure")
-        return generated_struct
+        lessons = ScSet()
+        for search_result in search_results:
+            lessons.add(search_result.get("_lesson"))
+        
+        return lessons.set_node
 
 
 
