@@ -73,8 +73,9 @@ class FormThemeRecommendationsForUserToSolveTestOrTaskAgent(ScAgentClassic):
         if generated_struct.is_valid():
             self.logger.info("FormThemeRecommendationsForUserToSolveTestOrTaskAgent: recommendations are generated")
             generate_action_result(action_node, generated_struct)
+            return ScResult.OK
         
-        return ScResult.OK
+        return ScResult.NO
     
 
     

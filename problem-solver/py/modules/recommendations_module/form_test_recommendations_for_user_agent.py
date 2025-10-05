@@ -77,7 +77,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
             theme
         )
         templ.quintuple(
-            (sc_type.CONST_NODE, "_test"),
+            (sc_type.VAR_NODE, "_test"),
             sc_type.VAR_COMMON_ARC,
             "_theme_set_of_test",
             sc_type.VAR_PERM_POS_ARC,

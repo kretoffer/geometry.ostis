@@ -79,7 +79,7 @@ class FormTaskRecommendationsForUserAgent(ScAgentClassic):
             theme
         )
         templ.quintuple(
-            (sc_type.CONST_NODE, "_problem"),
+            (sc_type.VAR_NODE, "_problem"),
             sc_type.VAR_COMMON_ARC,
             "_theme_set_of_problem",
             sc_type.VAR_PERM_POS_ARC,
