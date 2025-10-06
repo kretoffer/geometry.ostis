@@ -18,6 +18,8 @@ from sc_kpm.utils.action_utils import (
 )
 from sc_kpm import ScKeynodes
 
+from .additions import create_sc_set
+
 
 
 logging.basicConfig(
@@ -60,7 +62,11 @@ class FormTaskFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
         
     
         
-        generated_struct = self.set_recommendations_for_user(bad_problems, good_problems, other_problems)
+        generated_struct = self.set_recommendations_for_user(
+            create_sc_set(bad_problems), 
+            create_sc_set(good_problems), 
+            create_sc_set(other_problems)
+        )
         if generated_struct.is_valid():
             self.logger.info("FormTaskFromCentralizedTestingRecommendationsAgent: recommendations are generated")
             generate_action_result(action_node, generated_struct)
@@ -168,6 +174,6 @@ class FormTaskFromCentralizedTestingRecommendationsAgent(ScAgentClassic):
         if not generating_results:
             return ScAddr()
         
-        generated_struct = generating_results.get("_recommendations_struct")
+        generated_struct = generating_results.get("_recommedation_struct")
         return generated_struct
         

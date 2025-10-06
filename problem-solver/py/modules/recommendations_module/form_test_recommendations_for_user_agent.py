@@ -18,6 +18,8 @@ from sc_kpm.utils.action_utils import (
 )
 from sc_kpm import ScKeynodes
 
+from .additions import create_sc_set
+
 
 
 logging.basicConfig(
@@ -59,7 +61,11 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
                     other_tests.append(test)
         
     
-        generated_struct = self.set_recommendations_for_user(bad_tests, good_tests, other_tests)
+        generated_struct = self.set_recommendations_for_user(
+            create_sc_set(bad_tests), 
+            create_sc_set(good_tests), 
+            create_sc_set(other_tests)
+        )
         if generated_struct.is_valid():
             self.logger.info("FormTestRecommendationsForUserAgent: recommendations are generated")
             generate_action_result(action_node, generated_struct)
@@ -131,7 +137,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
         if not generating_results:
             return ScAddr()
         
-        generated_struct = generating_results.get("_recommendation_struct")
+        generated_struct = generating_results.get("_recommedation_struct")
         return generated_struct
 
 
