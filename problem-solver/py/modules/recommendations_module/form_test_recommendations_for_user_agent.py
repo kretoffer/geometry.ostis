@@ -78,7 +78,7 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
     def get_all_test_on_this_theme(self, theme: ScAddr) -> List[ScAddr]:
         templ = ScTemplate()
         templ.triple(
-            (sc_type.VAR_NODE, "_theme_set_of_test"),
+            (sc_type.VAR_NODE_TUPLE, "_theme_set_of_test"),
             sc_type.VAR_PERM_POS_ARC,
             theme
         )
@@ -90,9 +90,9 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
             ScKeynodes.resolve("nrel_themes", sc_type.CONST_NODE_NON_ROLE)
         )
         templ.triple(
-            "_test",
+            ScKeynodes.resolve("concept_test", sc_type.CONST_NODE_CLASS),
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("concept_test", sc_type.CONST_NODE_CLASS)
+            "_test"
         )
 
         search_results = search_by_template(templ)
@@ -170,6 +170,6 @@ class FormTestRecommendationsForUserAgent(ScAgentClassic):
 
         search_results = search_by_template(templ)
         if search_results:
-            return float(1.0 - get_link_content_data(search_results[0].get("_link")))
+            return float(1.0 - float(get_link_content_data(search_results[0].get("_link"))))
         return -100.0
         
