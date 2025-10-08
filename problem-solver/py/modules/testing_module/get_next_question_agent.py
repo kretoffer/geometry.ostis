@@ -71,7 +71,6 @@ class GetNextQuestionAgent(ScAgentClassic):
         # rrel_2 -> (action -> test);;
         # rrel_3 -> (action -> question);;
         [user, test, question] = get_action_arguments(action, 3)
-        print("GetNextQuestionAgent: idtf of question is", get_element_system_identifier(question))
 
         if question.is_valid():
             passing_test_history = get_user_passing_test_history(user, test)
@@ -80,7 +79,6 @@ class GetNextQuestionAgent(ScAgentClassic):
         else:
             passing_test_history = self.initialize_user_passing_test_history(user, test)
             first_question = self.get_first_question(test)
-            print("first question was returned!")
             return first_question
         
         next_question: ScAddr = self.get_next_question(user, test, question, is_question_answer_correct(question_answer, question))
