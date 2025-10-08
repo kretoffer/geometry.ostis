@@ -1,0 +1,14 @@
+action_get_next_question
+<- action;;
+
+action_start_test
+<- action;;
+
+action_start_diagnostic_test
+<- action;;
+
+action_answered_test_question
+<- action;;
+
+action_finish_test
+<- action;;

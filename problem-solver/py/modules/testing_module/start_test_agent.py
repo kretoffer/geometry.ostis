@@ -7,8 +7,11 @@ from sc_client.client import delete_elements
 from sc_kpm import ScAgentClassic, ScResult
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
-    get_action_arguments
+    get_action_arguments,
 )
+
+from sc_kpm.utils import get_element_system_identifier
+
 from sc_kpm import ScKeynodes
 
 from random import choice
@@ -57,6 +60,7 @@ class StartTestAgent(ScAgentClassic):
             ScKeynodes.rrel_index(1)
         )
         first_question = search_by_template(templ)[0].get("first_question")
+        print("first question in start idtf:", get_element_system_identifier(first_question))
 
         constr = ScConstruction()
 

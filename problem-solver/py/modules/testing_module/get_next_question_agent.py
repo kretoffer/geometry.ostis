@@ -2,11 +2,13 @@ import logging
 from sc_client.models import ScAddr, ScTemplate
 from sc_client.constants import sc_type
 from sc_client.client import search_by_template, generate_by_template, delete_elements
+from sc_client.client import get_elements_types
 
 from sc_kpm import ScAgentClassic, ScResult
 from sc_kpm.utils import (
     generate_connector,
-    generate_node
+    generate_node,
+    get_element_system_identifier
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
@@ -69,6 +71,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         # rrel_2 -> (action -> test);;
         # rrel_3 -> (action -> question);;
         [user, test, question] = get_action_arguments(action, 3)
+        print("GetNextQuestionAgent: idtf of question is", get_element_system_identifier(question))
 
         if question.is_valid():
             passing_test_history = get_user_passing_test_history(user, test)
@@ -77,6 +80,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         else:
             passing_test_history = self.initialize_user_passing_test_history(user, test)
             first_question = self.get_first_question(test)
+            print("first question was returned!")
             return first_question
         
         next_question: ScAddr = self.get_next_question(user, test, question, is_question_answer_correct(question_answer, question))
@@ -215,68 +219,168 @@ class GetNextQuestionAgent(ScAgentClassic):
         if search_results:
             return search_results.get("_first_question")
         return ScAddr()
+        
+
+    def get_harder_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
+        templ = ScTemplate()
+
+        # находим сет с вопросами
+        templ.quintuple(
+            test,
+            sc_type.VAR_COMMON_ARC,
+            (sc_type.VAR_NODE, "_question_set"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("nrel_decomposition", sc_type.CONST_NODE_NON_ROLE)
+        )
+
+        # находим первый элемент сета
+        templ.quintuple(
+            "_question_set",
+            (sc_type.VAR_PERM_POS_ARC, "_first_question_arc"),
+            (sc_type.VAR_NODE, "_first_question"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("rrel_1", sc_type.CONST_NODE_ROLE)
+        )
+
+        search_results = search_by_template(templ)
+        if not search_results:
+            return ScAddr()
+        
+        # будем перемещаться по дугам, соединённым nrel_basic_sequence
+        last_question_arc = search_results[0].get("_first_question_arc")
+        this_question = search_results[0].get("_first_question")
+        templ = ScTemplate()
+
+        # идём, пока не найдём текущий вопрос
+        while question != this_question:
+
+            # находим "следующую дугу"
+            templ.quintuple(
+                last_question_arc,
+                (sc_type.VAR_COMMON_ARC, "_connection_arc"),
+                (sc_type.VAR_PERM_POS_ARC, "_second_arc"),
+                sc_type.VAR_PERM_POS_ARC,
+                ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
+            )
+
+            # находим на вопрос, соединённый этой дугой
+            templ.triple(
+                sc_type.VAR_NODE,
+                "_second_arc",
+                (sc_type.VAR_NODE, "_next_question")
+            )
+
+            search_results = search_by_template(templ)
+            # если не нашли ничего -- прошли весь сет. возвращаем пустой адрес
+            if not search_results:
+                return ScAddr()
+            last_question_arc = search_results[0].get("_second_arc")
+            this_question = search_results[0].get("_next_question")
+            templ = ScTemplate()
+
+        templ = ScTemplate()
+
+        # ищем следующую дугу и вопрос
+        templ.quintuple(
+            last_question_arc,
+            (sc_type.VAR_COMMON_ARC, "_connection_arc"),
+            (sc_type.VAR_PERM_POS_ARC, "_second_arc"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
+        )
+        templ.triple(
+            sc_type.VAR_NODE,
+            "_second_arc",
+            (sc_type.VAR_NODE, "_next_question")
+        )
+
+        search_results = search_by_template(templ)
+        # если не нашли ничего -- прошли весь сет. возвращаем пустой адрес
+        if not search_results:
+            return ScAddr()
+        
+        more_hard_question = search_results[0].get("_next_question")
+        return more_hard_question
     
 
     def get_simplier_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
         templ = ScTemplate()
-        # ищем дугу, связывающую вопрос с тестом
-        templ.triple(
-            test,
-            (sc_type.VAR_PERM_POS_ARC, "_arc_of_this_question"),
-            question
-        )
 
-        # ищем дугу, связывающую следующий вопрос проще этого
+
+        # всё аналогично get_harder_question, но в конце идём в другую сторону 
+
+
         templ.quintuple(
-            (sc_type.VAR_PERM_POS_ARC, "_arc_of_simpler_question"),
+            test,
             sc_type.VAR_COMMON_ARC,
-            "_arc_of_this_question",
+            (sc_type.VAR_NODE, "_question_set"),
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
+            ScKeynodes.resolve("nrel_decomposition", sc_type.CONST_NODE_NON_ROLE)
         )
 
-        # ищем вопрос теста, связанный этой дугой
-        templ.triple(
-            test,
-            "_arc_of_simpler_question",
-            (sc_type.VAR_NODE, "_simpler_question")
+        templ.quintuple(
+            "_question_set",
+            (sc_type.VAR_PERM_POS_ARC, "_first_question_arc"),
+            (sc_type.VAR_NODE, "_first_question"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("rrel_1", sc_type.CONST_NODE_ROLE)
         )
 
         search_results = search_by_template(templ)
-        if search_results:
-            return search_results[0]
-        return ScAddr()
-    
-
-    def get_harder_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
+        if not search_results:
+            return ScAddr()
+        
+        last_question_arc = search_results[0].get("_first_question_arc")
+        this_question = search_results[0].get("_first_question")
         templ = ScTemplate()
-        # ищем дугу, связывающую вопрос с тестом
-        templ.triple(
-            test,
-            (sc_type.VAR_PERM_POS_ARC, "_arc_of_this_question"),
-            question
-        )
 
-        # ищем дугу, связывающую следующий вопрос сложнее этого
+
+        while question != this_question:
+
+            templ.quintuple(
+                last_question_arc,
+                (sc_type.VAR_COMMON_ARC, "_connection_arc"),
+                (sc_type.VAR_PERM_POS_ARC, "_second_arc"),
+                sc_type.VAR_PERM_POS_ARC,
+                ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
+            )
+
+            templ.triple(
+                sc_type.VAR_NODE,
+                "_second_arc",
+                (sc_type.VAR_NODE, "_next_question")
+            )
+
+            search_results = search_by_template(templ)
+
+            if not search_results:
+                return ScAddr()
+            last_question_arc = search_results[0].get("_second_arc")
+            this_question = search_results[0].get("_next_question")
+            templ = ScTemplate()
+
+        templ = ScTemplate()
+
+        # ищем следующую дугу и вопрос, но теперь идём "назад"
         templ.quintuple(
-            "_arc_of_this_question",
-            sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_PERM_POS_ARC, "_arc_of_harder_question"),
+            (sc_type.VAR_PERM_POS_ARC, "_second_arc"),
+            (sc_type.VAR_COMMON_ARC, "_connection_arc"),
+            last_question_arc,
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
         )
-
-        # ищем вопрос теста, связанный этой дугой
         templ.triple(
-            test,
-            "_arc_of_harder_question",
-            (sc_type.VAR_NODE, "_harder_question")
+            sc_type.VAR_NODE,
+            "_second_arc",
+            (sc_type.VAR_NODE, "_next_question")
         )
 
         search_results = search_by_template(templ)
-        if search_results:
-            return search_results[0]
-        return ScAddr()
+        if not search_results:
+            return ScAddr()
+        
+        more_simple_question = search_results[0].get("_next_question")
+        return more_simple_question
 
 
     def get_next_question(self, user: ScAddr, test: ScAddr, question: ScAddr, question_is_correct: bool) -> ScAddr:
