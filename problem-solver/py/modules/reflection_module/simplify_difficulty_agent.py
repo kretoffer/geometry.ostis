@@ -1,16 +1,9 @@
 import logging
-from typing import List
-from sc_client.models import ScAddr, ScTemplate, ScLinkContent, ScLinkContentType
+from sc_client.models import ScAddr, ScTemplate
 from sc_client.constants import sc_type
-from sc_client.client import search_by_template, generate_by_template, delete_elements
+from sc_client.client import search_by_template
 
 from sc_kpm import ScAgentClassic, ScResult
-from sc_kpm.sc_sets import ScSet
-from sc_kpm.utils import (
-    generate_connector,
-    generate_node,
-    get_link_content
-)
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
     get_action_arguments
@@ -18,7 +11,7 @@ from sc_kpm.utils.action_utils import (
 from sc_kpm import ScKeynodes
 
 
-from additions import get_difficulty_of_questiions, update_difficulty
+from .additions import get_user_kn_level, update_kn_level, get_system_rating, get_self_rating
 
 
 logging.basicConfig(
@@ -42,36 +35,31 @@ class SimplifyDifficultyAgent(ScAgentClassic):
     def run(self, action_node: ScAddr) -> ScResult:
         self.logger.info("SimplifyDifficultyAgent started")
 
-        user = get_action_arguments(action_node, 1)
+        [user] = get_action_arguments(action_node, 1)
 
+        ratings = (get_system_rating(user), get_self_rating(user))
+        this_level = get_user_kn_level(ratings[0])
+        more_simple_level = self.get_more_simple_level(this_level)
 
-        this_difficulty = get_difficulty_of_questiions(user)
-
-        more_simple_difficulty = self.get_more_simple_level(this_difficulty)
-
-        if more_simple_difficulty.is_valid():
-            update_difficulty(user, more_simple_difficulty)
-
-        return ScResult.OK
-
-
-
+        if more_simple_level.is_valid():
+            for rating in ratings:
+                update_kn_level(rating, more_simple_level)
+            return ScResult.OK
+        
+        return ScResult.NO
 
     
-    def get_more_simple_level(this_difficulty: ScAddr) -> ScAddr:
+    def get_more_simple_level(self, this_level: ScAddr) -> ScAddr:
         templ = ScTemplate()
         templ.quintuple(
-            this_difficulty,
+            (sc_type.VAR_NODE, "_more_simple_difficulty"),
             sc_type.VAR_COMMON_ARC,
-            (sc_type.CONST_NODE, "_more_simple_difficulty"),
+            this_level,
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_more_simple_level", sc_type.CONST_NODE_NON_ROLE)
+            ScKeynodes.resolve("nrel_next_level", sc_type.CONST_NODE_NON_ROLE)
         )
 
         search_results = search_by_template(templ)
         if search_results:
             return search_results[0].get("_more_simple_difficulty")
         return ScAddr()
-    
-
-    

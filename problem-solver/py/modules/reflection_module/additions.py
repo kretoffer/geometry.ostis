@@ -1,63 +1,85 @@
-import logging
-from typing import List
-from sc_client.models import ScAddr, ScTemplate, ScLinkContent, ScLinkContentType
+from sc_client.models import ScAddr, ScTemplate
 from sc_client.constants import sc_type
-from sc_client.client import search_by_template, generate_by_template, delete_elements
+from sc_client.client import search_by_template, delete_elements, generate_by_template
 
-from sc_kpm import ScAgentClassic, ScResult
-from sc_kpm.sc_sets import ScSet
-from sc_kpm.utils import (
-    generate_connector,
-    generate_node,
-    get_link_content
-)
-from sc_kpm.utils.action_utils import (
-    finish_action_with_status,
-    get_action_arguments
-)
 from sc_kpm import ScKeynodes
 
 
-def get_difficulty_of_questiions(user: ScAddr) -> ScAddr:
+def get_user_kn_level(rating: ScAddr) -> ScAddr:
+    templ = ScTemplate()
+    templ.quintuple(
+        ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE),
+        sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+        (sc_type.VAR_NODE, "main"),
+        sc_type.VAR_PERM_POS_ARC,
+        rating
+    )
+    templ.quintuple(
+        "main",
+        sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+        (sc_type.VAR_NODE, "knowledge_level"),
+        sc_type.VAR_PERM_POS_ARC,
+        ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE)
+    )
+    knowledge_level = search_by_template(templ)[0].get("knowledge_level")
+    return knowledge_level
+
+
+def get_rating(user: ScAddr, relation: ScAddr) -> ScAddr:
     templ = ScTemplate()
     templ.quintuple(
         user,
-        sc_type.VAR_COMMON_ARC,
-        (sc_type.CONST_NODE, "_user_difficulty"),
+        sc_type.COMMON_ARC,
+        (sc_type.VAR_NODE_STRUCTURE, "_rating"),
         sc_type.VAR_PERM_POS_ARC,
-        ScKeynodes.resolve("nrel_difficulty_of_questions", sc_type.CONST_NODE_NON_ROLE)
+        relation
     )
 
     search_results = search_by_template(templ)
     if search_results:
-        return search_results[0].get("_user_difficulty")
+        return search_results[0].get("_rating")
     return ScAddr()
 
 
-def update_difficulty(user: ScAddr, new_difficulty: ScAddr) -> bool:
-        templ = ScTemplate()
-        templ.quintuple(
-            user,
-            (sc_type.VAR_COMMON_ARC, "_previous_arc"),
-            (sc_type.CONST_NODE, "_previous_difficulty"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_difficulty_of_questions", sc_type.CONST_NODE_NON_ROLE)
-        )
+def get_self_rating(user: ScAddr) -> ScAddr:
+    return get_rating(user, ScKeynodes.resolve("nrel_self_rating", sc_type.CONST_NODE_NON_ROLE))
 
-        search_results = search_by_template(templ)
-        if not search_results:
-            return False
-        
-        previous_arc = search_results[0].get("_previous_arc")
-        previous_difficulty = search_results[0].get("_previous_difficulty")
+def get_system_rating(user: ScAddr) -> ScAddr:
+    return get_rating(user, ScKeynodes.resolve("nrel_system_rating", sc_type.CONST_NODE_NON_ROLE))
 
-        delete_elements(previous_arc, previous_difficulty)
 
-        templ_for_generating = ScTemplate()
-        templ_for_generating.quintuple(
-            user,
-            sc_type.VAR_COMMON_ARC,
-            new_difficulty,
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_difficulty_of_questions", sc_type.CONST_NODE_NON_ROLE)
-        )
+def update_kn_level(rating: ScAddr, new_kn_level: ScAddr):
+    templ = ScTemplate()
+    templ.quintuple(
+        ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE),
+        sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+        (sc_type.VAR_NODE, "main"),
+        sc_type.VAR_PERM_POS_ARC,
+        rating
+    )
+    templ.quintuple(
+        "main",
+        (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "arc_to_kn_level"),
+        (sc_type.VAR_NODE, "knowledge_level"),
+        sc_type.VAR_PERM_POS_ARC,
+        ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE)
+    )
+    search_result = search_by_template(templ)[0]
+    delete_elements(search_result.get("arc_to_kn_level"))
+
+    gen_templ = ScTemplate()
+    gen_templ.quintuple(
+        ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE),
+        sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+        (sc_type.VAR_NODE, "main"),
+        sc_type.VAR_PERM_POS_ARC,
+        rating
+    )
+    gen_templ.quintuple(
+        "main",
+        sc_type.VAR_ACTUAL_TEMP_POS_ARC,
+        new_kn_level,
+        sc_type.VAR_PERM_POS_ARC,
+        ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE)
+    )
+    generate_by_template(gen_templ)

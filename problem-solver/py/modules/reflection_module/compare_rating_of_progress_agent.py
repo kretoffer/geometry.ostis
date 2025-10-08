@@ -1,15 +1,13 @@
 import logging
 from typing import List
-from sc_client.models import ScAddr, ScTemplate, ScLinkContent, ScLinkContentType
+from sc_client.models import ScAddr, ScTemplate
 from sc_client.constants import sc_type
 from sc_client.client import search_by_template, generate_by_template, delete_elements
 
 from sc_kpm import ScAgentClassic, ScResult
 from sc_kpm.sc_sets import ScSet
 from sc_kpm.utils import (
-    generate_connector,
-    generate_node,
-    get_link_content
+    get_link_content_data
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
@@ -51,7 +49,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
     def run(self, action_node: ScAddr) -> ScResult:
         self.logger.info("CompareRatingOfProgressAgent started")
 
-        user = get_action_arguments(action_node, 1)
+        [user] = get_action_arguments(action_node, 1)
 
         system_rating = self.get_rating(
             user,
@@ -120,7 +118,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         return ScResult.OK
 
 
-    def get_rating(user: ScAddr, relation: ScAddr) -> ScAddr:
+    def get_rating(self, user: ScAddr, relation: ScAddr) -> ScAddr:
         templ = ScTemplate()
         templ.quintuple(
             user,
@@ -130,13 +128,13 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
             relation
         )
 
-        search_results = search_by_template()
+        search_results = search_by_template(templ)
         if search_results:
             return search_results[0].get("_rating")
         return ScAddr()
 
 
-    def get_knowledge_level(rating: ScAddr, user: ScAddr) -> ScAddr:
+    def get_knowledge_level(self, rating: ScAddr, user: ScAddr) -> ScAddr:
         templ = ScTemplate()
         templ.quintuple(
             (sc_type.VAR_NODE, "_knowledge_level_info"),
@@ -148,7 +146,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         templ.quintuple(
             "_knowledge_level_info",
             sc_type.VAR_ACTUAL_TEMP_POS_ARC,
-            (sc_type.CONST_NODE, "_knowledge_level"),
+            (sc_type.VAR_NODE, "_knowledge_level"),
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("rrel_knowledge_level", sc_type.VAR_NODE_ROLE)
         )
@@ -164,7 +162,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         return ScAddr()
     
 
-    def compare_knowledge_levels(user_knowledge_level: ScAddr, system_knowledge_level: ScAddr) -> tuple[bool, int]:
+    def compare_knowledge_levels(self, user_knowledge_level: ScAddr, system_knowledge_level: ScAddr) -> tuple[bool, int]:
         def get_knowledge_level_as_num(knowledge_level: ScAddr) -> int:
             templ = ScTemplate()
             templ.quintuple(
@@ -177,7 +175,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
 
             search_results = search_by_template(templ)
             if search_results:
-                return int(get_link_content(search_results[0].get("_link"))[0])
+                return int(get_link_content_data(search_results[0].get("_link"))[0])
             return INF
             
         
@@ -189,7 +187,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         return INF
     
 
-    def define_self_rating_level(assessment_gap: int) -> ScAddr:
+    def define_self_rating_level(self, assessment_gap: int) -> ScAddr:
         for rating in SELF_RATING_INTERVALS:
             interval = SELF_RATING_INTERVALS[rating]
             if assessment_gap >= interval[0] and assessment_gap <= interval[1]:
@@ -197,7 +195,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         return ScAddr()
 
 
-    def get_themes(system_rating: ScAddr, user: ScAddr, relation: ScAddr) -> List[ScAddr]:
+    def get_themes(self, system_rating: ScAddr, user: ScAddr, relation: ScAddr) -> List[ScAddr]:
         themes = []
 
         templ = ScTemplate()
@@ -214,7 +212,7 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
             relation
         )
 
-        search_results = search_by_template()
+        search_results = search_by_template(templ)
         if search_results:
             themes_set = search_results[0].get("_themes_set")
             themeTempl = ScTemplate()
@@ -224,14 +222,14 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
                 (sc_type.VAR_NODE, "_theme")
             )
 
-            search_results = search_by_template(templ)  
+            search_results = search_by_template(themeTempl)  
             for search_result in search_results:
                 themes.append(search_result.get("_theme"))
         
         return themes
     
 
-    def update_knowledge_level(rating: ScAddr, user: ScAddr, knowledge_level: ScAddr) -> bool:
+    def update_knowledge_level(self, rating: ScAddr, user: ScAddr, knowledge_level: ScAddr) -> bool:
         templ_for_searching = ScTemplate()
         templ_for_searching.quintuple(
             user,
@@ -273,11 +271,11 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         return False
 
 
-    def update_underrated_themes(self_rating: ScAddr, new_themes: ScAddr) -> bool:
+    def update_underrated_themes(self, self_rating: ScAddr, new_themes: ScAddr) -> bool:
         templ_for_searching = ScTemplate()
         templ_for_searching.quintuple(
             self_rating,
-            (sc_type.VAR_COMMON_ARC, "_previous_arc")
+            (sc_type.VAR_COMMON_ARC, "_previous_arc"),
             (sc_type.VAR_NODE, "_previous_set"),
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("nrel_underrated_themes", sc_type.CONST_NODE_NON_ROLE)
@@ -305,11 +303,11 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         return generate_results
 
 
-    def update_overrated_themes(self_rating: ScAddr, new_themes: ScAddr) -> bool:
+    def update_overrated_themes(self, self_rating: ScAddr, new_themes: ScAddr) -> bool:
         templ_for_searching = ScTemplate()
         templ_for_searching.quintuple(
             self_rating,
-            (sc_type.VAR_COMMON_ARC, "_previous_arc")
+            (sc_type.VAR_COMMON_ARC, "_previous_arc"),
             (sc_type.VAR_NODE, "_previous_set"),
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("nrel_overrated_themes", sc_type.CONST_NODE_NON_ROLE)
@@ -343,16 +341,10 @@ class CompareRatingOfProgressAgent(ScAgentClassic):
         sc_set = ScSet()
         for theme in themes:
             sc_set.add(theme)
-        return sc_set
+        return sc_set._set_node
 
 
-    def define_misjudged_themes(user_themes: ScAddr, system_themes: ScAddr) -> list[ScAddr]:
+    def define_misjudged_themes(self, user_themes: ScAddr, system_themes: ScAddr) -> list[ScAddr]:
         user_set = set(user_themes)
         system_set = set(system_themes) 
         return list(user_set & system_set)
-
-
-
-
-
-
