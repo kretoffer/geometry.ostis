@@ -7,6 +7,7 @@ Distributed under the MIT License
 import argparse
 from sc_kpm import ScServer
 from modules.auth_module.auth_module import AuthModule
+from modules.testing_module.testing_module import TestingModule
 
 SC_SERVER_PROTOCOL = "protocol"
 SC_SERVER_HOST = "host"
@@ -23,7 +24,8 @@ def main(args: dict):
 
     with server.connect():
         modules = [
-            AuthModule()
+            AuthModule(),
+            TestingModule()
         ]
         server.add_modules(*modules)
         with server.register_modules():
