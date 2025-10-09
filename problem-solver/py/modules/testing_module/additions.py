@@ -46,3 +46,13 @@ def is_question_answer_correct(question_answer: ScAddr, question: ScAddr) -> boo
         return True
         
     return False
+
+
+def is_diagnostic(test: ScAddr) -> bool:
+    templ = ScTemplate()
+    templ.triple(
+        ScKeynodes.resolve("concept_diagnostic_test", sc_type.VAR_NODE),
+        sc_type.VAR_PERM_POS_ARC,
+        test
+    )
+    return bool(search_by_template(templ))

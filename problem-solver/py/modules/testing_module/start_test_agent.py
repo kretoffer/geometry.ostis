@@ -14,8 +14,6 @@ from sc_kpm.utils import get_element_system_identifier
 
 from sc_kpm import ScKeynodes
 
-from random import choice
-
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"

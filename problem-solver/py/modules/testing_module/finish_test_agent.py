@@ -17,7 +17,7 @@ from sc_kpm.utils.action_utils import generate_action_result
 
 from typing import Tuple, List
 
-from .additions import get_user_passing_test_history, is_question_answer_correct
+from .additions import get_user_passing_test_history, is_question_answer_correct, is_diagnostic
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"
@@ -58,7 +58,8 @@ class FinishTestAgent(ScAgentClassic):
         score, middle_question_difficulty, worth_studied_themes, well_studied_themes = self.calculate_test_results(i, passing_test_history)
 
         kn_level = self.define_user_knowledge_level(score, middle_question_difficulty, worth_studied_themes, well_studied_themes)
-        self.set_user_knowledge_level(user, kn_level)
+        if is_diagnostic(test):
+            self.set_user_knowledge_level(user, kn_level)
         self.set_user_well_studied_themes(user, well_studied_themes)
         self.set_user_worth_studied_themes(user, worth_studied_themes)
 
@@ -202,8 +203,25 @@ class FinishTestAgent(ScAgentClassic):
 
         themes_set = search_by_template(templ)[0].get("_themes_set")
 
+        templ.triple_list[:-2]
+        templ.quintuple(
+            user,
+            sc_type.VAR_COMMON_ARC,
+            "_themes_set",
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("nrel_well_studied_themes", sc_type.CONST_NODE_NON_ROLE)
+        )
+
         for theme in themes:
             generate_connector(sc_type.CONST_PERM_POS_ARC, themes_set, theme)
+            templ.triple(
+                "_themes_set",
+                (sc_type.VAR_PERM_POS_ARC, "_arc"),
+                theme
+            )
+            if search_results := search_by_template(templ):
+                delete_elements(search_results[0].get("_arc"))
+            templ.triple_list[:-1]
 
 
     def set_user_well_studied_themes(self, user: ScAddr, themes: List[ScAddr]):
@@ -223,8 +241,25 @@ class FinishTestAgent(ScAgentClassic):
 
         themes_set = search_by_template(templ)[0].get("_themes_set")
 
+        templ.triple_list[:-2]
+        templ.quintuple(
+            user,
+            sc_type.VAR_COMMON_ARC,
+            "_themes_set",
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("nrel_worth_studied_themes", sc_type.CONST_NODE_NON_ROLE)
+        )
+
         for theme in themes:
             generate_connector(sc_type.CONST_PERM_POS_ARC, themes_set, theme)
+            templ.triple(
+                "_themes_set",
+                (sc_type.VAR_PERM_POS_ARC, "_arc"),
+                theme
+            )
+            if search_results := search_by_template(templ):
+                delete_elements(search_results[0].get("_arc"))
+            templ.triple_list[:-1]
 
 
     def set_user_knowledge_level(self, user: ScAddr, knowledge_level: ScAddr):
