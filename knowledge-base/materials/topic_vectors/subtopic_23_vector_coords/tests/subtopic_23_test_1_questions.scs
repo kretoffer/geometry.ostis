@@ -1,0 +1,239 @@
+subtopic_23_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Что такое координатные векторы i и j?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_1_answer_1;
+    subtopic_23_test_1_question_1_answer_2;
+    subtopic_23_test_1_question_1_answer_3;
+    subtopic_23_test_1_question_1_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_1_answer_3
+(*
+    => nrel_text: [Единичные векторы, сонаправленные с осями координат];;
+*);;
+
+subtopic_23_test_1_question_1_answer_1
+=> nrel_text: [Векторы произвольной длины на осях координат];;
+
+subtopic_23_test_1_question_1_answer_2
+=> nrel_text: [Векторы, соединяющие начало координат с точками (1,0) и (0,1)];;
+
+subtopic_23_test_1_question_1_answer_4
+=> nrel_text: [Векторы, параллельные осям координат];;
+
+subtopic_23_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Как записывается разложение вектора по координатным векторам?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_2_answer_1;
+    subtopic_23_test_1_question_2_answer_2;
+    subtopic_23_test_1_question_2_answer_3;
+    subtopic_23_test_1_question_2_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_2_answer_2
+(*
+    => nrel_text: [a = x·i + y·j];;
+*);;
+
+subtopic_23_test_1_question_2_answer_1
+=> nrel_text: [a = i + j];;
+
+subtopic_23_test_1_question_2_answer_3
+=> nrel_text: [a = x + y];;
+
+subtopic_23_test_1_question_2_answer_4
+=> nrel_text: [a = (i,j)];;
+
+subtopic_23_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Что такое радиус-вектор точки?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_3_answer_1;
+    subtopic_23_test_1_question_3_answer_2;
+    subtopic_23_test_1_question_3_answer_3;
+    subtopic_23_test_1_question_3_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_3_answer_4
+(*
+    => nrel_text: [Вектор из начала координат в данную точку];;
+*);;
+
+subtopic_23_test_1_question_3_answer_1
+=> nrel_text: [Вектор, соединяющий две произвольные точки];;
+
+subtopic_23_test_1_question_3_answer_2
+=> nrel_text: [Вектор единичной длины];;
+
+subtopic_23_test_1_question_3_answer_3
+=> nrel_text: [Вектор, лежащий на координатной оси];;
+
+subtopic_23_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Как найти координаты вектора AB, если A(x₁;y₁), B(x₂;y₂)?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_4_answer_1;
+    subtopic_23_test_1_question_4_answer_2;
+    subtopic_23_test_1_question_4_answer_3;
+    subtopic_23_test_1_question_4_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_4_answer_1
+(*
+    => nrel_text: [AB(x₂-x₁; y₂-y₁)];;
+*);;
+
+subtopic_23_test_1_question_4_answer_2
+=> nrel_text: [AB(x₁-x₂; y₁-y₂)];;
+
+subtopic_23_test_1_question_4_answer_3
+=> nrel_text: [AB(x₁+x₂; y₁+y₂)];;
+
+subtopic_23_test_1_question_4_answer_4
+=> nrel_text: [AB(x₂; y₂)];;
+
+subtopic_23_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Как вычисляется длина вектора a(a₁;a₂)?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_5_answer_1;
+    subtopic_23_test_1_question_5_answer_2;
+    subtopic_23_test_1_question_5_answer_3;
+    subtopic_23_test_1_question_5_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_5_answer_3
+(*
+    => nrel_text: [|a| = √(a₁² + a₂²)];;
+*);;
+
+subtopic_23_test_1_question_5_answer_1
+=> nrel_text: [|a| = a₁ + a₂];;
+
+subtopic_23_test_1_question_5_answer_2
+=> nrel_text: [|a| = a₁² + a₂²];;
+
+subtopic_23_test_1_question_5_answer_4
+=> nrel_text: [|a| = √(a₁ + a₂)];;
+
+subtopic_23_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Как находятся координаты суммы векторов a(a₁;a₂) и b(b₁;b₂)?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_6_answer_1;
+    subtopic_23_test_1_question_6_answer_2;
+    subtopic_23_test_1_question_6_answer_3;
+    subtopic_23_test_1_question_6_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_6_answer_2
+(*
+    => nrel_text: [(a₁+b₁; a₂+b₂)];;
+*);;
+
+subtopic_23_test_1_question_6_answer_1
+=> nrel_text: [(a₁+b₂; a₂+b₁)];;
+
+subtopic_23_test_1_question_6_answer_3
+=> nrel_text: [(a₁·b₁; a₂·b₂)];;
+
+subtopic_23_test_1_question_6_answer_4
+=> nrel_text: [(a₁-b₁; a₂-b₂)];;
+
+subtopic_23_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Как находятся координаты произведения вектора на число?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_7_answer_1;
+    subtopic_23_test_1_question_7_answer_2;
+    subtopic_23_test_1_question_7_answer_3;
+    subtopic_23_test_1_question_7_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_7_answer_4
+(*
+    => nrel_text: [(k·a₁; k·a₂)];;
+*);;
+
+subtopic_23_test_1_question_7_answer_1
+=> nrel_text: [(a₁+k; a₂+k)];;
+
+subtopic_23_test_1_question_7_answer_2
+=> nrel_text: [(k+a₁; k+a₂)];;
+
+subtopic_23_test_1_question_7_answer_3
+=> nrel_text: [(a₁·k; a₂)];;
+
+subtopic_23_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Когда два вектора коллинеарны?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_8_answer_1;
+    subtopic_23_test_1_question_8_answer_2;
+    subtopic_23_test_1_question_8_answer_3;
+    subtopic_23_test_1_question_8_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_8_answer_3
+(*
+    => nrel_text: [Когда их координаты пропорциональны];;
+*);;
+
+subtopic_23_test_1_question_8_answer_1
+=> nrel_text: [Когда их координаты равны];;
+
+subtopic_23_test_1_question_8_answer_2
+=> nrel_text: [Когда их длины равны];;
+
+subtopic_23_test_1_question_8_answer_4
+=> nrel_text: [Когда их скалярное произведение равно нулю];;
+
+subtopic_23_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Как найти координаты середины отрезка AB, если A(x₁;y₁), B(x₂;y₂)?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_9_answer_1;
+    subtopic_23_test_1_question_9_answer_2;
+    subtopic_23_test_1_question_9_answer_3;
+    subtopic_23_test_1_question_9_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_9_answer_1
+(*
+    => nrel_text: [((x₁+x₂)/2; (y₁+y₂)/2)];;
+*);;
+
+subtopic_23_test_1_question_9_answer_2
+=> nrel_text: [((x₁-x₂)/2; (y₁-y₂)/2)];;
+
+subtopic_23_test_1_question_9_answer_3
+=> nrel_text: [((x₁+x₂); (y₁+y₂))];;
+
+subtopic_23_test_1_question_9_answer_4
+=> nrel_text: [((x₂-x₁)/2; (y₂-y₁)/2)];;
+
+subtopic_23_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Даны точки A(2;3), B(5;7). Найдите координаты вектора AB.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subtopic_vector_coords;
+=> nrel_possible_answer:
+    subtopic_23_test_1_question_10_answer_1;
+    subtopic_23_test_1_question_10_answer_2;
+    subtopic_23_test_1_question_10_answer_3;
+    subtopic_23_test_1_question_10_answer_4;
+=> nrel_correct_answer: subtopic_23_test_1_question_10_answer_4
+(*
+    => nrel_text: [(3;4)];;
+*);;
+
+subtopic_23_test_1_question_10_answer_1
+=> nrel_text: [(7;10)];;
+
+subtopic_23_test_1_question_10_answer_2
+=> nrel_text: [(-3;-4)];;
+
+subtopic_23_test_1_question_10_answer_3
+=> nrel_text: [(2;3)];;

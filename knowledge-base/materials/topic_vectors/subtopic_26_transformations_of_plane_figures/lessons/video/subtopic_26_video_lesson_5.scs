@@ -1,13 +1,9 @@
 subtopic_26_video_lesson_5
 <- concept_lesson;
-<- concept_video_lesson; 
-=> nrel_lesson_content: 
-    ["движение и его свойства (11 мин) && https://youtu.be/w_LS0JghAbk?feature=shared"]
-    (*
-        <- lang_ru;;
-    *);; 
-=> nrel_task: subtopic_26_task_1; 
+<- concept_video_lesson;
+=> nrel_lesson_content: [движение и его свойства (11 мин) && https://youtu.be/w_LS0JghAbk?feature=shared];
+=> nrel_task: subtopic_26_task_1;
 => nrel_test: subtopic_26_test_1;
-<= nrel_is_available_for: { 
-    visibitlity_disorder;
+<= nrel_is_available_for: {
+    visibility_disorder
 };;

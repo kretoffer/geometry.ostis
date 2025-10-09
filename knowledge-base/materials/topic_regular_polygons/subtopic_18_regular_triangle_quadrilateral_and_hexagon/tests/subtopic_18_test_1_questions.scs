@@ -1,0 +1,239 @@
+subtopic_18_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Чему равна высота правильного треугольника со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_1_answer_1;
+    subtopic_18_test_1_question_1_answer_2;
+    subtopic_18_test_1_question_1_answer_3;
+    subtopic_18_test_1_question_1_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_1_answer_2
+(*
+    => nrel_text: [h = (a√3)/2];;
+*);;
+
+subtopic_18_test_1_question_1_answer_1
+=> nrel_text: [h = a/2];;
+
+subtopic_18_test_1_question_1_answer_3
+=> nrel_text: [h = a√2];;
+
+subtopic_18_test_1_question_1_answer_4
+=> nrel_text: [h = a];;
+
+subtopic_18_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Чему равна площадь правильного треугольника со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_2_answer_1;
+    subtopic_18_test_1_question_2_answer_2;
+    subtopic_18_test_1_question_2_answer_3;
+    subtopic_18_test_1_question_2_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_2_answer_3
+(*
+    => nrel_text: [S = (a²√3)/4];;
+*);;
+
+subtopic_18_test_1_question_2_answer_1
+=> nrel_text: [S = a²/2];;
+
+subtopic_18_test_1_question_2_answer_2
+=> nrel_text: [S = a²];;
+
+subtopic_18_test_1_question_2_answer_4
+=> nrel_text: [S = (a²√2)/4];;
+
+subtopic_18_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Чему равен радиус вписанной окружности правильного треугольника со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_3_answer_1;
+    subtopic_18_test_1_question_3_answer_2;
+    subtopic_18_test_1_question_3_answer_3;
+    subtopic_18_test_1_question_3_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_3_answer_4
+(*
+    => nrel_text: [r = (a√3)/6];;
+*);;
+
+subtopic_18_test_1_question_3_answer_1
+=> nrel_text: [r = a/2];;
+
+subtopic_18_test_1_question_3_answer_2
+=> nrel_text: [r = (a√3)/2];;
+
+subtopic_18_test_1_question_3_answer_3
+=> nrel_text: [r = a/√3];;
+
+subtopic_18_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Чему равен радиус описанной окружности квадрата со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_4_answer_1;
+    subtopic_18_test_1_question_4_answer_2;
+    subtopic_18_test_1_question_4_answer_3;
+    subtopic_18_test_1_question_4_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_4_answer_2
+(*
+    => nrel_text: [R = (a√2)/2];;
+*);;
+
+subtopic_18_test_1_question_4_answer_1
+=> nrel_text: [R = a/2];;
+
+subtopic_18_test_1_question_4_answer_3
+=> nrel_text: [R = a];;
+
+subtopic_18_test_1_question_4_answer_4
+=> nrel_text: [R = a√2];;
+
+subtopic_18_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Чему равен радиус вписанной окружности квадрата со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_5_answer_1;
+    subtopic_18_test_1_question_5_answer_2;
+    subtopic_18_test_1_question_5_answer_3;
+    subtopic_18_test_1_question_5_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_5_answer_1
+(*
+    => nrel_text: [r = a/2];;
+*);;
+
+subtopic_18_test_1_question_5_answer_2
+=> nrel_text: [r = a/√2];;
+
+subtopic_18_test_1_question_5_answer_3
+=> nrel_text: [r = a];;
+
+subtopic_18_test_1_question_5_answer_4
+=> nrel_text: [r = (a√2)/2];;
+
+subtopic_18_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Чему равна сторона правильного шестиугольника через радиус описанной окружности R?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_6_answer_1;
+    subtopic_18_test_1_question_6_answer_2;
+    subtopic_18_test_1_question_6_answer_3;
+    subtopic_18_test_1_question_6_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_6_answer_3
+(*
+    => nrel_text: [a = R];;
+*);;
+
+subtopic_18_test_1_question_6_answer_1
+=> nrel_text: [a = R√2];;
+
+subtopic_18_test_1_question_6_answer_2
+=> nrel_text: [a = R√3];;
+
+subtopic_18_test_1_question_6_answer_4
+=> nrel_text: [a = 2R];;
+
+subtopic_18_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Площадь правильного шестиугольника со стороной a равна:];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_7_answer_1;
+    subtopic_18_test_1_question_7_answer_2;
+    subtopic_18_test_1_question_7_answer_3;
+    subtopic_18_test_1_question_7_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_7_answer_2
+(*
+    => nrel_text: [S = (3√3 a²)/2];;
+*);;
+
+subtopic_18_test_1_question_7_answer_1
+=> nrel_text: [S = 6a²];;
+
+subtopic_18_test_1_question_7_answer_3
+=> nrel_text: [S = (a²√3)/4];;
+
+subtopic_18_test_1_question_7_answer_4
+=> nrel_text: [S = 3a²];;
+
+subtopic_18_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Из проволоки сделан правильный треугольник со стороной 12 см. Из этой же проволоки сделан квадрат. Чему равна его сторона?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_8_answer_1;
+    subtopic_18_test_1_question_8_answer_2;
+    subtopic_18_test_1_question_8_answer_3;
+    subtopic_18_test_1_question_8_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_8_answer_4
+(*
+    => nrel_text: [9 см];;
+*);;
+
+subtopic_18_test_1_question_8_answer_1
+=> nrel_text: [8 см];;
+
+subtopic_18_test_1_question_8_answer_2
+=> nrel_text: [10 см];;
+
+subtopic_18_test_1_question_8_answer_3
+=> nrel_text: [12 см];;
+
+subtopic_18_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Площадь правильного треугольника с высотой 6 см равна:];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_9_answer_1;
+    subtopic_18_test_1_question_9_answer_2;
+    subtopic_18_test_1_question_9_answer_3;
+    subtopic_18_test_1_question_9_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_9_answer_3
+(*
+    => nrel_text: [12√3 см²];;
+*);;
+
+subtopic_18_test_1_question_9_answer_1
+=> nrel_text: [18 см²];;
+
+subtopic_18_test_1_question_9_answer_2
+=> nrel_text: [9√3 см²];;
+
+subtopic_18_test_1_question_9_answer_4
+=> nrel_text: [6√3 см²];;
+
+subtopic_18_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Диагональ квадрата равна 10 см. Чему равна его площадь?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_triangle_square_hexagon;
+=> nrel_possible_answer:
+    subtopic_18_test_1_question_10_answer_1;
+    subtopic_18_test_1_question_10_answer_2;
+    subtopic_18_test_1_question_10_answer_3;
+    subtopic_18_test_1_question_10_answer_4;
+=> nrel_correct_answer: subtopic_18_test_1_question_10_answer_2
+(*
+    => nrel_text: [50 см²];;
+*);;
+
+subtopic_18_test_1_question_10_answer_1
+=> nrel_text: [25 см²];;
+
+subtopic_18_test_1_question_10_answer_3
+=> nrel_text: [100 см²];;
+
+subtopic_18_test_1_question_10_answer_4
+=> nrel_text: [20 см²];;

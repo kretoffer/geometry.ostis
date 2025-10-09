@@ -1,0 +1,21 @@
+subtopic_1_test_1
+<- concept_test;
+=> nrel_description: 
+    [Тест по теме "Синус, косинус, тангенс и котангенс острого угла"]
+    (* <- lang_ru;; *);
+=> nrel_themes: {
+    subtopic_trigonometric_functions_of_an_acute_angle
+};
+=> nrel_decomposition: <
+    subtopic_1_test_1_question_1;
+    subtopic_1_test_1_question_2;
+    subtopic_1_test_1_question_3;
+    subtopic_1_test_1_question_4;
+    subtopic_1_test_1_question_5;
+    subtopic_1_test_1_question_6;
+    subtopic_1_test_1_question_7;
+    subtopic_1_test_1_question_8;
+    subtopic_1_test_1_question_9;
+    subtopic_1_test_1_question_10
+>;
+=> nrel_difficulty: ["1"];;

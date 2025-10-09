@@ -1,13 +1,10 @@
 subtopic_16_video_lesson_3
 <- concept_lesson;
-<- concept_video_lesson; 
-=> nrel_lesson_content: 
-    ["правильный многоугольник (4 мин) && https://youtu.be/6DHBcl3tZLc?feature=shared"]
-    (*
-        <- lang_ru;;
-    *);; 
-=> nrel_task: subtopic_16_task_1; 
+<- concept_video_lesson;
+=> nrel_lesson_content: [правильный многоугольник (4 мин) && https://youtu.be/6DHBcl3tZLc?feature=shared];
+=> nrel_task: subtopic_16_task_1;
 => nrel_test: subtopic_16_test_1;
-<= nrel_is_available_for: { 
-    visibitlity_disorder;
+<= nrel_is_available_for: {
+    visibility_disorder
 };;
+

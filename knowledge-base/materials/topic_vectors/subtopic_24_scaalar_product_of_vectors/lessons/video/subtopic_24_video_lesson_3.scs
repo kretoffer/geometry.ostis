@@ -1,13 +1,10 @@
 subtopic_24_video_lesson_3
 <- concept_lesson;
-<- concept_video_lesson; 
-=> nrel_lesson_content: 
-    ["угол между векторами (9 мин) && https://youtu.be/ZhJGnuEvJRw?feature=shared"]
-    (*
-        <- lang_ru;;
-    *);; 
-=> nrel_task: subtopic_24_task_1; 
+<- concept_video_lesson;
+=> nrel_lesson_content: [угол между векторами (9 мин) && https://youtu.be/ZhJGnuEvJRw?feature=shared];
+=> nrel_task: subtopic_24_task_1;
 => nrel_test: subtopic_24_test_1;
-<= nrel_is_available_for: { 
-    visibitlity_disorder;
+<= nrel_is_available_for: {
+    visibility_disorder
 };;
+

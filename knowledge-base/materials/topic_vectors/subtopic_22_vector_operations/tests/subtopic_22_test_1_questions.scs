@@ -1,0 +1,239 @@
+subtopic_22_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Что называется произведением вектора на число?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_1_answer_1;
+    subtopic_22_test_1_question_1_answer_2;
+    subtopic_22_test_1_question_1_answer_3;
+    subtopic_22_test_1_question_1_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_1_answer_2
+(*
+    => nrel_text: [Вектор, сонаправленный с данным при k>0, противоположно направленный при k<0, с длиной в |k| раз отличающейся от длины данного вектора];;
+*);;
+
+subtopic_22_test_1_question_1_answer_1
+=> nrel_text: [Вектор, всегда сонаправленный с данным];;
+
+subtopic_22_test_1_question_1_answer_3
+=> nrel_text: [Вектор, длина которого равна произведению числа на длину данного вектора];;
+
+subtopic_22_test_1_question_1_answer_4
+=> nrel_text: [Число, равное произведению длины вектора на данное число];;
+
+subtopic_22_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Как находится сумма векторов по правилу треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_2_answer_1;
+    subtopic_22_test_1_question_2_answer_2;
+    subtopic_22_test_1_question_2_answer_3;
+    subtopic_22_test_1_question_2_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_2_answer_3
+(*
+    => nrel_text: [От конца первого вектора откладывается второй вектор, сумма - вектор из начала первого в конец второго];;
+*);;
+
+subtopic_22_test_1_question_2_answer_1
+=> nrel_text: [Векторы откладываются из одной точки, сумма - диагональ параллелограмма];;
+
+subtopic_22_test_1_question_2_answer_2
+=> nrel_text: [Векторы складываются по длине];;
+
+subtopic_22_test_1_question_2_answer_4
+=> nrel_text: [Векторы откладываются последовательно, сумма - последний вектор];;
+
+subtopic_22_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Как находится сумма векторов по правилу параллелограмма?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_3_answer_1;
+    subtopic_22_test_1_question_3_answer_2;
+    subtopic_22_test_1_question_3_answer_3;
+    subtopic_22_test_1_question_3_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_3_answer_1
+(*
+    => nrel_text: [Векторы откладываются из одной точки, строится параллелограмм, сумма - диагональ из общей точки];;
+*);;
+
+subtopic_22_test_1_question_3_answer_2
+=> nrel_text: [Векторы откладываются последовательно, сумма - замыкающий вектор];;
+
+subtopic_22_test_1_question_3_answer_3
+=> nrel_text: [Векторы складываются по координатам];;
+
+subtopic_22_test_1_question_3_answer_4
+=> nrel_text: [Векторы умножаются на числа и складываются];;
+
+subtopic_22_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Чему равна сумма противоположных векторов?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_4_answer_1;
+    subtopic_22_test_1_question_4_answer_2;
+    subtopic_22_test_1_question_4_answer_3;
+    subtopic_22_test_1_question_4_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_4_answer_2
+(*
+    => nrel_text: [Нулевому вектору];;
+*);;
+
+subtopic_22_test_1_question_4_answer_1
+=> nrel_text: [Вектору, равному их разности];;
+
+subtopic_22_test_1_question_4_answer_3
+=> nrel_text: [Вектору двойной длины];;
+
+subtopic_22_test_1_question_4_answer_4
+=> nrel_text: [Единичному вектору];;
+
+subtopic_22_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Что такое разность векторов?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_5_answer_1;
+    subtopic_22_test_1_question_5_answer_2;
+    subtopic_22_test_1_question_5_answer_3;
+    subtopic_22_test_1_question_5_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_5_answer_4
+(*
+    => nrel_text: [Вектор, сумма которого с вычитаемым дает уменьшаемое];;
+*);;
+
+subtopic_22_test_1_question_5_answer_1
+=> nrel_text: [Вектор, противоположный сумме];;
+
+subtopic_22_test_1_question_5_answer_2
+=> nrel_text: [Разность длин векторов];;
+
+subtopic_22_test_1_question_5_answer_3
+=> nrel_text: [Вектор, соединяющий концы данных векторов];;
+
+subtopic_22_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Как найти разность векторов a и b?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_6_answer_1;
+    subtopic_22_test_1_question_6_answer_2;
+    subtopic_22_test_1_question_6_answer_3;
+    subtopic_22_test_1_question_6_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_6_answer_3
+(*
+    => nrel_text: [a - b = a + (-b)];;
+*);;
+
+subtopic_22_test_1_question_6_answer_1
+=> nrel_text: [a - b = b - a];;
+
+subtopic_22_test_1_question_6_answer_2
+=> nrel_text: [a - b = |a| - |b|];;
+
+subtopic_22_test_1_question_6_answer_4
+=> nrel_text: [a - b = вектор из конца b в конец a];;
+
+subtopic_22_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Какое свойство сложения векторов называется переместительным?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_7_answer_1;
+    subtopic_22_test_1_question_7_answer_2;
+    subtopic_22_test_1_question_7_answer_3;
+    subtopic_22_test_1_question_7_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_7_answer_2
+(*
+    => nrel_text: [a + b = b + a];;
+*);;
+
+subtopic_22_test_1_question_7_answer_1
+=> nrel_text: [(a + b) + c = a + (b + c)];;
+
+subtopic_22_test_1_question_7_answer_3
+=> nrel_text: [k(a + b) = ka + kb];;
+
+subtopic_22_test_1_question_7_answer_4
+=> nrel_text: [a + 0 = a];;
+
+subtopic_22_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Чему равно произведение вектора на число 1?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_8_answer_1;
+    subtopic_22_test_1_question_8_answer_2;
+    subtopic_22_test_1_question_8_answer_3;
+    subtopic_22_test_1_question_8_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_8_answer_4
+(*
+    => nrel_text: [Самому вектору];;
+*);;
+
+subtopic_22_test_1_question_8_answer_1
+=> nrel_text: [Нулевому вектору];;
+
+subtopic_22_test_1_question_8_answer_2
+=> nrel_text: [Противоположному вектору];;
+
+subtopic_22_test_1_question_8_answer_3
+=> nrel_text: [Единичному вектору];;
+
+subtopic_22_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Чему равно произведение вектора на число -1?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_9_answer_1;
+    subtopic_22_test_1_question_9_answer_2;
+    subtopic_22_test_1_question_9_answer_3;
+    subtopic_22_test_1_question_9_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_9_answer_3
+(*
+    => nrel_text: [Противоположному вектору];;
+*);;
+
+subtopic_22_test_1_question_9_answer_1
+=> nrel_text: [Самому вектору];;
+
+subtopic_22_test_1_question_9_answer_2
+=> nrel_text: [Нулевому вектору];;
+
+subtopic_22_test_1_question_9_answer_4
+=> nrel_text: [Единичному вектору];;
+
+subtopic_22_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Как выражается медиана треугольника через векторы его сторон?];
+=> nrel_difficulty: [3];
+=> nrel_theme: subtopic_vector_operations;
+=> nrel_possible_answer:
+    subtopic_22_test_1_question_10_answer_1;
+    subtopic_22_test_1_question_10_answer_2;
+    subtopic_22_test_1_question_10_answer_3;
+    subtopic_22_test_1_question_10_answer_4;
+=> nrel_correct_answer: subtopic_22_test_1_question_10_answer_2
+(*
+    => nrel_text: [AM = 1/2(AB + AC)];;
+*);;
+
+subtopic_22_test_1_question_10_answer_1
+=> nrel_text: [AM = AB + AC];;
+
+subtopic_22_test_1_question_10_answer_3
+=> nrel_text: [AM = 1/2(AB - AC)];;
+
+subtopic_22_test_1_question_10_answer_4
+=> nrel_text: [AM = AB + BC];;

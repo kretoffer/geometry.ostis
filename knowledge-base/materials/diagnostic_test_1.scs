@@ -1,0 +1,65 @@
+diagnostic_test_1
+<- concept_test;
+<- concept_diagnostic_test;
+=> nrel_description:
+    [Тест для определения уровня знаний по всем темам планиметрии 9 класса]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_themes: { 
+    subtopic_trigonometric_functions_of_an_acute_angle;
+    subtopic_solving_right_triangle;
+    subtopic_trigonometric_identities;
+    subtopic_trigonometric_functions_of_an_obtuse_angle;
+    subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+    subtopic_geometric_mean_in_right_triangle;
+    subtopic_circumscribed_and_inscribed_circles_of_triangle;
+    subtopic_right_triangle_and_its_circumscribed_and_inscribed_circles;
+    subtopic_inscriibed_and_circumscribed_quadrilaterals;
+    subtopic_sine_rule;
+    subtopic_sine_rule;
+    subtopic_sine_rule;
+    subtopic_regular_polygons;
+    subtopic_circumradius_and_inradius_of_regular_polygon;
+    subtopic_finding_the_circumference_and_area_of_circle;
+    subtopic_regular_triangle_quadrilateral_and_hexagon;
+    subtopic_types_of_vectors;
+    subtopic_vector_operations;
+    subtopic_vector_coords;
+    subtopic_scaalar_product_of_vectors;
+    subtopic_coordinate_vector_method;
+    subtopic_transformations_of_plane_figures
+};
+=> nrel_decomposition: <
+    diagnostic_test_1_question_1;
+    diagnostic_test_1_question_2;
+    diagnostic_test_1_question_3;
+    diagnostic_test_1_question_4;
+    diagnostic_test_1_question_5;
+    diagnostic_test_1_question_6;
+    diagnostic_test_1_question_7;
+    diagnostic_test_1_question_8;
+    diagnostic_test_1_question_9;
+    diagnostic_test_1_question_10;
+    diagnostic_test_1_question_11;
+    diagnostic_test_1_question_12;
+    diagnostic_test_1_question_13;
+    diagnostic_test_1_question_14;
+    diagnostic_test_1_question_15;
+    diagnostic_test_1_question_16;
+    diagnostic_test_1_question_17;
+    diagnostic_test_1_question_18;
+    diagnostic_test_1_question_19;
+    diagnostic_test_1_question_20;
+    diagnostic_test_1_question_21;
+    diagnostic_test_1_question_22;
+    diagnostic_test_1_question_23;
+    diagnostic_test_1_question_24;
+    diagnostic_test_1_question_25;
+    diagnostic_test_1_question_26;
+    diagnostic_test_1_question_27;
+    diagnostic_test_1_question_28;
+    diagnostic_test_1_question_29;
+    diagnostic_test_1_question_30
+>;
+=> nrel_difficulty: [2];;

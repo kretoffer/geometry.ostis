@@ -1,13 +1,10 @@
 subtopic_17_video_lesson_4
 <- concept_lesson;
-<- concept_video_lesson; 
-=> nrel_lesson_content: 
-    ["окружность, описанная около правильного многоугольника (7 мин) && https://youtu.be/b3Dojby0Eig?feature=shared"]
-    (*
-        <- lang_ru;;
-    *);; 
-=> nrel_task: subtopic_17_task_1; 
+<- concept_video_lesson;
+=> nrel_lesson_content: [окружность, описанная около правильного многоугольника (7 мин) && https://youtu.be/b3Dojby0Eig?feature=shared];
+=> nrel_task: subtopic_17_task_1;
 => nrel_test: subtopic_17_test_1;
-<= nrel_is_available_for: { 
-    visibitlity_disorder;
+<= nrel_is_available_for: {
+    visibility_disorder
 };;
+

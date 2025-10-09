@@ -1,0 +1,242 @@
+subtopic_2_test_1_question_1
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике гипотенуза равна 6, острый угол равен 32°. Найдите катет, прилежащий к данному углу.];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_1_answer_1;
+    subtopic_2_test_1_question_1_answer_2;
+    subtopic_2_test_1_question_1_answer_3;
+    subtopic_2_test_1_question_1_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_1_answer_3
+(*
+    => nrel_text: [5.1];;
+*);;
+
+subtopic_2_test_1_question_1_answer_1
+=> nrel_text: [3.2];;
+
+subtopic_2_test_1_question_1_answer_2
+=> nrel_text: [4.8];;
+
+subtopic_2_test_1_question_1_answer_4
+=> nrel_text: [6.2];;
+
+subtopic_2_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Катет прямоугольного треугольника равен 2.5, прилежащий угол равен 68°. Найдите другой катет.];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_2_answer_1;
+    subtopic_2_test_1_question_2_answer_2;
+    subtopic_2_test_1_question_2_answer_3;
+    subtopic_2_test_1_question_2_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_2_answer_3
+(*
+    => nrel_text: [6.2];;
+*);;
+
+subtopic_2_test_1_question_2_answer_1
+=> nrel_text: [2.3];;
+
+subtopic_2_test_1_question_2_answer_2
+=> nrel_text: [4.1];;
+
+subtopic_2_test_1_question_2_answer_4
+=> nrel_text: [7.5];;
+
+subtopic_2_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Катет прямоугольного треугольника равен 4.2, противолежащий угол равен 29°. Найдите гипотенузу.];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_3_answer_1;
+    subtopic_2_test_1_question_3_answer_2;
+    subtopic_2_test_1_question_3_answer_3;
+    subtopic_2_test_1_question_3_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_3_answer_3
+(*
+    => nrel_text: [8.7];;
+*);;
+
+subtopic_2_test_1_question_3_answer_1
+=> nrel_text: [5.4];;
+
+subtopic_2_test_1_question_3_answer_2
+=> nrel_text: [7.2];;
+
+subtopic_2_test_1_question_3_answer_4
+=> nrel_text: [9.8];;
+
+subtopic_2_test_1_question_4
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике с углом 30° меньший катет равен 4. Найдите больший катет.];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_4_answer_1;
+    subtopic_2_test_1_question_4_answer_2;
+    subtopic_2_test_1_question_4_answer_3;
+    subtopic_2_test_1_question_4_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_4_answer_2
+(*
+    => nrel_text: [4√3];;
+*);;
+
+subtopic_2_test_1_question_4_answer_1
+=> nrel_text: [8];;
+
+subtopic_2_test_1_question_4_answer_3
+=> nrel_text: [2√3];;
+
+subtopic_2_test_1_question_4_answer_4
+=> nrel_text: [6];;
+
+subtopic_2_test_1_question_5
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике с углом 45° катет равен 5. Найдите гипотенузу.];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_5_answer_1;
+    subtopic_2_test_1_question_5_answer_2;
+    subtopic_2_test_1_question_5_answer_3;
+    subtopic_2_test_1_question_5_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_5_answer_3
+(*
+    => nrel_text: [5√2];;
+*);;
+
+subtopic_2_test_1_question_5_answer_1
+=> nrel_text: [10];;
+
+subtopic_2_test_1_question_5_answer_2
+=> nrel_text: [5];;
+
+subtopic_2_test_1_question_5_answer_4
+=> nrel_text: [2.5√2];;
+
+subtopic_2_test_1_question_6
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике ABC известно: ∠C = 90°, AC = 8, ∠A = α, CH - высота. Найдите проекцию HB катета BC на гипотенузу.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_6_answer_1;
+    subtopic_2_test_1_question_6_answer_2;
+    subtopic_2_test_1_question_6_answer_3;
+    subtopic_2_test_1_question_6_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_6_answer_2
+(*
+    => nrel_text: [8tgα·sinα];;
+*);;
+
+subtopic_2_test_1_question_6_answer_1
+=> nrel_text: [8cosα];;
+
+subtopic_2_test_1_question_6_answer_3
+=> nrel_text: [8sinα];;
+
+subtopic_2_test_1_question_6_answer_4
+=> nrel_text: [8tgα];;
+
+subtopic_2_test_1_question_7
+<- concept_question;
+=> nrel_condition: [В равнобедренной трапеции ABCD меньшее основание BC = 7, боковая сторона AB = 10, sinA = 0.8. Найдите площадь трапеции.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_7_answer_1;
+    subtopic_2_test_1_question_7_answer_2;
+    subtopic_2_test_1_question_7_answer_3;
+    subtopic_2_test_1_question_7_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_7_answer_4
+(*
+    => nrel_text: [104];;
+*);;
+
+subtopic_2_test_1_question_7_answer_1
+=> nrel_text: [72];;
+
+subtopic_2_test_1_question_7_answer_2
+=> nrel_text: [88];;
+
+subtopic_2_test_1_question_7_answer_3
+=> nrel_text: [96];;
+
+subtopic_2_test_1_question_8
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике MPK известно: ∠M = 90°, ∠P = 30°, PK = 8. Найдите катет MP.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_8_answer_1;
+    subtopic_2_test_1_question_8_answer_2;
+    subtopic_2_test_1_question_8_answer_3;
+    subtopic_2_test_1_question_8_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_8_answer_2
+(*
+    => nrel_text: [4√3];;
+*);;
+
+subtopic_2_test_1_question_8_answer_1
+=> nrel_text: [8];;
+
+subtopic_2_test_1_question_8_answer_3
+=> nrel_text: [4];;
+
+subtopic_2_test_1_question_8_answer_4
+=> nrel_text: [2√3];;
+
+subtopic_2_test_1_question_9
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике ABC ∠C = 90°, высота CH = 12, катет AC = 20. Найдите синус меньшего острого угла треугольника.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_9_answer_1;
+    subtopic_2_test_1_question_9_answer_2;
+    subtopic_2_test_1_question_9_answer_3;
+    subtopic_2_test_1_question_9_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_9_answer_1
+(*
+    => nrel_text: [0.6];;
+*);;
+
+subtopic_2_test_1_question_9_answer_1
+=> nrel_text: [0.6];;
+
+subtopic_2_test_1_question_9_answer_2
+=> nrel_text: [0.8];;
+
+subtopic_2_test_1_question_9_answer_3
+=> nrel_text: [0.75];;
+
+subtopic_2_test_1_question_9_answer_4
+=> nrel_text: [0.5];;
+
+subtopic_2_test_1_question_10
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике известны гипотенуза c и острый угол α. Найдите проекцию bc катета b на гипотенузу.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_possible_answer:
+    subtopic_2_test_1_question_10_answer_1;
+    subtopic_2_test_1_question_10_answer_2;
+    subtopic_2_test_1_question_10_answer_3;
+    subtopic_2_test_1_question_10_answer_4;
+=> nrel_correct_answer: subtopic_2_test_1_question_10_answer_3
+(*
+    => nrel_text: [c·cos²α];;
+*);;
+
+subtopic_2_test_1_question_10_answer_1
+=> nrel_text: [c·sinα];;
+
+subtopic_2_test_1_question_10_answer_2
+=> nrel_text: [c·cosα];;
+
+subtopic_2_test_1_question_10_answer_4
+=> nrel_text: [c·sin²α];; 

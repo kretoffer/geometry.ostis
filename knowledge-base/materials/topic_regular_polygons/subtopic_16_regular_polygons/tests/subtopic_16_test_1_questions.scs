@@ -1,0 +1,239 @@
+subtopic_16_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Какой многоугольник называется правильным?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_1_answer_1;
+    subtopic_16_test_1_question_1_answer_2;
+    subtopic_16_test_1_question_1_answer_3;
+    subtopic_16_test_1_question_1_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_1_answer_3
+(*
+    => nrel_text: [У которого все стороны и все углы равны];;
+*);;
+
+subtopic_16_test_1_question_1_answer_1
+=> nrel_text: [У которого все стороны равны];;
+
+subtopic_16_test_1_question_1_answer_2
+=> nrel_text: [У которого все углы равны];;
+
+subtopic_16_test_1_question_1_answer_4
+=> nrel_text: [Который можно вписать в окружность];;
+
+subtopic_16_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Какой треугольник является правильным?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_2_answer_1;
+    subtopic_16_test_1_question_2_answer_2;
+    subtopic_16_test_1_question_2_answer_3;
+    subtopic_16_test_1_question_2_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_2_answer_2
+(*
+    => nrel_text: [Равносторонний];;
+*);;
+
+subtopic_16_test_1_question_2_answer_1
+=> nrel_text: [Равнобедренный];;
+
+subtopic_16_test_1_question_2_answer_3
+=> nrel_text: [Прямоугольный];;
+
+subtopic_16_test_1_question_2_answer_4
+=> nrel_text: [Остроугольный];;
+
+subtopic_16_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Какой четырехугольник является правильным?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_3_answer_1;
+    subtopic_16_test_1_question_3_answer_2;
+    subtopic_16_test_1_question_3_answer_3;
+    subtopic_16_test_1_question_3_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_3_answer_4
+(*
+    => nrel_text: [Квадрат];;
+*);;
+
+subtopic_16_test_1_question_3_answer_1
+=> nrel_text: [Прямоугольник];;
+
+subtopic_16_test_1_question_3_answer_2
+=> nrel_text: [Ромб];;
+
+subtopic_16_test_1_question_3_answer_3
+=> nrel_text: [Параллелограмм];;
+
+subtopic_16_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Чему равна сумма углов n-угольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_4_answer_1;
+    subtopic_16_test_1_question_4_answer_2;
+    subtopic_16_test_1_question_4_answer_3;
+    subtopic_16_test_1_question_4_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_4_answer_2
+(*
+    => nrel_text: [180°(n - 2)];;
+*);;
+
+subtopic_16_test_1_question_4_answer_1
+=> nrel_text: [180°n];;
+
+subtopic_16_test_1_question_4_answer_3
+=> nrel_text: [360°];;
+
+subtopic_16_test_1_question_4_answer_4
+=> nrel_text: [90°n];;
+
+subtopic_16_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Чему равен каждый угол правильного n-угольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_5_answer_1;
+    subtopic_16_test_1_question_5_answer_2;
+    subtopic_16_test_1_question_5_answer_3;
+    subtopic_16_test_1_question_5_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_5_answer_3
+(*
+    => nrel_text: [180°(n - 2)/n];;
+*);;
+
+subtopic_16_test_1_question_5_answer_1
+=> nrel_text: [180°/n];;
+
+subtopic_16_test_1_question_5_answer_2
+=> nrel_text: [360°/n];;
+
+subtopic_16_test_1_question_5_answer_4
+=> nrel_text: [90°(n - 2)/n];;
+
+subtopic_16_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Чему равен центральный угол правильного n-угольника?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_6_answer_1;
+    subtopic_16_test_1_question_6_answer_2;
+    subtopic_16_test_1_question_6_answer_3;
+    subtopic_16_test_1_question_6_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_6_answer_2
+(*
+    => nrel_text: [360°/n];;
+*);;
+
+subtopic_16_test_1_question_6_answer_1
+=> nrel_text: [180°/n];;
+
+subtopic_16_test_1_question_6_answer_3
+=> nrel_text: [180°(n - 2)/n];;
+
+subtopic_16_test_1_question_6_answer_4
+=> nrel_text: [90°/n];;
+
+subtopic_16_test_1_question_7
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется длина окружности?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_7_answer_1;
+    subtopic_16_test_1_question_7_answer_2;
+    subtopic_16_test_1_question_7_answer_3;
+    subtopic_16_test_1_question_7_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_7_answer_3
+(*
+    => nrel_text: [C = 2πR];;
+*);;
+
+subtopic_16_test_1_question_7_answer_1
+=> nrel_text: [C = πR];;
+
+subtopic_16_test_1_question_7_answer_2
+=> nrel_text: [C = πR²];;
+
+subtopic_16_test_1_question_7_answer_4
+=> nrel_text: [C = 4πR];;
+
+subtopic_16_test_1_question_8
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется площадь круга?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_8_answer_1;
+    subtopic_16_test_1_question_8_answer_2;
+    subtopic_16_test_1_question_8_answer_3;
+    subtopic_16_test_1_question_8_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_8_answer_4
+(*
+    => nrel_text: [S = πR²];;
+*);;
+
+subtopic_16_test_1_question_8_answer_1
+=> nrel_text: [S = 2πR];;
+
+subtopic_16_test_1_question_8_answer_2
+=> nrel_text: [S = πR];;
+
+subtopic_16_test_1_question_8_answer_3
+=> nrel_text: [S = 4πR²];;
+
+subtopic_16_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Чему равен угол правильного шестиугольника?];
+=> nrel_difficulty: [3];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_9_answer_1;
+    subtopic_16_test_1_question_9_answer_2;
+    subtopic_16_test_1_question_9_answer_3;
+    subtopic_16_test_1_question_9_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_9_answer_2
+(*
+    => nrel_text: [120°];;
+*);;
+
+subtopic_16_test_1_question_9_answer_1
+=> nrel_text: [60°];;
+
+subtopic_16_test_1_question_9_answer_3
+=> nrel_text: [90°];;
+
+subtopic_16_test_1_question_9_answer_4
+=> nrel_text: [135°];;
+
+subtopic_16_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Чему равен центральный угол правильного восьмиугольника?];
+=> nrel_difficulty: [3];
+=> nrel_theme: subtopic_regular_polygons;
+=> nrel_possible_answer:
+    subtopic_16_test_1_question_10_answer_1;
+    subtopic_16_test_1_question_10_answer_2;
+    subtopic_16_test_1_question_10_answer_3;
+    subtopic_16_test_1_question_10_answer_4;
+=> nrel_correct_answer: subtopic_16_test_1_question_10_answer_3
+(*
+    => nrel_text: [45°];;
+*);;
+
+subtopic_16_test_1_question_10_answer_1
+=> nrel_text: [30°];;
+
+subtopic_16_test_1_question_10_answer_2
+=> nrel_text: [60°];;
+
+subtopic_16_test_1_question_10_answer_4
+=> nrel_text: [90°];;

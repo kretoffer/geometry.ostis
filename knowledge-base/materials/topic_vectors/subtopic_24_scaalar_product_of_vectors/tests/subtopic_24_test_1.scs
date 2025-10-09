@@ -1,0 +1,21 @@
+subtopic_23_test_1
+<- concept_test;
+=> nrel_description: 
+    [Тест по теме "Скалярное произведение векторов"]
+    (* <- lang_ru;; *);
+=> nrel_themes: {
+    subtopic_vector_coords
+};
+=> nrel_decomposition: <
+    subtopic_23_test_1_question_1;
+    subtopic_23_test_1_question_2;
+    subtopic_23_test_1_question_3;
+    subtopic_23_test_1_question_4;
+    subtopic_23_test_1_question_5;
+    subtopic_23_test_1_question_6;
+    subtopic_23_test_1_question_7;
+    subtopic_23_test_1_question_8;
+    subtopic_23_test_1_question_9;
+    subtopic_23_test_1_question_10
+>;
+=> nrel_difficulty: [2];;

@@ -1,13 +1,10 @@
 subtopic_1_video_lesson_5
 <- concept_lesson;
-<- concept_video_lesson; 
-=> nrel_lesson_content: < 
-    [определение синуса, косинуса, тангенса и котангенса острого угла: практика-1 (13 мин)]; 
-    [https://youtu.be/CDncNv7n8wY?feature=shared]; 
-    [определение синуса, косинуса, тангенса и котангенса острого угла: практика-1 (13 мин) && https://youtu.be/CDncNv7n8wY?feature=shared] 
->;
-=> nrel_task: task_1; 
-=> nrel_test: test_1;
-<= nrel_is_available_for: { 
-    visibitlity_disorder;
+<- concept_video_lesson;
+=> nrel_lesson_content: [определение синуса, косинуса, тангенса и котангенса острого угла: практика-1 (13 мин) && https://youtu.be/CDncNv7n8wY?feature=shared];
+=> nrel_task: subtopic_1_task_1;
+=> nrel_test: subtopic_1_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
 };;
+
