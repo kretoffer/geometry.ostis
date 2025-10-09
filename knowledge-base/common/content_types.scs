@@ -1,5 +1,6 @@
 concept_video_lesson
 <- concept_content_type;
+<- sc_node_class;
 => nrel_main_idtf:
     [Видеоурок]
     (*
@@ -9,6 +10,7 @@ concept_video_lesson
 
 concept_audio_lesson
 <- concept_content_type;
+<- sc_node_class;
 => nrel_main_idtf:
     [Аудиоурок]
     (*
@@ -18,6 +20,7 @@ concept_audio_lesson
 
 concept_text_lesson
 <- concept_content_type;
+<- sc_node_class;
 => nrel_main_idtf:
     [Урок]
     (*
