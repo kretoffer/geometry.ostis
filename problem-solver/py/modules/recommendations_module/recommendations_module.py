@@ -12,6 +12,5 @@ class RecommendationsModule(ScModule):
             FormTaskRecommendationsForUserAgent(),
             FormThemeRecommendationsForUserToStudyAgent(),
             FormThemeRecommendationsForUserToSolveTestOrTaskAgent(),
-            FormThemeRecommendationsForUserToSolveTestOrTaskAgent(),
             GetLessonOnTheThemeAgent()
         )
