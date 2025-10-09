@@ -2,13 +2,11 @@ import logging
 from sc_client.models import ScAddr, ScTemplate
 from sc_client.constants import sc_type
 from sc_client.client import search_by_template, generate_by_template, delete_elements
-from sc_client.client import get_elements_types
 
 from sc_kpm import ScAgentClassic, ScResult
 from sc_kpm.utils import (
     generate_connector,
-    generate_node,
-    get_element_system_identifier
+    generate_node
 )
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
@@ -79,9 +77,18 @@ class GetNextQuestionAgent(ScAgentClassic):
         else:
             passing_test_history = self.initialize_user_passing_test_history(user, test)
             first_question = self.get_first_question(test)
-            return first_question
+
+        templ = ScTemplate()
+        templ.quintuple(
+            question,
+            sc_type.VAR_PERM_POS_ARC,
+            (sc_type.VAR_NODE, "_question"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("rrel_test_question", sc_type.CONST_NODE_ROLE)
+        )
+        question_ref = search_by_template(templ)[0].get("_question")
         
-        next_question: ScAddr = self.get_next_question(user, test, question, is_question_answer_correct(question_answer, question))
+        next_question: ScAddr = self.get_next_question(user, test, question_ref, is_question_answer_correct(question_answer, question_ref))
 
 
         templ = ScTemplate()
@@ -89,7 +96,7 @@ class GetNextQuestionAgent(ScAgentClassic):
             passing_test_history,
             (sc_type.VAR_PERM_POS_ARC, "_last_arc"),
             question,
-            (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_arc_to_last_arc"),
+            (sc_type.VAR_PERM_POS_ARC, "_arc_to_last_arc"),
             ScKeynodes.resolve("rrel_last", sc_type.CONST_NODE_ROLE)
         )
         search_results = search_by_template(templ)
@@ -98,10 +105,10 @@ class GetNextQuestionAgent(ScAgentClassic):
             delete_elements(search_result.get("_arc_to_last_arc"))
 
             if next_question.is_valid(): 
-                question_arc: ScAddr = generate_connector(sc_type.CONST_PERM_POS_ARC, test, next_question)
+                question_arc: ScAddr = generate_connector(sc_type.CONST_PERM_POS_ARC, passing_test_history, next_question)
                 arc = generate_connector(sc_type.CONST_COMMON_ARC, search_result.get("_last_arc"), question_arc)
                 generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_basic_sequence", sc_type.VAR_NODE_NON_ROLE), arc)
-                generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), question_arc)
+                generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), question_arc)
             else:
                 create_action("action_finish_test", user, test)
 
@@ -219,62 +226,17 @@ class GetNextQuestionAgent(ScAgentClassic):
         return ScAddr()
         
 
-    def get_harder_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
+    def get_harder_question(self, questions_set: ScAddr, question: ScAddr) -> ScAddr:
         templ = ScTemplate()
-
-        # находим сет с вопросами
-        templ.quintuple(
-            test,
-            sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_NODE, "_question_set"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_decomposition", sc_type.CONST_NODE_NON_ROLE)
+        templ.triple(
+            questions_set,
+            (sc_type.VAR_PERM_POS_ARC, "_last_question_arc"),
+            question
         )
-
-        # находим первый элемент сета
-        templ.quintuple(
-            "_question_set",
-            (sc_type.VAR_PERM_POS_ARC, "_first_question_arc"),
-            (sc_type.VAR_NODE, "_first_question"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_1", sc_type.CONST_NODE_ROLE)
-        )
-
         search_results = search_by_template(templ)
         if not search_results:
             return ScAddr()
-        
-        # будем перемещаться по дугам, соединённым nrel_basic_sequence
-        last_question_arc = search_results[0].get("_first_question_arc")
-        this_question = search_results[0].get("_first_question")
-        templ = ScTemplate()
-
-        # идём, пока не найдём текущий вопрос
-        while question != this_question:
-
-            # находим "следующую дугу"
-            templ.quintuple(
-                last_question_arc,
-                (sc_type.VAR_COMMON_ARC, "_connection_arc"),
-                (sc_type.VAR_PERM_POS_ARC, "_second_arc"),
-                sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
-            )
-
-            # находим на вопрос, соединённый этой дугой
-            templ.triple(
-                sc_type.VAR_NODE,
-                "_second_arc",
-                (sc_type.VAR_NODE, "_next_question")
-            )
-
-            search_results = search_by_template(templ)
-            # если не нашли ничего -- прошли весь сет. возвращаем пустой адрес
-            if not search_results:
-                return ScAddr()
-            last_question_arc = search_results[0].get("_second_arc")
-            this_question = search_results[0].get("_next_question")
-            templ = ScTemplate()
+        last_question_arc = search_results[0].get("_last_question_arc")
 
         templ = ScTemplate()
 
@@ -287,7 +249,7 @@ class GetNextQuestionAgent(ScAgentClassic):
             ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
         )
         templ.triple(
-            sc_type.VAR_NODE,
+            questions_set,
             "_second_arc",
             (sc_type.VAR_NODE, "_next_question")
         )
@@ -301,61 +263,17 @@ class GetNextQuestionAgent(ScAgentClassic):
         return more_hard_question
     
 
-    def get_simplier_question(self, test: ScAddr, question: ScAddr) -> ScAddr:
+    def get_simplier_question(self, questions_set: ScAddr, question: ScAddr) -> ScAddr:
         templ = ScTemplate()
-
-
-        # всё аналогично get_harder_question, но в конце идём в другую сторону 
-
-
-        templ.quintuple(
-            test,
-            sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_NODE, "_question_set"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_decomposition", sc_type.CONST_NODE_NON_ROLE)
+        templ.triple(
+            questions_set,
+            (sc_type.VAR_PERM_POS_ARC, "_last_question_arc"),
+            question
         )
-
-        templ.quintuple(
-            "_question_set",
-            (sc_type.VAR_PERM_POS_ARC, "_first_question_arc"),
-            (sc_type.VAR_NODE, "_first_question"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_1", sc_type.CONST_NODE_ROLE)
-        )
-
         search_results = search_by_template(templ)
         if not search_results:
             return ScAddr()
-        
-        last_question_arc = search_results[0].get("_first_question_arc")
-        this_question = search_results[0].get("_first_question")
-        templ = ScTemplate()
-
-
-        while question != this_question:
-
-            templ.quintuple(
-                last_question_arc,
-                (sc_type.VAR_COMMON_ARC, "_connection_arc"),
-                (sc_type.VAR_PERM_POS_ARC, "_second_arc"),
-                sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
-            )
-
-            templ.triple(
-                sc_type.VAR_NODE,
-                "_second_arc",
-                (sc_type.VAR_NODE, "_next_question")
-            )
-
-            search_results = search_by_template(templ)
-
-            if not search_results:
-                return ScAddr()
-            last_question_arc = search_results[0].get("_second_arc")
-            this_question = search_results[0].get("_next_question")
-            templ = ScTemplate()
+        last_question_arc = search_results[0].get("_last_question_arc")
 
         templ = ScTemplate()
 
@@ -368,7 +286,7 @@ class GetNextQuestionAgent(ScAgentClassic):
             ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE)
         )
         templ.triple(
-            sc_type.VAR_NODE,
+            questions_set,
             "_second_arc",
             (sc_type.VAR_NODE, "_next_question")
         )
@@ -382,18 +300,27 @@ class GetNextQuestionAgent(ScAgentClassic):
 
 
     def get_next_question(self, user: ScAddr, test: ScAddr, question: ScAddr, question_is_correct: bool) -> ScAddr:
-        
-        new_question = generate_node(sc_type.NODE)
-        user_connector = generate_connector(sc_type.CONST_PERM_POS_ARC, new_question, user)
-        generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_passer", sc_type.CONST_NODE_ROLE), user_connector)
+        templ = ScTemplate()
+        templ.quintuple(
+            test,
+            sc_type.VAR_COMMON_ARC,
+            (sc_type.VAR_NODE_TUPLE, "_set"),
+            sc_type.VAR_PERM_POS_ARC,
+            ScKeynodes.resolve("nrel_decomposition", sc_type.VAR_NODE_NON_ROLE)
+        )
+        questions_set = search_by_template(templ)[0].get("_set")
 
         if question_is_correct:
-            correct_question = self.get_harder_question(test, question)
+            correct_question = self.get_harder_question(questions_set, question)
         else: 
-            correct_question = self.get_simplier_question(test, question)
+            correct_question = self.get_simplier_question(questions_set, question)
 
         if not correct_question.is_valid():
             return ScAddr()
+        
+        new_question = generate_node(sc_type.CONST_NODE)
+        user_connector = generate_connector(sc_type.CONST_PERM_POS_ARC, new_question, user)
+        generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_passer", sc_type.CONST_NODE_ROLE), user_connector)
 
         arc = generate_connector(sc_type.CONST_PERM_POS_ARC, new_question, correct_question)
         generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_test_question", sc_type.CONST_NODE_ROLE), arc)

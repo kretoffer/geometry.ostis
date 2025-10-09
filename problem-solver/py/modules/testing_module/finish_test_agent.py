@@ -79,7 +79,6 @@ class FinishTestAgent(ScAgentClassic):
         score = 0
 
         while True:
-            print(i)
             templ = ScTemplate()
             templ.triple(
                 passing_test_history,
@@ -139,6 +138,7 @@ class FinishTestAgent(ScAgentClassic):
             difficulties.append(difficulty)
 
             # Нахождение ребра указывающего на следующий вопрос
+            templ = ScTemplate()
             templ.quintuple(
                 i,
                 sc_type.VAR_COMMON_ARC,
