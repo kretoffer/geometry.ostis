@@ -1,0 +1,6 @@
+action 
+->
+    action_compare_rating_of_progress;
+    action_complicate_difficulty;
+    action_show_progress;
+    action_simplify_difficulty;;

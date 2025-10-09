@@ -1,0 +1,59 @@
+bad_knowledge_level
+<- concept_knowledge_level;
+=> nrel_main_idtf:
+    [Плохой уровень знаний]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_main_idtf:
+    [Bad knowledge level]
+    (*
+        <- lang_en;;
+    *);
+=> nrel_next_level:
+    normal_knowledge_level;;
+
+
+normal_knowledge_level
+<- concept_knowledge_level;
+=> nrel_main_idtf:
+    [Нормальный уровень знаний]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_main_idtf:
+    [Normal knowledge level]
+    (*
+        <- lang_en;;
+    *);
+=> nrel_next_level:
+    good_knowledge_level;;
+
+
+good_knowledge_level
+<- concept_knowledge_level;
+=> nrel_main_idtf:
+    [Хороший уровень знаний]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_main_idtf:
+    [Good knowledge level]
+    (*
+        <- lang_en;;
+    *);
+=> nrel_next_level:
+    olimpyc_knowledge_level;;
+
+olimpyc_knowledge_level
+<- concept_knowledge_level;
+=> nrel_main_idtf:
+    [Олимпиадный уровень знаний]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_main_idtf:
+    [Olimpyc knowledge level]
+    (*
+        <- lang_en;;
+    *);;

@@ -1,0 +1,19 @@
+nrel_name
+<- sc_node_non_role_relation;
+=> nrel_main_idtf: 
+	[Имя* ] 
+	(* <- lang_ru;; *);
+=> nrel_main_idtf: 
+	[Name* ] 
+	(* <- lang_en;; *);;
+
+
+nrel_condition
+<- sc_node_non_role_relation;
+=> nrel_main_idtf: 
+	[Условие* ] 
+	(* <- lang_ru;; *);
+=> nrel_main_idtf: 
+	[Condition* ] 
+	(* <- lang_en;; *);;
+
