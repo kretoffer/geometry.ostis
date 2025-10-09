@@ -207,6 +207,8 @@ Steps for installing and running the application directly on your system.
 
 10.  **Install py libraries:**
 
+    The `py-sc-server` is a Python library that provides a communication interface between the `sc-machine` and the Python agents. It's installed using pip:
+
     ```sh
     cd problem-solver/py/
     python3 -m venv .venv
