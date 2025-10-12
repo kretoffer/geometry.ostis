@@ -8,7 +8,7 @@ diagnostic_test_1_question_1
     diagnostic_test_1_question_1_answer_2;
     diagnostic_test_1_question_1_answer_3;
     diagnostic_test_1_question_1_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_1_answer_3
+=> nrel_correct_answer: diagnostic_test_1_question_1_answer_3
 (*
     => nrel_text: [BC/AC];;
 *);;
