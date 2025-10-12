@@ -1,0 +1,48 @@
+theme_vector_operations
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 22. Действия над векторами]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 22]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_vector_section;
+=> nrel_key_concepts: {
+    concept_vector;
+    definition_of_vector;
+    concept_collinear_vector;
+    definition_of_angle_between_vectors;
+    definition_of_zero_vector;
+    definition_of_vector_length;
+    definition_of_magnitude_of_vector;
+    definition_multiplication_of_nonzero_vector_by_scalar_k; // произведение ненулевого вектора на число
+    properties_of_scalar_multiplication; // свойства умножения вектора на число
+    sum_of_vectors; // сумма векторов
+    triangle_rule; // правило треугольника
+    parallelogram_rule; // правило параллелограмма
+    properties_of_vector_addition; // свойства сложения векторов
+    vector_subtraction; // вычитание векторов
+    rules_of_vector_subtraction // правила вычитания векторов 
+};
+=> nrel_lessons: {
+    theme_22_video_lesson_1;
+    theme_22_video_lesson_2;
+    theme_22_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_22_task_1
+};
+
+
+=> nrel_tests: {
+    theme_22_test_1
+};
+
+<= nrel_themes_before_this: {
+    theme_types_of_vectors
+};;

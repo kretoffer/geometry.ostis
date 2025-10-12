@@ -1,0 +1,10 @@
+theme_4_video_lesson_4
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [синус, косинус, тангенс тупого угла (2 мин) && https://youtu.be/kflJc7AMQvU?feature=shared];
+=> nrel_task: theme_4_task_1;
+=> nrel_test: theme_4_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

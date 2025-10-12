@@ -1,9 +1,0 @@
-subtopic_26_video_lesson_6
-<- concept_lesson;
-<- concept_video_lesson;
-=> nrel_lesson_content: [преобразование плоскости, движение и его свойства (10 мин) && https://youtu.be/p5-hzfhYols?feature=shared];
-=> nrel_task: subtopic_26_task_1;
-=> nrel_test: subtopic_26_test_1;
-<= nrel_is_available_for: {
-    visibility_disorder
-};;

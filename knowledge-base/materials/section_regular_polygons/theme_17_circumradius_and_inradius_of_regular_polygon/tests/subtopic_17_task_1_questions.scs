@@ -1,0 +1,239 @@
+theme_17_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Чему равен радиус описанной окружности правильного n-угольника со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_1_answer_1;
+    theme_17_test_1_question_1_answer_2;
+    theme_17_test_1_question_1_answer_3;
+    theme_17_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_1_answer_3
+(*
+    => nrel_text: [R = a/(2sin(180°/n))];;
+*);;
+
+theme_17_test_1_question_1_answer_1
+=> nrel_text: [R = a/(2cos(180°/n))];;
+
+theme_17_test_1_question_1_answer_2
+=> nrel_text: [R = a/(sin(180°/n))];;
+
+theme_17_test_1_question_1_answer_4
+=> nrel_text: [R = a/(cos(180°/n))];;
+
+theme_17_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Чему равен радиус вписанной окружности правильного n-угольника со стороной a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_2_answer_1;
+    theme_17_test_1_question_2_answer_2;
+    theme_17_test_1_question_2_answer_3;
+    theme_17_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_2_answer_2
+(*
+    => nrel_text: [r = a/(2tg(180°/n))];;
+*);;
+
+theme_17_test_1_question_2_answer_1
+=> nrel_text: [r = a/(2sin(180°/n))];;
+
+theme_17_test_1_question_2_answer_3
+=> nrel_text: [r = a/(tg(180°/n))];;
+
+theme_17_test_1_question_2_answer_4
+=> nrel_text: [r = a/(sin(180°/n))];;
+
+theme_17_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Чему равна сторона правильного треугольника через радиус описанной окружности R?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_3_answer_1;
+    theme_17_test_1_question_3_answer_2;
+    theme_17_test_1_question_3_answer_3;
+    theme_17_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_3_answer_4
+(*
+    => nrel_text: [a = R√3];;
+*);;
+
+theme_17_test_1_question_3_answer_1
+=> nrel_text: [a = R√2];;
+
+theme_17_test_1_question_3_answer_2
+=> nrel_text: [a = R];;
+
+theme_17_test_1_question_3_answer_3
+=> nrel_text: [a = 2R];;
+
+theme_17_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Чему равна сторона квадрата через радиус описанной окружности R?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_4_answer_1;
+    theme_17_test_1_question_4_answer_2;
+    theme_17_test_1_question_4_answer_3;
+    theme_17_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_4_answer_1
+(*
+    => nrel_text: [a = R√2];;
+*);;
+
+theme_17_test_1_question_4_answer_2
+=> nrel_text: [a = R√3];;
+
+theme_17_test_1_question_4_answer_3
+=> nrel_text: [a = R];;
+
+theme_17_test_1_question_4_answer_4
+=> nrel_text: [a = 2R];;
+
+theme_17_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Чему равна сторона правильного шестиугольника через радиус описанной окружности R?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_5_answer_1;
+    theme_17_test_1_question_5_answer_2;
+    theme_17_test_1_question_5_answer_3;
+    theme_17_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_5_answer_3
+(*
+    => nrel_text: [a = R];;
+*);;
+
+theme_17_test_1_question_5_answer_1
+=> nrel_text: [a = R√2];;
+
+theme_17_test_1_question_5_answer_2
+=> nrel_text: [a = R√3];;
+
+theme_17_test_1_question_5_answer_4
+=> nrel_text: [a = 2R];;
+
+theme_17_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Периметр правильного шестиугольника равен 30 см. Найдите радиус описанной окружности.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_6_answer_1;
+    theme_17_test_1_question_6_answer_2;
+    theme_17_test_1_question_6_answer_3;
+    theme_17_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_6_answer_2
+(*
+    => nrel_text: [5 см];;
+*);;
+
+theme_17_test_1_question_6_answer_1
+=> nrel_text: [6 см];;
+
+theme_17_test_1_question_6_answer_3
+=> nrel_text: [4 см];;
+
+theme_17_test_1_question_6_answer_4
+=> nrel_text: [3 см];;
+
+theme_17_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Радиус окружности, вписанной в правильный четырехугольник со стороной 8 см, равен:];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_7_answer_1;
+    theme_17_test_1_question_7_answer_2;
+    theme_17_test_1_question_7_answer_3;
+    theme_17_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_7_answer_1
+(*
+    => nrel_text: [4 см];;
+*);;
+
+theme_17_test_1_question_7_answer_2
+=> nrel_text: [8 см];;
+
+theme_17_test_1_question_7_answer_3
+=> nrel_text: [4√2 см];;
+
+theme_17_test_1_question_7_answer_4
+=> nrel_text: [8√2 см];;
+
+theme_17_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Периметр правильного четырехугольника равен 32 см. Найдите радиус описанной окружности.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_8_answer_1;
+    theme_17_test_1_question_8_answer_2;
+    theme_17_test_1_question_8_answer_3;
+    theme_17_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_8_answer_4
+(*
+    => nrel_text: [4√2 см];;
+*);;
+
+theme_17_test_1_question_8_answer_1
+=> nrel_text: [8 см];;
+
+theme_17_test_1_question_8_answer_2
+=> nrel_text: [4 см];;
+
+theme_17_test_1_question_8_answer_3
+=> nrel_text: [8√2 см];;
+
+theme_17_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Радиус вписанной окружности правильного шестиугольника со стороной a равен:];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_9_answer_1;
+    theme_17_test_1_question_9_answer_2;
+    theme_17_test_1_question_9_answer_3;
+    theme_17_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_9_answer_3
+(*
+    => nrel_text: [(a√3)/2];;
+*);;
+
+theme_17_test_1_question_9_answer_1
+=> nrel_text: [a/2];;
+
+theme_17_test_1_question_9_answer_2
+=> nrel_text: [a√3];;
+
+theme_17_test_1_question_9_answer_4
+=> nrel_text: [2a/√3];;
+
+theme_17_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Площадь правильного 12-угольника с радиусом описанной окружности 6 см равна:];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_circumradius_and_inradius_of_regular_polygon;
+=> nrel_possible_answer:
+    theme_17_test_1_question_10_answer_1;
+    theme_17_test_1_question_10_answer_2;
+    theme_17_test_1_question_10_answer_3;
+    theme_17_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_17_test_1_question_10_answer_2
+(*
+    => nrel_text: [108 см²];;
+*);;
+
+theme_17_test_1_question_10_answer_1
+=> nrel_text: [72 см²];;
+
+theme_17_test_1_question_10_answer_3
+=> nrel_text: [144 см²];;
+
+theme_17_test_1_question_10_answer_4
+=> nrel_text: [36√3 см²];;

@@ -1,0 +1,33 @@
+section_1_test_1
+<- concept_test;
+=> nrel_description:
+    [Тест на знание раздела "Соотношения в прямоугольном треугольнике"]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_themes: { 
+    subsection_trigonometric_functions_of_an_acute_angle;
+    subsection_solving_right_triange;
+    subsection_trigonometric_identities;
+    subsection_trigonometric_functions_of_an_obtuse_angle;
+    subsection_formulas_for_the_area_of_triangle_and_parallelogram;
+    subsection_geometric_mean_in_right_triangle
+};
+=> nrel_decomposition: <
+    section_1_test_1_question_1;
+    section_1_test_1_question_2;
+    section_1_test_1_question_3;
+    section_1_test_1_question_4;
+    section_1_test_1_question_5;
+    section_1_test_1_question_6;
+    section_1_test_1_question_7;
+    section_1_test_1_question_8;
+    section_1_test_1_question_9;
+    section_1_test_1_question_10;
+    section_1_test_1_question_11;
+    section_1_test_1_question_12;
+    section_1_test_1_question_13;
+    section_1_test_1_question_14;
+    section_1_test_1_question_15
+>;
+=> nrel_difficulty: [2];;

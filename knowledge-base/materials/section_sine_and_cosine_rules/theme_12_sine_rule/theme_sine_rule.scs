@@ -1,0 +1,36 @@
+theme_formulas_for_the_area_of_parallelogram
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 12. Теорема синусов]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 12]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_sine_and_cosine_rules_section;
+=> nrel_key_concepts: {
+    concept_sin;
+    concept_sin_of_an_obtuse_angle;
+    concept_triangle;
+    concept_sine_theorem;
+    definition_of_sin
+};
+=> nrel_lessons: {
+    theme_12_video_lesson_1;
+    theme_12_video_lesson_2;
+    theme_12_video_lesson_3
+};
+
+
+=> nrel_tasks: {
+    theme_12_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_12_test_1
+};;

@@ -1,0 +1,35 @@
+theme_regular_polygons
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 16. Правильные многоугольники]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 16]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_regular_polygons_section;
+=> nrel_key_concepts: {
+    concept_polygon;
+    concept_right_polygon;
+    definition_of_regular_polygon; // определение правильного многоугольника
+    formula_for_the_interior_angle_of_a_regular_polygon; // формула угла правильного n-угольника
+    property_of_incircle_and_circumcircle_regular_polygons // свойство о оп. и вп. окружностях в правильный n-угольник
+};
+=> nrel_lessons: {
+    theme_16_video_lesson_1;
+    theme_16_video_lesson_2;
+    theme_16_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_16_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_16_test_1
+};;

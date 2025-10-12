@@ -7,28 +7,28 @@ diagnostic_test_1
         <- lang_ru;;
     *);
 => nrel_themes: { 
-    subtopic_trigonometric_functions_of_an_acute_angle;
-    subtopic_solving_right_triangle;
-    subtopic_trigonometric_identities;
-    subtopic_trigonometric_functions_of_an_obtuse_angle;
-    subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
-    subtopic_geometric_mean_in_right_triangle;
-    subtopic_circumscribed_and_inscribed_circles_of_triangle;
-    subtopic_right_triangle_and_its_circumscribed_and_inscribed_circles;
-    subtopic_inscriibed_and_circumscribed_quadrilaterals;
-    subtopic_sine_rule;
-    subtopic_sine_rule;
-    subtopic_sine_rule;
-    subtopic_regular_polygons;
-    subtopic_circumradius_and_inradius_of_regular_polygon;
-    subtopic_finding_the_circumference_and_area_of_circle;
-    subtopic_regular_triangle_quadrilateral_and_hexagon;
-    subtopic_types_of_vectors;
-    subtopic_vector_operations;
-    subtopic_vector_coords;
-    subtopic_scaalar_product_of_vectors;
-    subtopic_coordinate_vector_method;
-    subtopic_transformations_of_plane_figures
+    theme_trigonometric_functions_of_an_acute_angle;
+    theme_solving_right_triangle;
+    theme_trigonometric_identities;
+    theme_trigonometric_functions_of_an_obtuse_angle;
+    theme_formulas_for_the_area_of_triangle_and_parallelogram;
+    theme_geometric_mean_in_right_triangle;
+    theme_circumscribed_and_inscribed_circles_of_triangle;
+    theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+    theme_inscriibed_and_circumscribed_quadrilaterals;
+    theme_sine_rule;
+    theme_sine_rule;
+    theme_sine_rule;
+    theme_regular_polygons;
+    theme_circumradius_and_inradius_of_regular_polygon;
+    theme_finding_the_circumference_and_area_of_circle;
+    theme_regular_triangle_quadrilateral_and_hexagon;
+    theme_types_of_vectors;
+    theme_vector_operations;
+    theme_vector_coords;
+    theme_scaalar_product_of_vectors;
+    theme_coordinate_vector_method;
+    theme_transformations_of_plane_figures
 };
 => nrel_decomposition: <
     diagnostic_test_1_question_1;

@@ -1,0 +1,10 @@
+theme_6_video_lesson_5
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [высота в прямоугольном треугольнике (12 мин) && https://youtu.be/8HVyEhbfF6U?feature=shared];
+=> nrel_task: theme_6_task_1;
+=> nrel_test: theme_6_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

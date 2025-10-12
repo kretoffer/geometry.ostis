@@ -1,0 +1,9 @@
+theme_26_video_lesson_5
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [движение и его свойства (11 мин) && https://youtu.be/w_LS0JghAbk?feature=shared];
+=> nrel_task: theme_26_task_1;
+=> nrel_test: theme_26_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;

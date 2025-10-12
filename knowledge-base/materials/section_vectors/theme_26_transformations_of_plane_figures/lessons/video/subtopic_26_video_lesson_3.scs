@@ -1,0 +1,13 @@
+theme_26_video_lesson_3
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [преобразование плоскости, параллельный перенос (8 мин) && https://youtu.be/7SwlkRPNYPA?feature=shared];
+=> nrel_task: theme_26_task_1;
+=> nrel_test: theme_26_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+
+
+
+

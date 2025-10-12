@@ -1,0 +1,10 @@
+theme_10_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [вписанные четырёхугольники (7 мин) && https://youtu.be/AOT80kGT0Bs?feature=shared];
+=> nrel_task: theme_10_task_1;
+=> nrel_test: theme_10_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

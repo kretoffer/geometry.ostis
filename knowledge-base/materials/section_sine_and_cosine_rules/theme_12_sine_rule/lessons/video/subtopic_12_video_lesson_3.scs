@@ -1,0 +1,10 @@
+theme_12_video_lesson_3
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [теорема синусов (10 мин) && https://youtu.be/Bl02ibsS6ao?feature=shared];
+=> nrel_task: theme_12_task_1;
+=> nrel_test: theme_12_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

@@ -1,0 +1,10 @@
+theme_24_video_lesson_5
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [нахождение угла между векторами через координаты (13 мин) && https://youtu.be/l__4BmJzXhU?feature=shared];
+=> nrel_task: theme_24_task_1;
+=> nrel_test: theme_24_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

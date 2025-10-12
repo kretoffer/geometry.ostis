@@ -1,0 +1,21 @@
+theme_10_test_1
+<- concept_test;
+=> nrel_description: 
+    [Тест по теме "Вписанные и описанные четырехугольники"]
+    (* <- lang_ru;; *);
+=> nrel_themes: {
+    theme_inscriibed_and_circumscribed_quadrilaterals
+};
+=> nrel_decomposition: <
+    theme_10_test_1_question_1;
+    theme_10_test_1_question_2;
+    theme_10_test_1_question_3;
+    theme_10_test_1_question_4;
+    theme_10_test_1_question_5;
+    theme_10_test_1_question_6;
+    theme_10_test_1_question_7;
+    theme_10_test_1_question_8;
+    theme_10_test_1_question_9;
+    theme_10_test_1_question_10
+>;
+=> nrel_difficulty: [2];;

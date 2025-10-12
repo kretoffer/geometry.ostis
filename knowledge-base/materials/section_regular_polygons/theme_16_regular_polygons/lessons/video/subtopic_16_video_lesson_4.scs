@@ -1,0 +1,10 @@
+theme_16_video_lesson_4
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [правильные многоугольники (15 мин) && https://youtu.be/mCNnjmZd-zQ?feature=shared];
+=> nrel_task: theme_16_task_1;
+=> nrel_test: theme_16_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

@@ -1,0 +1,10 @@
+theme_17_video_lesson_6
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: [четырёхугольники, вписанные в окружность (15 мин) && https://youtu.be/2B6wJH_nHjo?feature=shared];
+=> nrel_task: theme_17_task_1;
+=> nrel_test: theme_17_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

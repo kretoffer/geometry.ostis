@@ -1,0 +1,239 @@
+theme_5_test_1_question_1
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется площадь треугольника через две стороны и угол между ними?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_1_answer_1;
+    theme_5_test_1_question_1_answer_2;
+    theme_5_test_1_question_1_answer_3;
+    theme_5_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_1_answer_2
+(*
+    => nrel_text: [S = ½ab·sinγ];;
+*);;
+
+theme_5_test_1_question_1_answer_1
+=> nrel_text: [S = ab·sinγ];;
+
+theme_5_test_1_question_1_answer_3
+=> nrel_text: [S = ½ab·cosγ];;
+
+theme_5_test_1_question_1_answer_4
+=> nrel_text: [S = ab·cosγ];;
+
+theme_5_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Чему равна площадь параллелограмма через две стороны и угол между ними?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_2_answer_1;
+    theme_5_test_1_question_2_answer_2;
+    theme_5_test_1_question_2_answer_3;
+    theme_5_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_2_answer_3
+(*
+    => nrel_text: [S = ab·sinα];;
+*);;
+
+theme_5_test_1_question_2_answer_1
+=> nrel_text: [S = ½ab·sinα];;
+
+theme_5_test_1_question_2_answer_2
+=> nrel_text: [S = ab·cosα];;
+
+theme_5_test_1_question_2_answer_4
+=> nrel_text: [S = ½ab·cosα];;
+
+theme_5_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Стороны треугольника равны 5 и 8, угол между ними 30°. Найдите площадь треугольника.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_3_answer_1;
+    theme_5_test_1_question_3_answer_2;
+    theme_5_test_1_question_3_answer_3;
+    theme_5_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_3_answer_2
+(*
+    => nrel_text: [10];;
+*);;
+
+theme_5_test_1_question_3_answer_1
+=> nrel_text: [20];;
+
+theme_5_test_1_question_3_answer_3
+=> nrel_text: [40];;
+
+theme_5_test_1_question_3_answer_4
+=> nrel_text: [5√3];;
+
+theme_5_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Стороны параллелограмма равны 6 и 10, острый угол 45°. Найдите площадь параллелограмма.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_4_answer_1;
+    theme_5_test_1_question_4_answer_2;
+    theme_5_test_1_question_4_answer_3;
+    theme_5_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_4_answer_4
+(*
+    => nrel_text: [30√2];;
+*);;
+
+theme_5_test_1_question_4_answer_1
+=> nrel_text: [60];;
+
+theme_5_test_1_question_4_answer_2
+=> nrel_text: [30];;
+
+theme_5_test_1_question_4_answer_3
+=> nrel_text: [60√2];;
+
+theme_5_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Площадь прямоугольника является частным случаем площади параллелограмма при угле...];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_5_answer_1;
+    theme_5_test_1_question_5_answer_2;
+    theme_5_test_1_question_5_answer_3;
+    theme_5_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_5_answer_3
+(*
+    => nrel_text: [90°];;
+*);;
+
+theme_5_test_1_question_5_answer_1
+=> nrel_text: [0°];;
+
+theme_5_test_1_question_5_answer_2
+=> nrel_text: [45°];;
+
+theme_5_test_1_question_5_answer_4
+=> nrel_text: [180°];;
+
+theme_5_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Площадь параллелограмма равна 40 см², периметр 36 см, угол D равен 150°. Найдите стороны параллелограмма.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_6_answer_1;
+    theme_5_test_1_question_6_answer_2;
+    theme_5_test_1_question_6_answer_3;
+    theme_5_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_6_answer_2
+(*
+    => nrel_text: [8 см и 10 см];;
+*);;
+
+theme_5_test_1_question_6_answer_1
+=> nrel_text: [6 см и 12 см];;
+
+theme_5_test_1_question_6_answer_3
+=> nrel_text: [5 см и 13 см];;
+
+theme_5_test_1_question_6_answer_4
+=> nrel_text: [7 см и 11 см];;
+
+theme_5_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Площадь равнобедренного треугольника с боковой стороной 6√2 см и углом при основании 75° равна...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_7_answer_1;
+    theme_5_test_1_question_7_answer_2;
+    theme_5_test_1_question_7_answer_3;
+    theme_5_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_7_answer_3
+(*
+    => nrel_text: [18 см²];;
+*);;
+
+theme_5_test_1_question_7_answer_1
+=> nrel_text: [9 см²];;
+
+theme_5_test_1_question_7_answer_2
+=> nrel_text: [12 см²];;
+
+theme_5_test_1_question_7_answer_4
+=> nrel_text: [24 см²];;
+
+theme_5_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Площадь ромба со стороной a и углом α вычисляется по формуле...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_8_answer_1;
+    theme_5_test_1_question_8_answer_2;
+    theme_5_test_1_question_8_answer_3;
+    theme_5_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_8_answer_4
+(*
+    => nrel_text: [S = a²·sinα];;
+*);;
+
+theme_5_test_1_question_8_answer_1
+=> nrel_text: [S = ½a²·sinα];;
+
+theme_5_test_1_question_8_answer_2
+=> nrel_text: [S = a²·cosα];;
+
+theme_5_test_1_question_8_answer_3
+=> nrel_text: [S = ½a²·cosα];;
+
+theme_5_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Две стороны треугольника имеют длины a и b. Какое наибольшее значение может принимать площадь треугольника?];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_9_answer_1;
+    theme_5_test_1_question_9_answer_2;
+    theme_5_test_1_question_9_answer_3;
+    theme_5_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_9_answer_2
+(*
+    => nrel_text: [½ab];;
+*);;
+
+theme_5_test_1_question_9_answer_1
+=> nrel_text: [ab];;
+
+theme_5_test_1_question_9_answer_3
+=> nrel_text: [¼ab];;
+
+theme_5_test_1_question_9_answer_4
+=> nrel_text: [2ab];;
+
+theme_5_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Площадь выпуклого четырехугольника равна половине произведения диагоналей на синус угла между ними. При каком угле площадь будет максимальной?];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_possible_answer:
+    theme_5_test_1_question_10_answer_1;
+    theme_5_test_1_question_10_answer_2;
+    theme_5_test_1_question_10_answer_3;
+    theme_5_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_5_test_1_question_10_answer_3
+(*
+    => nrel_text: [90°];;
+*);;
+
+theme_5_test_1_question_10_answer_1
+=> nrel_text: [0°];;
+
+theme_5_test_1_question_10_answer_2
+=> nrel_text: [45°];;
+
+theme_5_test_1_question_10_answer_4
+=> nrel_text: [180°];;  

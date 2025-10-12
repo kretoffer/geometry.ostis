@@ -1,719 +1,719 @@
-diagnostic_test_question_1
+diagnostic_test_1_question_1
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике ABC (∠C=90°) тангенс угла A равен...];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_trigonometric_functions_of_an_acute_angle;
+=> nrel_theme: theme_trigonometric_functions_of_an_acute_angle;
 => nrel_possible_answer:
-    diagnostic_test_question_1_answer_1;
-    diagnostic_test_question_1_answer_2;
-    diagnostic_test_question_1_answer_3;
-    diagnostic_test_question_1_answer_4;
+    diagnostic_test_1_question_1_answer_1;
+    diagnostic_test_1_question_1_answer_2;
+    diagnostic_test_1_question_1_answer_3;
+    diagnostic_test_1_question_1_answer_4;
 => nrel_correct_answer: diagnostic_test_question_1_answer_3
 (*
     => nrel_text: [BC/AC];;
 *);;
 
-diagnostic_test_question_1_answer_1
+diagnostic_test_1_question_1_answer_1
 => nrel_text: [AC/BC];;
 
-diagnostic_test_question_1_answer_2
+diagnostic_test_1_question_1_answer_2
 => nrel_text: [BC/AB];;
 
-diagnostic_test_question_1_answer_4
+diagnostic_test_1_question_1_answer_4
 => nrel_text: [AC/AB];;
 
-diagnostic_test_question_2
+diagnostic_test_1_question_2
 <- concept_question;
 => nrel_condition: [Чему равен cos 150°?];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_trigonometric_functions_of_an_acute_angle;
+=> nrel_theme: theme_trigonometric_functions_of_an_acute_angle;
 => nrel_possible_answer:
-    diagnostic_test_question_2_answer_1;
-    diagnostic_test_question_2_answer_2;
-    diagnostic_test_question_2_answer_3;
-    diagnostic_test_question_2_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_2_answer_3
+    diagnostic_test_1_question_2_answer_1;
+    diagnostic_test_1_question_2_answer_2;
+    diagnostic_test_1_question_2_answer_3;
+    diagnostic_test_1_question_2_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_2_answer_3
 (*
     => nrel_text: [-√3/2];;
 *);;
 
-diagnostic_test_question_2_answer_1
+diagnostic_test_1_question_2_answer_1
 => nrel_text: [√3/2];;
 
-diagnostic_test_question_2_answer_2
+diagnostic_test_1_question_2_answer_2
 => nrel_text: [1/2];;
 
-diagnostic_test_question_2_answer_4
+diagnostic_test_1_question_2_answer_4
 => nrel_text: [-1/2];;
 
-diagnostic_test_question_3
+diagnostic_test_1_question_3
 <- concept_question;
 => nrel_condition: [Если sinα = 0.6 и α - острый угол, найдите tgα.];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_trigonometric_functions_of_an_acute_angle;
+=> nrel_theme: theme_trigonometric_functions_of_an_acute_angle;
 => nrel_possible_answer:
-    diagnostic_test_question_3_answer_1;
-    diagnostic_test_question_3_answer_2;
-    diagnostic_test_question_3_answer_3;
-    diagnostic_test_question_3_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_3_answer_2
+    diagnostic_test_1_question_3_answer_1;
+    diagnostic_test_1_question_3_answer_2;
+    diagnostic_test_1_question_3_answer_3;
+    diagnostic_test_1_question_3_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_3_answer_2
 (*
     => nrel_text: [0.75];;
 *);;
 
-diagnostic_test_question_3_answer_1
+diagnostic_test_1_question_3_answer_1
 => nrel_text: [0.8];;
 
-diagnostic_test_question_3_answer_3
+diagnostic_test_1_question_3_answer_3
 => nrel_text: [1.25];;
 
-diagnostic_test_question_3_answer_4
+diagnostic_test_1_question_3_answer_4
 => nrel_text: [1.33];;
 
-diagnostic_test_question_4
+diagnostic_test_1_question_4
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике гипотенуза равна 10, угол A = 30°. Найдите катет BC.];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_theme: theme_solving_right_triangle;
 => nrel_possible_answer:
-    diagnostic_test_question_4_answer_1;
-    diagnostic_test_question_4_answer_2;
-    diagnostic_test_question_4_answer_3;
-    diagnostic_test_question_4_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_4_answer_1
+    diagnostic_test_1_question_4_answer_1;
+    diagnostic_test_1_question_4_answer_2;
+    diagnostic_test_1_question_4_answer_3;
+    diagnostic_test_1_question_4_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_4_answer_1
 (*
     => nrel_text: [5];;
 *);;
 
-diagnostic_test_question_4_answer_2
+diagnostic_test_1_question_4_answer_2
 => nrel_text: [5√3];;
 
-diagnostic_test_question_4_answer_3
+diagnostic_test_1_question_4_answer_3
 => nrel_text: [10];;
 
-diagnostic_test_question_4_answer_4
+diagnostic_test_1_question_4_answer_4
 => nrel_text: [10√3];;
 
-diagnostic_test_question_5
+diagnostic_test_1_question_5
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике катет AC = 8, ∠A = α. Найдите проекцию катета BC на гипотенузу.];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_theme: theme_solving_right_triangle;
 => nrel_possible_answer:
-    diagnostic_test_question_5_answer_1;
-    diagnostic_test_question_5_answer_2;
-    diagnostic_test_question_5_answer_3;
-    diagnostic_test_question_5_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_5_answer_4
+    diagnostic_test_1_question_5_answer_1;
+    diagnostic_test_1_question_5_answer_2;
+    diagnostic_test_1_question_5_answer_3;
+    diagnostic_test_1_question_5_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_5_answer_4
 (*
     => nrel_text: [8tgα·sinα];;
 *);;
 
-diagnostic_test_question_5_answer_1
+diagnostic_test_1_question_5_answer_1
 => nrel_text: [8cosα];;
 
-diagnostic_test_question_5_answer_2
+diagnostic_test_1_question_5_answer_2
 => nrel_text: [8sinα];;
 
-diagnostic_test_question_5_answer_3
+diagnostic_test_1_question_5_answer_3
 => nrel_text: [8tgα];;
 
-diagnostic_test_question_6
+diagnostic_test_1_question_6
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике высота CH = 12, медиана CM = 15. Найдите синус меньшего острого угла.];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_solving_right_triangle;
+=> nrel_theme: theme_solving_right_triangle;
 => nrel_possible_answer:
-    diagnostic_test_question_6_answer_1;
-    diagnostic_test_question_6_answer_2;
-    diagnostic_test_question_6_answer_3;
-    diagnostic_test_question_6_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_6_answer_1
+    diagnostic_test_1_question_6_answer_1;
+    diagnostic_test_1_question_6_answer_2;
+    diagnostic_test_1_question_6_answer_3;
+    diagnostic_test_1_question_6_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_6_answer_1
 (*
     => nrel_text: [0.6];;
 *);;
 
-diagnostic_test_question_6_answer_2
+diagnostic_test_1_question_6_answer_2
 => nrel_text: [0.8];;
 
-diagnostic_test_question_6_answer_3
+diagnostic_test_1_question_6_answer_3
 => nrel_text: [0.75];;
 
-diagnostic_test_question_6_answer_4
+diagnostic_test_1_question_6_answer_4
 => nrel_text: [0.5];;
 
-diagnostic_test_question_7
+diagnostic_test_1_question_7
 <- concept_question;
 => nrel_condition: [Какое из тождеств является основным тригонометрическим?];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_trigonometric_identities;
+=> nrel_theme: theme_trigonometric_identities;
 => nrel_possible_answer:
-    diagnostic_test_question_7_answer_1;
-    diagnostic_test_question_7_answer_2;
-    diagnostic_test_question_7_answer_3;
-    diagnostic_test_question_7_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_7_answer_2
+    diagnostic_test_1_question_7_answer_1;
+    diagnostic_test_1_question_7_answer_2;
+    diagnostic_test_1_question_7_answer_3;
+    diagnostic_test_1_question_7_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_7_answer_2
 (*
     => nrel_text: [sin²α + cos²α = 1];;
 *);;
 
-diagnostic_test_question_7_answer_1
+diagnostic_test_1_question_7_answer_1
 => nrel_text: [tgα = sinα/cosα];;
 
-diagnostic_test_question_7_answer_3
+diagnostic_test_1_question_7_answer_3
 => nrel_text: [ctgα = 1/tgα];;
 
-diagnostic_test_question_7_answer_4
+diagnostic_test_1_question_7_answer_4
 => nrel_text: [sin(90°-α) = cosα];;
 
-diagnostic_test_question_8
+diagnostic_test_1_question_8
 <- concept_question;
 => nrel_condition: [Если cosα = 0.8 и α - острый угол, то sinα равен...];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_trigonometric_identities;
+=> nrel_theme: theme_trigonometric_identities;
 => nrel_possible_answer:
-    diagnostic_test_question_8_answer_1;
-    diagnostic_test_question_8_answer_2;
-    diagnostic_test_question_8_answer_3;
-    diagnostic_test_question_8_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_8_answer_2
+    diagnostic_test_1_question_8_answer_1;
+    diagnostic_test_1_question_8_answer_2;
+    diagnostic_test_1_question_8_answer_3;
+    diagnostic_test_1_question_8_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_8_answer_2
 (*
     => nrel_text: [0.6];;
 *);;
 
-diagnostic_test_question_8_answer_1
+diagnostic_test_1_question_8_answer_1
 => nrel_text: [0.8];;
 
-diagnostic_test_question_8_answer_3
+diagnostic_test_1_question_8_answer_3
 => nrel_text: [0.2];;
 
-diagnostic_test_question_8_answer_4
+diagnostic_test_1_question_8_answer_4
 => nrel_text: [1.6];;
 
-diagnostic_test_question_9
+diagnostic_test_1_question_9
 <- concept_question;
 => nrel_condition: [Выведите формулу 1 + tg²α = 1/cos²α. Какое преобразование нужно выполнить?];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_trigonometric_identities;
+=> nrel_theme: theme_trigonometric_identities;
 => nrel_possible_answer:
-    diagnostic_test_question_9_answer_1;
-    diagnostic_test_question_9_answer_2;
-    diagnostic_test_question_9_answer_3;
-    diagnostic_test_question_9_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_9_answer_4
+    diagnostic_test_1_question_9_answer_1;
+    diagnostic_test_1_question_9_answer_2;
+    diagnostic_test_1_question_9_answer_3;
+    diagnostic_test_1_question_9_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_9_answer_4
 (*
     => nrel_text: [Разделить обе части основного тождества на cos²α];;
 *);;
 
-diagnostic_test_question_9_answer_1
+diagnostic_test_1_question_9_answer_1
 => nrel_text: [Умножить обе части на sin²α];;
 
-diagnostic_test_question_9_answer_2
+diagnostic_test_1_question_9_answer_2
 => nrel_text: [Возвести в квадрат сумму sinα и cosα];;
 
-diagnostic_test_question_9_answer_3
+diagnostic_test_1_question_9_answer_3
 => nrel_text: [Разделить обе части на sin²α];;
 
-diagnostic_test_question_10
+diagnostic_test_1_question_10
 <- concept_question;
 => nrel_condition: [По какой формуле вычисляется площадь треугольника через две стороны и угол между ними?];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_10_answer_1;
-    diagnostic_test_question_10_answer_2;
-    diagnostic_test_question_10_answer_3;
-    diagnostic_test_question_10_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_10_answer_2
+    diagnostic_test_1_question_10_answer_1;
+    diagnostic_test_1_question_10_answer_2;
+    diagnostic_test_1_question_10_answer_3;
+    diagnostic_test_1_question_10_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_10_answer_2
 (*
     => nrel_text: [S = ½ab·sinγ];;
 *);;
 
-diagnostic_test_question_10_answer_1
+diagnostic_test_1_question_10_answer_1
 => nrel_text: [S = ab·sinγ];;
 
-diagnostic_test_question_10_answer_3
+diagnostic_test_1_question_10_answer_3
 => nrel_text: [S = ½ab·cosγ];;
 
-diagnostic_test_question_10_answer_4
+diagnostic_test_1_question_10_answer_4
 => nrel_text: [S = ab·cosγ];;
 
-diagnostic_test_question_11
+diagnostic_test_1_question_11
 <- concept_question;
 => nrel_condition: [Стороны треугольника 6 и 8, угол между ними 30°. Площадь равна...];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_11_answer_1;
-    diagnostic_test_question_11_answer_2;
-    diagnostic_test_question_11_answer_3;
-    diagnostic_test_question_11_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_11_answer_3
+    diagnostic_test_1_question_11_answer_1;
+    diagnostic_test_1_question_11_answer_2;
+    diagnostic_test_1_question_11_answer_3;
+    diagnostic_test_1_question_11_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_11_answer_3
 (*
     => nrel_text: [12];;
 *);;
 
-diagnostic_test_question_11_answer_1
+diagnostic_test_1_question_11_answer_1
 => nrel_text: [24];;
 
-diagnostic_test_question_11_answer_2
+diagnostic_test_1_question_11_answer_2
 => nrel_text: [48];;
 
-diagnostic_test_question_11_answer_4
+diagnostic_test_1_question_11_answer_4
 => nrel_text: [6√3];;
 
-diagnostic_test_question_12
+diagnostic_test_1_question_12
 <- concept_question;
 => nrel_condition: [Две стороны треугольника имеют длины a и b. Какое наибольшее значение может принимать площадь?];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_12_answer_1;
-    diagnostic_test_question_12_answer_2;
-    diagnostic_test_question_12_answer_3;
-    diagnostic_test_question_12_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_12_answer_2
+    diagnostic_test_1_question_12_answer_1;
+    diagnostic_test_1_question_12_answer_2;
+    diagnostic_test_1_question_12_answer_3;
+    diagnostic_test_1_question_12_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_12_answer_2
 (*
     => nrel_text: [½ab];;
 *);;
 
-diagnostic_test_question_12_answer_1
+diagnostic_test_1_question_12_answer_1
 => nrel_text: [ab];;
 
-diagnostic_test_question_12_answer_3
+diagnostic_test_1_question_12_answer_3
 => nrel_text: [¼ab];;
 
-diagnostic_test_question_12_answer_4
+diagnostic_test_1_question_12_answer_4
 => nrel_text: [2ab];;
 
-diagnostic_test_question_13
+diagnostic_test_1_question_13
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике высота к гипотенузе является средним пропорциональным между...];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_13_answer_1;
-    diagnostic_test_question_13_answer_2;
-    diagnostic_test_question_13_answer_3;
-    diagnostic_test_question_13_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_13_answer_2
+    diagnostic_test_1_question_13_answer_1;
+    diagnostic_test_1_question_13_answer_2;
+    diagnostic_test_1_question_13_answer_3;
+    diagnostic_test_1_question_13_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_13_answer_2
 (*
     => nrel_text: [проекциями катетов];;
 *);;
 
-diagnostic_test_question_13_answer_1
+diagnostic_test_1_question_13_answer_1
 => nrel_text: [катетами];;
 
-diagnostic_test_question_13_answer_3
+diagnostic_test_1_question_13_answer_3
 => nrel_text: [гипотенузой и катетом];;
 
-diagnostic_test_question_13_answer_4
+diagnostic_test_1_question_13_answer_4
 => nrel_text: [гипотенузой и проекцией];;
 
-diagnostic_test_question_14
+diagnostic_test_1_question_14
 <- concept_question;
 => nrel_condition: [Проекции катетов на гипотенузу равны 3 и 12. Найдите высоту треугольника.];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_14_answer_1;
-    diagnostic_test_question_14_answer_2;
-    diagnostic_test_question_14_answer_3;
-    diagnostic_test_question_14_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_14_answer_3
+    diagnostic_test_1_question_14_answer_1;
+    diagnostic_test_1_question_14_answer_2;
+    diagnostic_test_1_question_14_answer_3;
+    diagnostic_test_1_question_14_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_14_answer_3
 (*
     => nrel_text: [6];;
 *);;
 
-diagnostic_test_question_14_answer_1
+diagnostic_test_1_question_14_answer_1
 => nrel_text: [4];;
 
-diagnostic_test_question_14_answer_2
+diagnostic_test_1_question_14_answer_2
 => nrel_text: [5];;
 
-diagnostic_test_question_14_answer_4
+diagnostic_test_1_question_14_answer_4
 => nrel_text: [7];;
 
-diagnostic_test_question_15
+diagnostic_test_1_question_15
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике катет AC равен проекции катета BC на гипотенузу. Найдите cosA.];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_15_answer_1;
-    diagnostic_test_question_15_answer_2;
-    diagnostic_test_question_15_answer_3;
-    diagnostic_test_question_15_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_15_answer_2
+    diagnostic_test_1_question_15_answer_1;
+    diagnostic_test_1_question_15_answer_2;
+    diagnostic_test_1_question_15_answer_3;
+    diagnostic_test_1_question_15_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_15_answer_2
 (*
     => nrel_text: [√2/2];;
 *);;
 
-diagnostic_test_question_15_answer_1
+diagnostic_test_1_question_15_answer_1
 => nrel_text: [1/2];;
 
-diagnostic_test_question_15_answer_3
+diagnostic_test_1_question_15_answer_3
 => nrel_text: [√3/2];;
 
-diagnostic_test_question_15_answer_4
+diagnostic_test_1_question_15_answer_4
 => nrel_text: [1/√3];;
 
-diagnostic_test_question_16
+diagnostic_test_1_question_16
 <- concept_question;
 => nrel_condition: [Площади треугольников с общим углом относятся как...];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_16_answer_1;
-    diagnostic_test_question_16_answer_2;
-    diagnostic_test_question_16_answer_3;
-    diagnostic_test_question_16_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_16_answer_3
+    diagnostic_test_1_question_16_answer_1;
+    diagnostic_test_1_question_16_answer_2;
+    diagnostic_test_1_question_16_answer_3;
+    diagnostic_test_1_question_16_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_16_answer_3
 (*
     => nrel_text: [произведениям сторон, заключающих этот угол];;
 *);;
 
-diagnostic_test_question_16_answer_1
+diagnostic_test_1_question_16_answer_1
 => nrel_text: [суммам сторон];;
 
-diagnostic_test_question_16_answer_2
+diagnostic_test_1_question_16_answer_2
 => nrel_text: [отношениям сторон];;
 
-diagnostic_test_question_16_answer_4
+diagnostic_test_1_question_16_answer_4
 => nrel_text: [квадратам сторон];;
 
-diagnostic_test_question_17
+diagnostic_test_1_question_17
 <- concept_question;
 => nrel_condition: [В треугольнике точка делит сторону в отношении 2:3. Площадь отсеченного треугольника составляет от площади исходного...];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_17_answer_1;
-    diagnostic_test_question_17_answer_2;
-    diagnostic_test_question_17_answer_3;
-    diagnostic_test_question_17_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_17_answer_2
+    diagnostic_test_1_question_17_answer_1;
+    diagnostic_test_1_question_17_answer_2;
+    diagnostic_test_1_question_17_answer_3;
+    diagnostic_test_1_question_17_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_17_answer_2
 (*
     => nrel_text: [2/5];;
 *);;
 
-diagnostic_test_question_17_answer_1
+diagnostic_test_1_question_17_answer_1
 => nrel_text: [3/5];;
 
-diagnostic_test_question_17_answer_3
+diagnostic_test_1_question_17_answer_3
 => nrel_text: [2/3];;
 
-diagnostic_test_question_17_answer_4
+diagnostic_test_1_question_17_answer_4
 => nrel_text: [3/2];;
 
-diagnostic_test_question_18
+diagnostic_test_1_question_18
 <- concept_question;
 => nrel_condition: [В треугольнике ABC на сторонах AB и AC взяты точки M и K. AM:MB = 2:3, AK:KC = 1:4. Найдите отношение площадей треугольников AMK и ABC.];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_formulas_for_the_area_of_triangle_and_parallelogram;
+=> nrel_theme: theme_formulas_for_the_area_of_triangle_and_parallelogram;
 => nrel_possible_answer:
-    diagnostic_test_question_18_answer_1;
-    diagnostic_test_question_18_answer_2;
-    diagnostic_test_question_18_answer_3;
-    diagnostic_test_question_18_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_18_answer_4
+    diagnostic_test_1_question_18_answer_1;
+    diagnostic_test_1_question_18_answer_2;
+    diagnostic_test_1_question_18_answer_3;
+    diagnostic_test_1_question_18_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_18_answer_4
 (*
     => nrel_text: [2/25];;
 *);;
 
-diagnostic_test_question_18_answer_1
+diagnostic_test_1_question_18_answer_1
 => nrel_text: [1/5];;
 
-diagnostic_test_question_18_answer_2
+diagnostic_test_1_question_18_answer_2
 => nrel_text: [3/10];;
 
-diagnostic_test_question_18_answer_3
+diagnostic_test_1_question_18_answer_3
 => nrel_text: [1/3];;
 
-diagnostic_test_question_19
+diagnostic_test_1_question_19
 <- concept_question;
 => nrel_condition: [Где находится центр описанной окружности треугольника?];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
 => nrel_possible_answer:
-    diagnostic_test_question_19_answer_1;
-    diagnostic_test_question_19_answer_2;
-    diagnostic_test_question_19_answer_3;
-    diagnostic_test_question_19_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_19_answer_2
+    diagnostic_test_1_question_19_answer_1;
+    diagnostic_test_1_question_19_answer_2;
+    diagnostic_test_1_question_19_answer_3;
+    diagnostic_test_1_question_19_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_19_answer_2
 (*
     => nrel_text: [В точке пересечения серединных перпендикуляров];;
 *);;
 
-diagnostic_test_question_19_answer_1
+diagnostic_test_1_question_19_answer_1
 => nrel_text: [В точке пересечения биссектрис];;
 
-diagnostic_test_question_19_answer_3
+diagnostic_test_1_question_19_answer_3
 => nrel_text: [В точке пересечения медиан];;
 
-diagnostic_test_question_19_answer_4
+diagnostic_test_1_question_19_answer_4
 => nrel_text: [В точке пересечения высот];;
 
-diagnostic_test_question_20
+diagnostic_test_1_question_20
 <- concept_question;
 => nrel_condition: [В равнобедренном треугольнике с боковыми сторонами 10 и основанием 12 радиус вписанной окружности равен...];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
 => nrel_possible_answer:
-    diagnostic_test_question_20_answer_1;
-    diagnostic_test_question_20_answer_2;
-    diagnostic_test_question_20_answer_3;
-    diagnostic_test_question_20_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_20_answer_2
+    diagnostic_test_1_question_20_answer_1;
+    diagnostic_test_1_question_20_answer_2;
+    diagnostic_test_1_question_20_answer_3;
+    diagnostic_test_1_question_20_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_20_answer_2
 (*
     => nrel_text: [3];;
 *);;
 
-diagnostic_test_question_20_answer_1
+diagnostic_test_1_question_20_answer_1
 => nrel_text: [2];;
 
-diagnostic_test_question_20_answer_3
+diagnostic_test_1_question_20_answer_3
 => nrel_text: [4];;
 
-diagnostic_test_question_20_answer_4
+diagnostic_test_1_question_20_answer_4
 => nrel_text: [5];;
 
-diagnostic_test_question_21
+diagnostic_test_1_question_21
 <- concept_question;
 => nrel_condition: [В треугольнике ∠A = 30°, BC = 6. Диаметр описанной окружности равен...];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
 => nrel_possible_answer:
-    diagnostic_test_question_21_answer_1;
-    diagnostic_test_question_21_answer_2;
-    diagnostic_test_question_21_answer_3;
-    diagnostic_test_question_21_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_21_answer_3
+    diagnostic_test_1_question_21_answer_1;
+    diagnostic_test_1_question_21_answer_2;
+    diagnostic_test_1_question_21_answer_3;
+    diagnostic_test_1_question_21_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_21_answer_3
 (*
     => nrel_text: [12];;
 *);;
 
-diagnostic_test_question_21_answer_1
+diagnostic_test_1_question_21_answer_1
 => nrel_text: [6];;
 
-diagnostic_test_question_21_answer_2
+diagnostic_test_1_question_21_answer_2
 => nrel_text: [8];;
 
-diagnostic_test_question_21_answer_4
+diagnostic_test_1_question_21_answer_4
 => nrel_text: [18];;
 
-diagnostic_test_question_22
+diagnostic_test_1_question_22
 <- concept_question;
 => nrel_condition: [Где находится центр описанной окружности прямоугольного треугольника?];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
 => nrel_possible_answer:
-    diagnostic_test_question_22_answer_1;
-    diagnostic_test_question_22_answer_2;
-    diagnostic_test_question_22_answer_3;
-    diagnostic_test_question_22_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_22_answer_2
+    diagnostic_test_1_question_22_answer_1;
+    diagnostic_test_1_question_22_answer_2;
+    diagnostic_test_1_question_22_answer_3;
+    diagnostic_test_1_question_22_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_22_answer_2
 (*
     => nrel_text: [На середине гипотенузы];;
 *);;
 
-diagnostic_test_question_22_answer_1
+diagnostic_test_1_question_22_answer_1
 => nrel_text: [В точке пересечения высот];;
 
-diagnostic_test_question_22_answer_3
+diagnostic_test_1_question_22_answer_3
 => nrel_text: [В точке пересечения биссектрис];;
 
-diagnostic_test_question_22_answer_4
+diagnostic_test_1_question_22_answer_4
 => nrel_text: [В точке пересечения медиан];;
 
-diagnostic_test_question_23
+diagnostic_test_1_question_23
 <- concept_question;
 => nrel_condition: [Радиус вписанной окружности прямоугольного треугольника с катетами 3 и 4 равен...];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
 => nrel_possible_answer:
-    diagnostic_test_question_23_answer_1;
-    diagnostic_test_question_23_answer_2;
-    diagnostic_test_question_23_answer_3;
-    diagnostic_test_question_23_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_23_answer_2
+    diagnostic_test_1_question_23_answer_1;
+    diagnostic_test_1_question_23_answer_2;
+    diagnostic_test_1_question_23_answer_3;
+    diagnostic_test_1_question_23_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_23_answer_2
 (*
     => nrel_text: [1];;
 *);;
 
-diagnostic_test_question_23_answer_1
+diagnostic_test_1_question_23_answer_1
 => nrel_text: [2];;
 
-diagnostic_test_question_23_answer_3
+diagnostic_test_1_question_23_answer_3
 => nrel_text: [0.5];;
 
-diagnostic_test_question_23_answer_4
+diagnostic_test_1_question_23_answer_4
 => nrel_text: [1.5];;
 
-diagnostic_test_question_24
+diagnostic_test_1_question_24
 <- concept_question;
 => nrel_condition: [В прямоугольном треугольнике гипотенуза c = 18, радиус вписанной окружности r = 2. Площадь треугольника равна...];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
 => nrel_possible_answer:
-    diagnostic_test_question_24_answer_1;
-    diagnostic_test_question_24_answer_2;
-    diagnostic_test_question_24_answer_3;
-    diagnostic_test_question_24_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_24_answer_4
+    diagnostic_test_1_question_24_answer_1;
+    diagnostic_test_1_question_24_answer_2;
+    diagnostic_test_1_question_24_answer_3;
+    diagnostic_test_1_question_24_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_24_answer_4
 (*
     => nrel_text: [40];;
 *);;
 
-diagnostic_test_question_24_answer_1
+diagnostic_test_1_question_24_answer_1
 => nrel_text: [36];;
 
-diagnostic_test_question_24_answer_2
+diagnostic_test_1_question_24_answer_2
 => nrel_text: [38];;
 
-diagnostic_test_question_24_answer_3
+diagnostic_test_1_question_24_answer_3
 => nrel_text: [42];;
 
-diagnostic_test_question_25
+diagnostic_test_1_question_25
 <- concept_question;
 => nrel_condition: [Какое условие необходимо для вписанного четырехугольника?];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_inscriibed_and_circumscribed_quadrilaterals;
+=> nrel_theme: theme_inscriibed_and_circumscribed_quadrilaterals;
 => nrel_possible_answer:
-    diagnostic_test_question_25_answer_1;
-    diagnostic_test_question_25_answer_2;
-    diagnostic_test_question_25_answer_3;
-    diagnostic_test_question_25_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_25_answer_2
+    diagnostic_test_1_question_25_answer_1;
+    diagnostic_test_1_question_25_answer_2;
+    diagnostic_test_1_question_25_answer_3;
+    diagnostic_test_1_question_25_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_25_answer_2
 (*
     => nrel_text: [Сумма противоположных углов равна 180°];;
 *);;
 
-diagnostic_test_question_25_answer_1
+diagnostic_test_1_question_25_answer_1
 => nrel_text: [Сумма соседних углов равна 180°];;
 
-diagnostic_test_question_25_answer_3
+diagnostic_test_1_question_25_answer_3
 => nrel_text: [Диагонали равны];;
 
-diagnostic_test_question_25_answer_4
+diagnostic_test_1_question_25_answer_4
 => nrel_text: [Все стороны равны];;
 
-diagnostic_test_question_26
+diagnostic_test_1_question_26
 <- concept_question;
 => nrel_condition: [В ромб с периметром 24 и углом 45° вписана окружность. Ее радиус равен...];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_inscriibed_and_circumscribed_quadrilaterals;
+=> nrel_theme: theme_inscriibed_and_circumscribed_quadrilaterals;
 => nrel_possible_answer:
-    diagnostic_test_question_26_answer_1;
-    diagnostic_test_question_26_answer_2;
-    diagnostic_test_question_26_answer_3;
-    diagnostic_test_question_26_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_26_answer_2
+    diagnostic_test_1_question_26_answer_1;
+    diagnostic_test_1_question_26_answer_2;
+    diagnostic_test_1_question_26_answer_3;
+    diagnostic_test_1_question_26_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_26_answer_2
 (*
     => nrel_text: [3√2/2];;
 *);;
 
-diagnostic_test_question_26_answer_1
+diagnostic_test_1_question_26_answer_1
 => nrel_text: [3];;
 
-diagnostic_test_question_26_answer_3
+diagnostic_test_1_question_26_answer_3
 => nrel_text: [2√2];;
 
-diagnostic_test_question_26_answer_4
+diagnostic_test_1_question_26_answer_4
 => nrel_text: [4];;
 
-diagnostic_test_question_27
+diagnostic_test_1_question_27
 <- concept_question;
 => nrel_condition: [В выпуклом четырехугольнике ABCD ∠A + ∠C = 180°. Докажите, что ∠BAC = ∠BDC. Какое свойство используется?];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_inscriibed_and_circumscribed_quadrilaterals;
+=> nrel_theme: theme_inscriibed_and_circumscribed_quadrilaterals;
 => nrel_possible_answer:
-    diagnostic_test_question_27_answer_1;
-    diagnostic_test_question_27_answer_2;
-    diagnostic_test_question_27_answer_3;
-    diagnostic_test_question_27_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_27_answer_3
+    diagnostic_test_1_question_27_answer_1;
+    diagnostic_test_1_question_27_answer_2;
+    diagnostic_test_1_question_27_answer_3;
+    diagnostic_test_1_question_27_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_27_answer_3
 (*
     => nrel_text: [Четырехугольник вписанный];;
 *);;
 
-diagnostic_test_question_27_answer_1
+diagnostic_test_1_question_27_answer_1
 => nrel_text: [Четырехугольник описанный];;
 
-diagnostic_test_question_27_answer_2
+diagnostic_test_1_question_27_answer_2
 => nrel_text: [Диагонали равны];;
 
-diagnostic_test_question_27_answer_4
+diagnostic_test_1_question_27_answer_4
 => nrel_text: [Противоположные стороны равны];;
 
-diagnostic_test_question_28
+diagnostic_test_1_question_28
 <- concept_question;
 => nrel_condition: [Что утверждает теорема синусов?];
 => nrel_difficulty: [1];
-=> nrel_theme: subtopic_sine_rule;
+=> nrel_theme: theme_sine_rule;
 => nrel_possible_answer:
-    diagnostic_test_question_28_answer_1;
-    diagnostic_test_question_28_answer_2;
-    diagnostic_test_question_28_answer_3;
-    diagnostic_test_question_28_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_28_answer_2
+    diagnostic_test_1_question_28_answer_1;
+    diagnostic_test_1_question_28_answer_2;
+    diagnostic_test_1_question_28_answer_3;
+    diagnostic_test_1_question_28_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_28_answer_2
 (*
     => nrel_text: [Стороны пропорциональны синусам противолежащих углов];;
 *);;
 
-diagnostic_test_question_28_answer_1
+diagnostic_test_1_question_28_answer_1
 => nrel_text: [Стороны пропорциональны косинусам прилежащих углов];;
 
-diagnostic_test_question_28_answer_3
+diagnostic_test_1_question_28_answer_3
 => nrel_text: [Стороны равны синусам противолежащих углов];;
 
-diagnostic_test_question_28_answer_4
+diagnostic_test_1_question_28_answer_4
 => nrel_text: [Стороны обратно пропорциональны синусам углов];;
 
-diagnostic_test_question_29
+diagnostic_test_1_question_29
 <- concept_question;
 => nrel_condition: [В треугольнике a = 8, α = 60°, b = 9. Найдите угол β.];
 => nrel_difficulty: [2];
-=> nrel_theme: subtopic_sine_rule;
+=> nrel_theme: theme_sine_rule;
 => nrel_possible_answer:
-    diagnostic_test_question_29_answer_1;
-    diagnostic_test_question_29_answer_2;
-    diagnostic_test_question_29_answer_3;
-    diagnostic_test_question_29_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_29_answer_2
+    diagnostic_test_1_question_29_answer_1;
+    diagnostic_test_1_question_29_answer_2;
+    diagnostic_test_1_question_29_answer_3;
+    diagnostic_test_1_question_29_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_29_answer_2
 (*
     => nrel_text: [77°];;
 *);;
 
-diagnostic_test_question_29_answer_1
+diagnostic_test_1_question_29_answer_1
 => nrel_text: [45°];;
 
-diagnostic_test_question_29_answer_3
+diagnostic_test_1_question_29_answer_3
 => nrel_text: [90°];;
 
-diagnostic_test_question_29_answer_4
+diagnostic_test_1_question_29_answer_4
 => nrel_text: [120°];;
 
-diagnostic_test_question_30
+diagnostic_test_1_question_30
 <- concept_question;
 => nrel_condition: [Если один из углов треугольника равен 30° или 150°, то сторона, противолежащая этому углу...];
 => nrel_difficulty: [3];
-=> nrel_theme: subtopic_12_law_of_sines;
+=> nrel_theme: theme_12_law_of_sines;
 => nrel_possible_answer:
-    diagnostic_test_question_30_answer_1;
-    diagnostic_test_question_30_answer_2;
-    diagnostic_test_question_30_answer_3;
-    diagnostic_test_question_30_answer_4;
-=> nrel_correct_answer: diagnostic_test_question_30_answer_3
+    diagnostic_test_1_question_30_answer_1;
+    diagnostic_test_1_question_30_answer_2;
+    diagnostic_test_1_question_30_answer_3;
+    diagnostic_test_1_question_30_answer_4;
+=> nrel_correct_answer: diagnostic_test_1_question_30_answer_3
 (*
     => nrel_text: [равна радиусу описанной окружности];;
 *);;
 
-diagnostic_test_question_30_answer_1
+diagnostic_test_1_question_30_answer_1
 => nrel_text: [равна диаметру описанной окружности];;
 
-diagnostic_test_question_30_answer_2
+diagnostic_test_1_question_30_answer_2
 => nrel_text: [вдвое больше радиуса описанной окружности];;
 
-diagnostic_test_question_30_answer_4
+diagnostic_test_1_question_30_answer_4
 => nrel_text: [вдвое меньше радиуса описанной окружности];;
