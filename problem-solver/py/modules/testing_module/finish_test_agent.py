@@ -243,13 +243,17 @@ class FinishTestAgent(ScAgentClassic):
     def set_user_knowledge_level(self, user: ScAddr, knowledge_level: ScAddr):
         system_rating = self.get_system_rating_of_user(user)
         templ = ScTemplate()
-        templ.quintuple(
+        templ.triple(
             ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE),
             sc_type.VAR_ACTUAL_TEMP_POS_ARC,
-            (sc_type.VAR_NODE, "main"),
-            sc_type.VAR_PERM_POS_ARC,
-            system_rating
+            (sc_type.VAR_NODE, "main")
         )
+        templ.triple(
+            system_rating,
+            sc_type.VAR_PERM_POS_ARC,
+            "main"
+        )
+        main_node = search_by_template(templ)[0].get("main")
         templ.quintuple(
             "main",
             (sc_type.VAR_ACTUAL_TEMP_POS_ARC, "_arc_to_knowledge_level"),
@@ -266,9 +270,10 @@ class FinishTestAgent(ScAgentClassic):
         if search_results := search_by_template(templ):
             delete_elements(search_results[0].get("_arc_to_knowledge_level"))
             delete_elements(search_results[0].get("_arc_from_rating"))
-            arc = generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, search_results[0].get("main"), knowledge_level)
-            arc_2 = generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE), arc)
 
-            generate_connector(sc_type.CONST_PERM_POS_ARC, system_rating, knowledge_level)
-            generate_connector(sc_type.CONST_PERM_POS_ARC, system_rating, arc)
-            generate_connector(sc_type.CONST_PERM_POS_ARC, system_rating, arc_2)
+        arc = generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, main_node, knowledge_level)
+        arc_2 = generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE), arc)
+
+        generate_connector(sc_type.CONST_PERM_POS_ARC, system_rating, knowledge_level)
+        generate_connector(sc_type.CONST_PERM_POS_ARC, system_rating, arc)
+        generate_connector(sc_type.CONST_PERM_POS_ARC, system_rating, arc_2)
