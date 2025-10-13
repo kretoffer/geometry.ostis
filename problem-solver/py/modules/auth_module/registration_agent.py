@@ -44,19 +44,19 @@ class RegistrationAgent(ScAgentClassic):
 
         # user
         constr.generate_node(sc_type.CONST_NODE, "user")
-        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("concept_student", sc_type.VAR_NODE_CLASS), "user")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("concept_student", sc_type.CONST_NODE_CLASS), "user")
 
         # user id
         constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", user_id_link, "arc_to_user_id_link")
-        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_tg_id", sc_type.VAR_NODE_NON_ROLE), "arc_to_user_id_link")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_tg_id", sc_type.CONST_NODE_NON_ROLE), "arc_to_user_id_link")
 
         # user class
         constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", user_class_link, "arc_to_user_class_link")
-        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_class", sc_type.VAR_NODE_NON_ROLE), "arc_to_user_class_link")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_class", sc_type.CONST_NODE_NON_ROLE), "arc_to_user_class_link")
 
         # user name
         constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", user_name_link, "arc_to_user_name_link")
-        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_name", sc_type.VAR_NODE_NON_ROLE), "arc_to_user_name_link")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_name", sc_type.CONST_NODE_NON_ROLE), "arc_to_user_name_link")
 
         sets = [
             "preferable_content_types",
@@ -70,7 +70,7 @@ class RegistrationAgent(ScAgentClassic):
         for set_name in sets:
             constr.generate_node(sc_type.CONST_NODE_TUPLE, set_name)
             constr.generate_connector(sc_type.CONST_COMMON_ARC, "user", set_name, f"arc_to_{set_name}")
-            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve(f"nrel_{set_name}", sc_type.VAR_NODE_NON_ROLE), f"arc_to_{set_name}")
+            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve(f"nrel_{set_name}", sc_type.CONST_NODE_NON_ROLE), f"arc_to_{set_name}")
 
         # ratings
         for rating in ["self", "system"]:
@@ -82,17 +82,17 @@ class RegistrationAgent(ScAgentClassic):
 
             constr.generate_node(sc_type.CONST_NODE, f"{rating}_main")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_main", f"set2{rating}_main_arc")
-            constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, f"{rating}_main", "user", f"{rating}_main2user_arc")
+            constr.generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, f"{rating}_main", "user", f"{rating}_main2user_arc")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_main2user_arc")
 
 
-            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("rrel_theme", sc_type.VAR_NODE_ROLE))
+            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("rrel_theme", sc_type.CONST_NODE_ROLE))
 
             constr.generate_node(sc_type.CONST_NODE_TUPLE, f"{rating}_themes_set")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_themes_set")
-            constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, f"{rating}_main", f"{rating}_themes_set", f"main_{rating}2themes_set_arc")
+            constr.generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, f"{rating}_main", f"{rating}_themes_set", f"main_{rating}2themes_set_arc")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"main_{rating}2themes_set_arc")
-            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_theme", sc_type.VAR_NODE_ROLE), f"main_{rating}2themes_set_arc", f"arc_rrel_theme2themes_{rating}_set")
+            constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_theme", sc_type.CONST_NODE_ROLE), f"main_{rating}2themes_set_arc", f"arc_rrel_theme2themes_{rating}_set")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"arc_rrel_theme2themes_{rating}_set")
 
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("rrel_student", sc_type.CONST_NODE_ROLE))
@@ -114,13 +114,13 @@ class RegistrationAgent(ScAgentClassic):
                 constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_{theme_type}2set_arc_arc")
 
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE))
-            constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE), f"{rating}_main", f"{rating}_kn_level2main")
+            constr.generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, ScKeynodes.resolve("nrel_user_knowledge_level", sc_type.CONST_NODE_NON_ROLE), f"{rating}_main", f"{rating}_kn_level2main")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, f"{rating}_kn_level2main")
             constr.generate_connector(sc_type.CONST_PERM_POS_ARC, rating, ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE))
 
         # self rating
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "self", self_knowledge_level)
-        constr.generate_connector(sc_type.CONST_TEMP_POS_ARC, "self_main", self_knowledge_level, "self_main2kn_level_arc")
+        constr.generate_connector(sc_type.CONST_ACTUAL_TEMP_POS_ARC, "self_main", self_knowledge_level, "self_main2kn_level_arc")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "self", "self_main2kn_level_arc")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_knowledge_level", sc_type.CONST_NODE_ROLE), "self_main2kn_level_arc", "rrel_kn_level2arc2kn_level")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "self", "rrel_kn_level2arc2kn_level")
@@ -136,7 +136,7 @@ class RegistrationAgent(ScAgentClassic):
             sc_type.VAR_COMMON_ARC,
             user_id_link,
             sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_tg_id", sc_type.NODE_NON_ROLE)
+            ScKeynodes.resolve("nrel_tg_id", sc_type.CONST_NODE_NON_ROLE)
         )
         if search_results := search_by_template(templ):
             return search_results[0].get("user")
