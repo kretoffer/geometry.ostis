@@ -1,0 +1,239 @@
+theme_26_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Что такое преобразование фигуры на плоскости?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_1_answer_1;
+    theme_26_test_1_question_1_answer_2;
+    theme_26_test_1_question_1_answer_3;
+    theme_26_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_1_answer_3
+(*
+    => nrel_text: [Перемещение каждой точки фигуры по некоторому общему алгоритму];;
+*);;
+
+theme_26_test_1_question_1_answer_1
+=> nrel_text: [Изменение размеров фигуры];;
+
+theme_26_test_1_question_1_answer_2
+=> nrel_text: [Поворот фигуры вокруг точки];;
+
+theme_26_test_1_question_1_answer_4
+=> nrel_text: [Симметрия фигуры относительно прямой];;
+
+theme_26_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Что такое движение в геометрии?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_2_answer_1;
+    theme_26_test_1_question_2_answer_2;
+    theme_26_test_1_question_2_answer_3;
+    theme_26_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_2_answer_2
+(*
+    => nrel_text: [Преобразование, сохраняющее расстояние между точками];;
+*);;
+
+theme_26_test_1_question_2_answer_1
+=> nrel_text: [Перемещение фигуры в пространстве];;
+
+theme_26_test_1_question_2_answer_3
+=> nrel_text: [Преобразование, изменяющее размеры фигуры];;
+
+theme_26_test_1_question_2_answer_4
+=> nrel_text: [Поворот фигуры на заданный угол];;
+
+theme_26_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Какое преобразование называется центральной симметрией?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_3_answer_1;
+    theme_26_test_1_question_3_answer_2;
+    theme_26_test_1_question_3_answer_3;
+    theme_26_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_3_answer_4
+(*
+    => nrel_text: [Преобразование, при котором точки переходят в симметричные относительно центра симметрии];;
+*);;
+
+theme_26_test_1_question_3_answer_1
+=> nrel_text: [Преобразование относительно прямой];;
+
+theme_26_test_1_question_3_answer_2
+=> nrel_text: [Преобразование, сохраняющее расстояния];;
+
+theme_26_test_1_question_3_answer_3
+=> nrel_text: [Преобразование параллельного переноса];;
+
+theme_26_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Какое преобразование называется осевой симметрией?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_4_answer_1;
+    theme_26_test_1_question_4_answer_2;
+    theme_26_test_1_question_4_answer_3;
+    theme_26_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_4_answer_1
+(*
+    => nrel_text: [Преобразование, при котором точки переходят в симметричные относительно оси симметрии];;
+*);;
+
+theme_26_test_1_question_4_answer_2
+=> nrel_text: [Преобразование относительно точки];;
+
+theme_26_test_1_question_4_answer_3
+=> nrel_text: [Преобразование параллельного переноса];;
+
+theme_26_test_1_question_4_answer_4
+=> nrel_text: [Преобразование поворота];;
+
+theme_26_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Что такое параллельный перенос?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_5_answer_1;
+    theme_26_test_1_question_5_answer_2;
+    theme_26_test_1_question_5_answer_3;
+    theme_26_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_5_answer_3
+(*
+    => nrel_text: [Преобразование, при котором все точки фигуры перемещаются в одном направлении на одно расстояние];;
+*);;
+
+theme_26_test_1_question_5_answer_1
+=> nrel_text: [Преобразование симметрии];;
+
+theme_26_test_1_question_5_answer_2
+=> nrel_text: [Преобразование поворота];;
+
+theme_26_test_1_question_5_answer_4
+=> nrel_text: [Преобразование изменения размеров];;
+
+theme_26_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Что такое поворот?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_6_answer_1;
+    theme_26_test_1_question_6_answer_2;
+    theme_26_test_1_question_6_answer_3;
+    theme_26_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_6_answer_2
+(*
+    => nrel_text: [Преобразование, при котором все точки фигуры поворачиваются вокруг центра на один и тот же угол];;
+*);;
+
+theme_26_test_1_question_6_answer_1
+=> nrel_text: [Преобразование симметрии];;
+
+theme_26_test_1_question_6_answer_3
+=> nrel_text: [Преобразование параллельного переноса];;
+
+theme_26_test_1_question_6_answer_4
+=> nrel_text: [Преобразование изменения размеров];;
+
+theme_26_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Какое свойство движений является основным?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_7_answer_1;
+    theme_26_test_1_question_7_answer_2;
+    theme_26_test_1_question_7_answer_3;
+    theme_26_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_7_answer_4
+(*
+    => nrel_text: [Сохранение расстояний между точками];;
+*);;
+
+theme_26_test_1_question_7_answer_1
+=> nrel_text: [Сохранение углов];;
+
+theme_26_test_1_question_7_answer_2
+=> nrel_text: [Сохранение площадей];;
+
+theme_26_test_1_question_7_answer_3
+=> nrel_text: [Сохранение направлений];;
+
+theme_26_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Что такое гомотетия?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_8_answer_1;
+    theme_26_test_1_question_8_answer_2;
+    theme_26_test_1_question_8_answer_3;
+    theme_26_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_8_answer_3
+(*
+    => nrel_text: [Преобразование, при котором расстояния изменяются в k раз относительно центра];;
+*);;
+
+theme_26_test_1_question_8_answer_1
+=> nrel_text: [Преобразование симметрии];;
+
+theme_26_test_1_question_8_answer_2
+=> nrel_text: [Преобразование параллельного переноса];;
+
+theme_26_test_1_question_8_answer_4
+=> nrel_text: [Преобразование поворота];;
+
+theme_26_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Что такое подобие?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_9_answer_1;
+    theme_26_test_1_question_9_answer_2;
+    theme_26_test_1_question_9_answer_3;
+    theme_26_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_9_answer_2
+(*
+    => nrel_text: [Преобразование, при котором расстояния изменяются в одно и то же число раз];;
+*);;
+
+theme_26_test_1_question_9_answer_1
+=> nrel_text: [Преобразование, сохраняющее расстояния];;
+
+theme_26_test_1_question_9_answer_3
+=> nrel_text: [Преобразование симметрии];;
+
+theme_26_test_1_question_9_answer_4
+=> nrel_text: [Преобразование параллельного переноса];;
+
+theme_26_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Какое преобразование переводит прямые в параллельные им прямые?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_transformations_of_plane_figures;
+=> nrel_possible_answer:
+    theme_26_test_1_question_10_answer_1;
+    theme_26_test_1_question_10_answer_2;
+    theme_26_test_1_question_10_answer_3;
+    theme_26_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_26_test_1_question_10_answer_4
+(*
+    => nrel_text: [Гомотетия];;
+*);;
+
+theme_26_test_1_question_10_answer_1
+=> nrel_text: [Поворот];;
+
+theme_26_test_1_question_10_answer_2
+=> nrel_text: [Симметрия];;
+
+theme_26_test_1_question_10_answer_3
+=> nrel_text: [Параллельный перенос];;

@@ -1,0 +1,12 @@
+theme_9_video_lesson_2
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [прямоугольный треугольник со вписанной окружностью (2 мин) && https://youtu.be/SFSlsMN7N5M?feature=shared]
+>;
+=> nrel_task: theme_9_task_1;
+=> nrel_test: theme_9_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

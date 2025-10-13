@@ -1,0 +1,239 @@
+theme_13_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Что утверждает теорема косинусов?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_1_answer_1;
+    theme_13_test_1_question_1_answer_2;
+    theme_13_test_1_question_1_answer_3;
+    theme_13_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_1_answer_2
+(*
+    => nrel_text: [Квадрат стороны равен сумме квадратов двух других сторон минус удвоенное произведение этих сторон на косинус угла между ними];;
+*);;
+
+theme_13_test_1_question_1_answer_1
+=> nrel_text: [Квадрат стороны равен сумме квадратов двух других сторон плюс удвоенное произведение этих сторон на косинус угла между ними];;
+
+theme_13_test_1_question_1_answer_3
+=> nrel_text: [Сторона равна сумме двух других сторон, умноженной на косинус угла между ними];;
+
+theme_13_test_1_question_1_answer_4
+=> nrel_text: [Квадрат стороны равен произведению двух других сторон на косинус угла между ними];;
+
+theme_13_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Как записывается теорема косинусов для стороны a?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_2_answer_1;
+    theme_13_test_1_question_2_answer_2;
+    theme_13_test_1_question_2_answer_3;
+    theme_13_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_2_answer_3
+(*
+    => nrel_text: [a² = b² + c² - 2bc·cosα];;
+*);;
+
+theme_13_test_1_question_2_answer_1
+=> nrel_text: [a² = b² + c² + 2bc·cosα];;
+
+theme_13_test_1_question_2_answer_2
+=> nrel_text: [a = b² + c² - 2bc·cosα];;
+
+theme_13_test_1_question_2_answer_4
+=> nrel_text: [a² = b² - c² - 2bc·cosα];;
+
+theme_13_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Чему равен косинус угла α через стороны треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_3_answer_1;
+    theme_13_test_1_question_3_answer_2;
+    theme_13_test_1_question_3_answer_3;
+    theme_13_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_3_answer_2
+(*
+    => nrel_text: [cosα = (b² + c² - a²)/2bc];;
+*);;
+
+theme_13_test_1_question_3_answer_1
+=> nrel_text: [cosα = (a² + b² - c²)/2ab];;
+
+theme_13_test_1_question_3_answer_3
+=> nrel_text: [cosα = (a² - b² - c²)/2bc];;
+
+theme_13_test_1_question_3_answer_4
+=> nrel_text: [cosα = (b² + c² + a²)/2bc];;
+
+theme_13_test_1_question_4
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется площадь треугольника по трем сторонам (формула Герона)?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_4_answer_1;
+    theme_13_test_1_question_4_answer_2;
+    theme_13_test_1_question_4_answer_3;
+    theme_13_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_4_answer_3
+(*
+    => nrel_text: [S = √(p(p-a)(p-b)(p-c)];;
+*);;
+
+theme_13_test_1_question_4_answer_1
+=> nrel_text: [S = p(p-a)(p-b)(p-c)];;
+
+theme_13_test_1_question_4_answer_2
+=> nrel_text: [S = √((p-a)(p-b)(p-c))];;
+
+theme_13_test_1_question_4_answer_4
+=> nrel_text: [S = p√((p-a)(p-b)(p-c))];;
+
+theme_13_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Стороны треугольника равны 7, 8, 9. Найдите площадь треугольника.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_5_answer_1;
+    theme_13_test_1_question_5_answer_2;
+    theme_13_test_1_question_5_answer_3;
+    theme_13_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_5_answer_2
+(*
+    => nrel_text: [12√5];;
+*);;
+
+theme_13_test_1_question_5_answer_1
+=> nrel_text: [24];;
+
+theme_13_test_1_question_5_answer_3
+=> nrel_text: [10√5];;
+
+theme_13_test_1_question_5_answer_4
+=> nrel_text: [15];;
+
+theme_13_test_1_question_6
+<- concept_question;
+=> nrel_condition: [В треугольнике стороны равны 5, 6, 7. Найдите косинус наибольшего угла.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_6_answer_1;
+    theme_13_test_1_question_6_answer_2;
+    theme_13_test_1_question_6_answer_3;
+    theme_13_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_6_answer_3
+(*
+    => nrel_text: [1/5];;
+*);;
+
+theme_13_test_1_question_6_answer_1
+=> nrel_text: [1/7];;
+
+theme_13_test_1_question_6_answer_2
+=> nrel_text: [2/7];;
+
+theme_13_test_1_question_6_answer_4
+=> nrel_text: [3/7];;
+
+theme_13_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Две стороны треугольника равны 8 и 10, угол между ними 60°. Найдите третью сторону.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_7_answer_1;
+    theme_13_test_1_question_7_answer_2;
+    theme_13_test_1_question_7_answer_3;
+    theme_13_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_7_answer_2
+(*
+    => nrel_text: [2√21];;
+*);;
+
+theme_13_test_1_question_7_answer_1
+=> nrel_text: [√164];;
+
+theme_13_test_1_question_7_answer_3
+=> nrel_text: [2√19];;
+
+theme_13_test_1_question_7_answer_4
+=> nrel_text: [√84];;
+
+theme_13_test_1_question_8
+<- concept_question;
+=> nrel_condition: [В треугольнике стороны равны 13, 14, 15. Найдите радиус вписанной окружности.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_8_answer_1;
+    theme_13_test_1_question_8_answer_2;
+    theme_13_test_1_question_8_answer_3;
+    theme_13_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_8_answer_4
+(*
+    => nrel_text: [4];;
+*);;
+
+theme_13_test_1_question_8_answer_1
+=> nrel_text: [3];;
+
+theme_13_test_1_question_8_answer_2
+=> nrel_text: [3.5];;
+
+theme_13_test_1_question_8_answer_3
+=> nrel_text: [4.5];;
+
+theme_13_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Диагонали параллелограмма равны 10 и 12, угол между ними 60°. Найдите стороны параллелограмма.];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_9_answer_1;
+    theme_13_test_1_question_9_answer_2;
+    theme_13_test_1_question_9_answer_3;
+    theme_13_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_9_answer_2
+(*
+    => nrel_text: [√31 и √19];;
+*);;
+
+theme_13_test_1_question_9_answer_1
+=> nrel_text: [8 и 6];;
+
+theme_13_test_1_question_9_answer_3
+=> nrel_text: [√41 и √29];;
+
+theme_13_test_1_question_9_answer_4
+=> nrel_text: [7 и 5];;
+
+theme_13_test_1_question_10
+<- concept_question;
+=> nrel_condition: [В треугольнике медианы равны 9, 12, 15. Найдите площадь треугольника.];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_cosine_rule;
+=> nrel_possible_answer:
+    theme_13_test_1_question_10_answer_1;
+    theme_13_test_1_question_10_answer_2;
+    theme_13_test_1_question_10_answer_3;
+    theme_13_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_13_test_1_question_10_answer_3
+(*
+    => nrel_text: [72];;
+*);;
+
+theme_13_test_1_question_10_answer_1
+=> nrel_text: [54];;
+
+theme_13_test_1_question_10_answer_2
+=> nrel_text: [64];;
+
+theme_13_test_1_question_10_answer_4
+=> nrel_text: [80];;

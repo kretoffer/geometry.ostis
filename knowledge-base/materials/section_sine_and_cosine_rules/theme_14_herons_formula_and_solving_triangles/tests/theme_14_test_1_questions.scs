@@ -1,0 +1,239 @@
+theme_14_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Какое соотношение связывает диагонали и стороны параллелограмма?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_1_answer_1;
+    theme_14_test_1_question_1_answer_2;
+    theme_14_test_1_question_1_answer_3;
+    theme_14_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_1_answer_2
+(*
+    => nrel_text: [d₁² + d₂² = 2(a² + b²)];;
+*);;
+
+theme_14_test_1_question_1_answer_1
+=> nrel_text: [d₁² + d₂² = a² + b²];;
+
+theme_14_test_1_question_1_answer_3
+=> nrel_text: [d₁² - d₂² = 2(a² - b²)];;
+
+theme_14_test_1_question_1_answer_4
+=> nrel_text: [d₁·d₂ = a·b];;
+
+theme_14_test_1_question_2
+<- concept_question;
+=> nrel_condition: [В параллелограмме стороны равны 6 и 8. Найдите сумму квадратов диагоналей.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_2_answer_1;
+    theme_14_test_1_question_2_answer_2;
+    theme_14_test_1_question_2_answer_3;
+    theme_14_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_2_answer_3
+(*
+    => nrel_text: [200];;
+*);;
+
+theme_14_test_1_question_2_answer_1
+=> nrel_text: [100];;
+
+theme_14_test_1_question_2_answer_2
+=> nrel_text: [144];;
+
+theme_14_test_1_question_2_answer_4
+=> nrel_text: [280];;
+
+theme_14_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Диагонали параллелограмма равны 10 и 12. Найдите сумму квадратов сторон.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_3_answer_1;
+    theme_14_test_1_question_3_answer_2;
+    theme_14_test_1_question_3_answer_3;
+    theme_14_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_3_answer_4
+(*
+    => nrel_text: [122];;
+*);;
+
+theme_14_test_1_question_3_answer_1
+=> nrel_text: [61];;
+
+theme_14_test_1_question_3_answer_2
+=> nrel_text: [100];;
+
+theme_14_test_1_question_3_answer_4
+=> nrel_text: [122];;
+
+theme_14_test_1_question_4
+<- concept_question;
+=> nrel_condition: [В прямоугольнике диагонали равны 13. Найдите периметр, если одна сторона равна 5.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_4_answer_1;
+    theme_14_test_1_question_4_answer_2;
+    theme_14_test_1_question_4_answer_3;
+    theme_14_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_4_answer_2
+(*
+    => nrel_text: [34];;
+*);;
+
+theme_14_test_1_question_4_answer_1
+=> nrel_text: [30];;
+
+theme_14_test_1_question_4_answer_3
+=> nrel_text: [36];;
+
+theme_14_test_1_question_4_answer_4
+=> nrel_text: [38];;
+
+theme_14_test_1_question_5
+<- concept_question;
+=> nrel_condition: [В ромбе диагонали равны 6 и 8. Найдите сторону ромба.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_5_answer_1;
+    theme_14_test_1_question_5_answer_2;
+    theme_14_test_1_question_5_answer_3;
+    theme_14_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_5_answer_3
+(*
+    => nrel_text: [5];;
+*);;
+
+theme_14_test_1_question_5_answer_1
+=> nrel_text: [7];;
+
+theme_14_test_1_question_5_answer_2
+=> nrel_text: [10];;
+
+theme_14_test_1_question_5_answer_4
+=> nrel_text: [√14];;
+
+theme_14_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Стороны параллелограмма равны 5 и 12, одна из диагоналей равна 11. Найдите другую диагональ.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_6_answer_1;
+    theme_14_test_1_question_6_answer_2;
+    theme_14_test_1_question_6_answer_3;
+    theme_14_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_6_answer_4
+(*
+    => nrel_text: [√217];;
+*);;
+
+theme_14_test_1_question_6_answer_1
+=> nrel_text: [13];;
+
+theme_14_test_1_question_6_answer_2
+=> nrel_text: [15];;
+
+theme_14_test_1_question_6_answer_3
+=> nrel_text: [17];;
+
+theme_14_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Диагонали параллелограмма равны 6 и 8. Найдите периметр параллелограмма, если его стороны относятся как 1:2.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_7_answer_1;
+    theme_14_test_1_question_7_answer_2;
+    theme_14_test_1_question_7_answer_3;
+    theme_14_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_7_answer_2
+(*
+    => nrel_text: [6√10];;
+*);;
+
+theme_14_test_1_question_7_answer_1
+=> nrel_text: [4√10];;
+
+theme_14_test_1_question_7_answer_3
+=> nrel_text: [4√13];;
+
+theme_14_test_1_question_7_answer_4
+=> nrel_text: [8√7];;
+
+theme_14_test_1_question_8
+<- concept_question;
+=> nrel_condition: [В параллелограмме с периметром 28 диагонали равны 10 и 4√6. Найдите площадь параллелограмма.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_8_answer_1;
+    theme_14_test_1_question_8_answer_2;
+    theme_14_test_1_question_8_answer_3;
+    theme_14_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_8_answer_1
+(*
+    => nrel_text: [24];;
+*);;
+
+theme_14_test_1_question_8_answer_2
+=> nrel_text: [20];;
+
+theme_14_test_1_question_8_answer_3
+=> nrel_text: [28];;
+
+theme_14_test_1_question_8_answer_4
+=> nrel_text: [32];;
+
+theme_14_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Диагонали параллелограмма относятся как 3:4, а сумма квадратов сторон равна 50. Найдите длины диагоналей.];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_9_answer_1;
+    theme_14_test_1_question_9_answer_2;
+    theme_14_test_1_question_9_answer_3;
+    theme_14_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_9_answer_3
+(*
+    => nrel_text: [6 и 8];;
+*);;
+
+theme_14_test_1_question_9_answer_1
+=> nrel_text: [3 и 4];;
+
+theme_14_test_1_question_9_answer_2
+=> nrel_text: [9 и 12];;
+
+theme_14_test_1_question_9_answer_4
+=> nrel_text: [12 и 16];;
+
+theme_14_test_1_question_10
+<- concept_question;
+=> nrel_condition: [В параллелограмме сумма квадратов диагоналей равна 100, а сумма квадратов сторон равна 50. Найдите стороны параллелограмма.];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_herons_formula_and_solving_triangles;
+=> nrel_possible_answer:
+    theme_14_test_1_question_10_answer_1;
+    theme_14_test_1_question_10_answer_2;
+    theme_14_test_1_question_10_answer_3;
+    theme_14_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_14_test_1_question_10_answer_2
+(*
+    => nrel_text: [5 и 5];;
+*);;
+
+theme_14_test_1_question_10_answer_1
+=> nrel_text: [4 и 6];;
+
+theme_14_test_1_question_10_answer_3
+=> nrel_text: [3 и 7];;
+
+theme_14_test_1_question_10_answer_4
+=> nrel_text: [2 и 8];;

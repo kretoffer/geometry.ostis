@@ -1,0 +1,46 @@
+theme_formulas_for_the_area_of_triangle_and_parallelogram
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 5. Формулы площади треугольника и площади параллелограмма]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 5]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_ratios_in_right_triangle_section;
+=> nrel_key_concepts: {
+    concept_sin;
+    concept_sin_of_an_obtuse_angle;
+    concept_triangle;
+    concept_obtuse_triangle;
+    triangle_area_sine_formula; // S = (1/2)absinx
+    concept_parallelogram;
+    parallelogram_area_sine_formula; // S = (1/2)absinx
+    definition_of_sin
+};
+=> nrel_lessons: {
+    theme_5_video_lesson_1;
+    theme_5_video_lesson_2;
+    theme_5_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_5_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_5_test_1
+};
+
+
+<= nrel_themes_before_this: {
+    theme_trigonometric_functions_of_an_acute_angle;
+   theme_solving_right_triangle;
+   theme_trigonometric_identities;
+   theme_trigonometric_functions_of_an_obtuse_angle
+};;

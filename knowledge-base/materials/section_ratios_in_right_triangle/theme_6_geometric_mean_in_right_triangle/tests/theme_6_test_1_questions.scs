@@ -1,0 +1,239 @@
+theme_6_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Какое число является средним пропорциональным чисел 2 и 8?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_1_answer_1;
+    theme_6_test_1_question_1_answer_2;
+    theme_6_test_1_question_1_answer_3;
+    theme_6_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_1_answer_2;;
+
+theme_6_test_1_question_1_answer_1
+=> nrel_text: [5];;
+
+theme_6_test_1_question_1_answer_2
+=> nrel_text: [4];;
+
+theme_6_test_1_question_1_answer_3
+=> nrel_text: [6];;
+
+theme_6_test_1_question_1_answer_4
+=> nrel_text: [3];;
+
+theme_6_test_1_question_2
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике высота, проведенная к гипотенузе, является средним пропорциональным между...];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_2_answer_1;
+    theme_6_test_1_question_2_answer_2;
+    theme_6_test_1_question_2_answer_3;
+    theme_6_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_2_answer_3;;
+
+theme_6_test_1_question_2_answer_1
+=> nrel_text: [катетами];;
+
+theme_6_test_1_question_2_answer_2
+=> nrel_text: [гипотенузой и катетом];;
+
+theme_6_test_1_question_2_answer_3
+=> nrel_text: [проекциями катетов на гипотенузу];;
+
+theme_6_test_1_question_2_answer_4
+=> nrel_text: [гипотенузой и проекцией катета];;
+
+theme_6_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Катет прямоугольного треугольника является средним пропорциональным между...];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_3_answer_1;
+    theme_6_test_1_question_3_answer_2;
+    theme_6_test_1_question_3_answer_3;
+    theme_6_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_3_answer_4;;
+
+theme_6_test_1_question_3_answer_1
+=> nrel_text: [гипотенузой и другим катетом];;
+
+theme_6_test_1_question_3_answer_2
+=> nrel_text: [высотой и проекцией катета];;
+
+theme_6_test_1_question_3_answer_3
+=> nrel_text: [двумя проекциями катетов];;
+
+theme_6_test_1_question_3_answer_4
+=> nrel_text: [гипотенузой и проекцией этого катета];;
+
+theme_6_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Проекции катетов на гипотенузу равны 2 см и 8 см. Найдите высоту, проведенную к гипотенузе.];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_4_answer_1;
+    theme_6_test_1_question_4_answer_2;
+    theme_6_test_1_question_4_answer_3;
+    theme_6_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_4_answer_2;;
+
+theme_6_test_1_question_4_answer_1
+=> nrel_text: [2 см];;
+
+theme_6_test_1_question_4_answer_2
+=> nrel_text: [4 см];;
+
+theme_6_test_1_question_4_answer_3
+=> nrel_text: [6 см];;
+
+theme_6_test_1_question_4_answer_4
+=> nrel_text: [10 см];;
+
+theme_6_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Если проекции катетов на гипотенузу равны 2 см и 8 см, то площадь треугольника равна...];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_5_answer_1;
+    theme_6_test_1_question_5_answer_2;
+    theme_6_test_1_question_5_answer_3;
+    theme_6_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_5_answer_3;;
+
+theme_6_test_1_question_5_answer_1
+=> nrel_text: [10 см²];;
+
+theme_6_test_1_question_5_answer_2
+=> nrel_text: [16 см²];;
+
+theme_6_test_1_question_5_answer_3
+=> nrel_text: [20 см²];;
+
+theme_6_test_1_question_5_answer_4
+=> nrel_text: [24 см²];;
+
+theme_6_test_1_question_6
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике катет BC = 6 см, его проекция на гипотенузу равна 4 см. Найдите гипотенузу AB.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_6_answer_1;
+    theme_6_test_1_question_6_answer_2;
+    theme_6_test_1_question_6_answer_3;
+    theme_6_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_6_answer_2;;
+
+theme_6_test_1_question_6_answer_1
+=> nrel_text: [8 см];;
+
+theme_6_test_1_question_6_answer_2
+=> nrel_text: [9 см];;
+
+theme_6_test_1_question_6_answer_3
+=> nrel_text: [10 см];;
+
+theme_6_test_1_question_6_answer_4
+=> nrel_text: [12 см];;
+
+theme_6_test_1_question_7
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике проекция катета AC на гипотенузу равна 9 см, катет BC = 6 см. Найдите гипотенузу.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_7_answer_1;
+    theme_6_test_1_question_7_answer_2;
+    theme_6_test_1_question_7_answer_3;
+    theme_6_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_7_answer_1;;
+
+theme_6_test_1_question_7_answer_1
+=> nrel_text: [12 см];;
+
+theme_6_test_1_question_7_answer_2
+=> nrel_text: [14 см];;
+
+theme_6_test_1_question_7_answer_3
+=> nrel_text: [13 см];;
+
+theme_6_test_1_question_7_answer_4
+=> nrel_text: [15 см];;
+
+theme_6_test_1_question_8
+<- concept_question;
+=> nrel_condition: [В прямоугольнике перпендикуляр, опущенный из вершины на диагональ, делит ее на отрезки 4 см и 9 см. Найдите меньшую сторону прямоугольника.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_8_answer_1;
+    theme_6_test_1_question_8_answer_2;
+    theme_6_test_1_question_8_answer_3;
+    theme_6_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_8_answer_1;;
+
+theme_6_test_1_question_8_answer_1
+=> nrel_text: [6 см];;
+
+theme_6_test_1_question_8_answer_2
+=> nrel_text: [8 см];;
+
+theme_6_test_1_question_8_answer_3
+=> nrel_text: [2√13 см];;
+
+theme_6_test_1_question_8_answer_4
+=> nrel_text: [4√3 см];;
+
+theme_6_test_1_question_9
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике катет равен среднему пропорциональному гипотенузы и своей проекции на гипотенузу. Найдите острый угол, противолежащий этому катету.];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_9_answer_1;
+    theme_6_test_1_question_9_answer_2;
+    theme_6_test_1_question_9_answer_3;
+    theme_6_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_9_answer_2;;
+
+theme_6_test_1_question_9_answer_1
+=> nrel_text: [30°];;
+
+theme_6_test_1_question_9_answer_2
+=> nrel_text: [45°];;
+
+theme_6_test_1_question_9_answer_3
+=> nrel_text: [60°];;
+
+theme_6_test_1_question_9_answer_4
+=> nrel_text: [15°];;
+
+theme_6_test_1_question_10
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике с углом A = 60° катет AC = 6 см. Найдите разность проекций катетов на гипотенузу (BH - AH).];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_6_geometric_mean;
+=> nrel_possible_answer:
+    theme_6_test_1_question_10_answer_1;
+    theme_6_test_1_question_10_answer_2;
+    theme_6_test_1_question_10_answer_3;
+    theme_6_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_6_test_1_question_10_answer_4;;
+
+theme_6_test_1_question_10_answer_1
+=> nrel_text: [3 см];;
+
+theme_6_test_1_question_10_answer_2
+=> nrel_text: [4 см];;
+
+theme_6_test_1_question_10_answer_3
+=> nrel_text: [3√3 см];;
+
+theme_6_test_1_question_10_answer_4
+=> nrel_text: [6 см];;

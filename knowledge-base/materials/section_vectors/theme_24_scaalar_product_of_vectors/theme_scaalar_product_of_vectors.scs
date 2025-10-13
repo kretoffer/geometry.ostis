@@ -1,0 +1,50 @@
+theme_scaalar_product_of_vectors
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 24. Скалярное произведение векторов]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 24]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_vector_section;
+=> nrel_key_concepts: {
+    concept_vector;
+    definition_of_vector;
+    concept_collinear_vector;
+    definition_of_angle_between_vectors;
+    definition_of_zero_vector;
+    definition_of_vector_length;
+    definition_of_magnitude_of_vector;
+    definition_multiplication_of_nonzero_vector_by_scalar_k; // произведение ненулевого вектора на число
+    properties_of_scalar_multiplication; // свойства умножения вектора на число
+    formula_for_multiplying_a_vector_by_a_scalar; // формула умножения вектора на число
+    scalar_product_of_two_nonzero_vectors; // скалярное произведение двух ненулевых векторов
+    theorem_on_vector_perpendicularity; // теорема о перпендикулярности векторов
+    theorem_on_scalar_product_of_vectors // теорема о скалярном произведении векторов
+};
+=> nrel_lessons: {
+    theme_24_video_lesson_1;
+    theme_24_video_lesson_2;
+    theme_24_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_24_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_24_test_1
+};
+
+
+<= nrel_themes_before_this: {
+    theme_types_of_vectors;
+   theme_vector_operations;
+   theme_vector_coords
+};;

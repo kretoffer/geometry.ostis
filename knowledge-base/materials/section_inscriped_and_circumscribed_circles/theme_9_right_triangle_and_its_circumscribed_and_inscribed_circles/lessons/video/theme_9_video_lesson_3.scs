@@ -1,0 +1,12 @@
+theme_9_video_lesson_3
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [прямоугольный треугольник и окружность (15 мин) && https://youtu.be/Qnvc4VV1DfM?feature=shared]
+>;
+=> nrel_task: theme_9_task_1;
+=> nrel_test: theme_9_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

@@ -1,0 +1,239 @@
+theme_8_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Где находится центр описанной окружности треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_1_answer_1;
+    theme_8_test_1_question_1_answer_2;
+    theme_8_test_1_question_1_answer_3;
+    theme_8_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_1_answer_2
+(*
+    => nrel_text: [В точке пересечения серединных перпендикуляров];;
+*);;
+
+theme_8_test_1_question_1_answer_1
+=> nrel_text: [В точке пересечения биссектрис];;
+
+theme_8_test_1_question_1_answer_3
+=> nrel_text: [В точке пересечения медиан];;
+
+theme_8_test_1_question_1_answer_4
+=> nrel_text: [В точке пересечения высот];;
+
+theme_8_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Где находится центр вписанной окружности треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_2_answer_1;
+    theme_8_test_1_question_2_answer_2;
+    theme_8_test_1_question_2_answer_3;
+    theme_8_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_2_answer_1
+(*
+    => nrel_text: [В точке пересечения биссектрис];;
+*);;
+
+theme_8_test_1_question_2_answer_2
+=> nrel_text: [В точке пересечения серединных перпендикуляров];;
+
+theme_8_test_1_question_2_answer_3
+=> nrel_text: [В точке пересечения медиан];;
+
+theme_8_test_1_question_2_answer_4
+=> nrel_text: [В точке пересечения высот];;
+
+theme_8_test_1_question_3
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется площадь треугольника через радиус вписанной окружности?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_3_answer_1;
+    theme_8_test_1_question_3_answer_2;
+    theme_8_test_1_question_3_answer_3;
+    theme_8_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_3_answer_3
+(*
+    => nrel_text: [S = pr];;
+*);;
+
+theme_8_test_1_question_3_answer_1
+=> nrel_text: [S = 2pr];;
+
+theme_8_test_1_question_3_answer_2
+=> nrel_text: [S = ½pr];;
+
+theme_8_test_1_question_3_answer_4
+=> nrel_text: [S = p²r];;
+
+theme_8_test_1_question_4
+<- concept_question;
+=> nrel_condition: [В равностороннем треугольнике со стороной a радиус вписанной окружности равен...];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_4_answer_1;
+    theme_8_test_1_question_4_answer_2;
+    theme_8_test_1_question_4_answer_3;
+    theme_8_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_4_answer_2
+(*
+    => nrel_text: [a√3/6];;
+*);;
+
+theme_8_test_1_question_4_answer_1
+=> nrel_text: [a√3/3];;
+
+theme_8_test_1_question_4_answer_3
+=> nrel_text: [a√3/2];;
+
+theme_8_test_1_question_4_answer_4
+=> nrel_text: [a/2];;
+
+theme_8_test_1_question_5
+<- concept_question;
+=> nrel_condition: [В равностороннем треугольнике со стороной a радиус описанной окружности равен...];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_5_answer_1;
+    theme_8_test_1_question_5_answer_2;
+    theme_8_test_1_question_5_answer_3;
+    theme_8_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_5_answer_1
+(*
+    => nrel_text: [a√3/3];;
+*);;
+
+theme_8_test_1_question_5_answer_2
+=> nrel_text: [a√3/6];;
+
+theme_8_test_1_question_5_answer_3
+=> nrel_text: [a√3/2];;
+
+theme_8_test_1_question_5_answer_4
+=> nrel_text: [a/2];;
+
+theme_8_test_1_question_6
+<- concept_question;
+=> nrel_condition: [В равнобедренном треугольнике ABC с боковыми сторонами 26 см и высотой 24 см радиус описанной окружности равен...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_6_answer_1;
+    theme_8_test_1_question_6_answer_2;
+    theme_8_test_1_question_6_answer_3;
+    theme_8_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_6_answer_3
+(*
+    => nrel_text: [14¹/₁₂ см];;
+*);;
+
+theme_8_test_1_question_6_answer_1
+=> nrel_text: [12 см];;
+
+theme_8_test_1_question_6_answer_2
+=> nrel_text: [13 см];;
+
+theme_8_test_1_question_6_answer_4
+=> nrel_text: [15 см];;
+
+theme_8_test_1_question_7
+<- concept_question;
+=> nrel_condition: [В равнобедренном треугольнике ABC с боковыми сторонами 10 см и основанием 12 см радиус вписанной окружности равен...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_7_answer_1;
+    theme_8_test_1_question_7_answer_2;
+    theme_8_test_1_question_7_answer_3;
+    theme_8_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_7_answer_2
+(*
+    => nrel_text: [3 см];;
+*);;
+
+theme_8_test_1_question_7_answer_1
+=> nrel_text: [2 см];;
+
+theme_8_test_1_question_7_answer_3
+=> nrel_text: [4 см];;
+
+theme_8_test_1_question_7_answer_4
+=> nrel_text: [5 см];;
+
+theme_8_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Периметр треугольника равен 18 см, радиус вписанной окружности 2 см. Площадь треугольника равна...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_8_answer_1;
+    theme_8_test_1_question_8_answer_2;
+    theme_8_test_1_question_8_answer_3;
+    theme_8_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_8_answer_4
+(*
+    => nrel_text: [18 см²];;
+*);;
+
+theme_8_test_1_question_8_answer_1
+=> nrel_text: [9 см²];;
+
+theme_8_test_1_question_8_answer_2
+=> nrel_text: [12 см²];;
+
+theme_8_test_1_question_8_answer_3
+=> nrel_text: [16 см²];;
+
+theme_8_test_1_question_9
+<- concept_question;
+=> nrel_condition: [В треугольнике ABC ∠A = 30°, BC = 6 см. Диаметр описанной окружности равен...];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_9_answer_1;
+    theme_8_test_1_question_9_answer_2;
+    theme_8_test_1_question_9_answer_3;
+    theme_8_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_9_answer_3
+(*
+    => nrel_text: [12 см];;
+*);;
+
+theme_8_test_1_question_9_answer_1
+=> nrel_text: [6 см];;
+
+theme_8_test_1_question_9_answer_2
+=> nrel_text: [8 см];;
+
+theme_8_test_1_question_9_answer_4
+=> nrel_text: [18 см];;
+
+theme_8_test_1_question_10
+<- concept_question;
+=> nrel_condition: [В треугольнике ABC высота AM проходит через центр вписанной окружности, AM:BC = 3:4, P = 48. Радиус вписанной окружности равен...];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_circumscribed_and_inscribed_circles_of_triangle;
+=> nrel_possible_answer:
+    theme_8_test_1_question_10_answer_1;
+    theme_8_test_1_question_10_answer_2;
+    theme_8_test_1_question_10_answer_3;
+    theme_8_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_8_test_1_question_10_answer_2
+(*
+    => nrel_text: [4];;
+*);;
+
+theme_8_test_1_question_10_answer_1
+=> nrel_text: [3];;
+
+theme_8_test_1_question_10_answer_3
+=> nrel_text: [5];;
+
+theme_8_test_1_question_10_answer_4
+=> nrel_text: [6];;

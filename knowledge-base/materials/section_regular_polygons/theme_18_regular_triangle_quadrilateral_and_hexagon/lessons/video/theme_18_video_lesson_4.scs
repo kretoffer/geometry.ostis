@@ -1,0 +1,12 @@
+theme_18_video_lesson_4
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [правильный треугольник, четырёхугольник, шестиугольник (вывод основных формул) (30 мин) && https://youtu.be/PhzGXewZt7U?feature=shared]
+>;
+=> nrel_task: theme_18_task_1;
+=> nrel_test: theme_18_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

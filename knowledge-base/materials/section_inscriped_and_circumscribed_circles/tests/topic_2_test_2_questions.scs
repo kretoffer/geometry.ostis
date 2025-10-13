@@ -1,0 +1,359 @@
+section_2_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Где находится центр окружности, описанной около треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subsection_circumscribed_circle;
+=> nrel_possible_answer:
+    section_2_test_1_question_1_answer_1;
+    section_2_test_1_question_1_answer_2;
+    section_2_test_1_question_1_answer_3;
+    section_2_test_1_question_1_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_1_answer_2
+(*
+    => nrel_text: [В точке пересечения серединных перпендикуляров];;
+*);;
+
+section_2_test_1_question_1_answer_1
+=> nrel_text: [В точке пересечения медиан];;
+
+section_2_test_1_question_1_answer_3
+=> nrel_text: [В точке пересечения биссектрис];;
+
+section_2_test_1_question_1_answer_4
+=> nrel_text: [В точке пересечения высот];;
+
+section_2_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Где находится центр окружности, вписанной в треугольник?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subsection_inscribed_circle;
+=> nrel_possible_answer:
+    section_2_test_1_question_2_answer_1;
+    section_2_test_1_question_2_answer_2;
+    section_2_test_1_question_2_answer_3;
+    section_2_test_1_question_2_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_2_answer_3
+(*
+    => nrel_text: [В точке пересечения биссектрис];;
+*);;
+
+section_2_test_1_question_2_answer_1
+=> nrel_text: [В точке пересечения медиан];;
+
+section_2_test_1_question_2_answer_2
+=> nrel_text: [В точке пересечения серединных перпендикуляров];;
+
+section_2_test_1_question_2_answer_4
+=> nrel_text: [В точке пересечения высот];;
+
+section_2_test_1_question_3
+<- concept_question;
+=> nrel_condition: [В какой треугольник можно вписать окружность?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subsection_inscribed_circle;
+=> nrel_possible_answer:
+    section_2_test_1_question_3_answer_1;
+    section_2_test_1_question_3_answer_2;
+    section_2_test_1_question_3_answer_3;
+    section_2_test_1_question_3_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_3_answer_3
+(*
+    => nrel_text: [В любой треугольник];;
+*);;
+
+section_2_test_1_question_3_answer_1
+=> nrel_text: [Только в равнобедренный];;
+
+section_2_test_1_question_3_answer_2
+=> nrel_text: [Только в прямоугольный];;
+
+section_2_test_1_question_3_answer_4
+=> nrel_text: [Только в равносторонний];;
+
+section_2_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Чему равна сумма противоположных углов вписанного четырехугольника?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_inscribed_quadrilateral;
+=> nrel_possible_answer:
+    section_2_test_1_question_4_answer_1;
+    section_2_test_1_question_4_answer_2;
+    section_2_test_1_question_4_answer_3;
+    section_2_test_1_question_4_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_4_answer_3
+(*
+    => nrel_text: [180°];;
+*);;
+
+section_2_test_1_question_4_answer_1
+=> nrel_text: [90°];;
+
+section_2_test_1_question_4_answer_2
+=> nrel_text: [360°];;
+
+section_2_test_1_question_4_answer_4
+=> nrel_text: [270°];;
+
+section_2_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Какое условие выполняется для описанного четырехугольника?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_circumscribed_quadrilateral;
+=> nrel_possible_answer:
+    section_2_test_1_question_5_answer_1;
+    section_2_test_1_question_5_answer_2;
+    section_2_test_1_question_5_answer_3;
+    section_2_test_1_question_5_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_5_answer_4
+(*
+    => nrel_text: [Суммы противоположных сторон равны];;
+*);;
+
+section_2_test_1_question_5_answer_1
+=> nrel_text: [Суммы противоположных углов равны 180°];;
+
+section_2_test_1_question_5_answer_2
+=> nrel_text: [Все стороны равны];;
+
+section_2_test_1_question_5_answer_3
+=> nrel_text: [Диагонали перпендикулярны];;
+
+section_2_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Чему равен радиус окружности, описанной около прямоугольного треугольника с гипотенузой 10?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_circumscribed_circle_right_triangle;
+=> nrel_possible_answer:
+    section_2_test_1_question_6_answer_1;
+    section_2_test_1_question_6_answer_2;
+    section_2_test_1_question_6_answer_3;
+    section_2_test_1_question_6_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_6_answer_2
+(*
+    => nrel_text: [5];;
+*);;
+
+section_2_test_1_question_6_answer_1
+=> nrel_text: [10];;
+
+section_2_test_1_question_6_answer_3
+=> nrel_text: [2.5];;
+
+section_2_test_1_question_6_answer_4
+=> nrel_text: [7.5];;
+
+section_2_test_1_question_7
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется радиус окружности, вписанной в прямоугольный треугольник с катетами a и b и гипотенузой c?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_inscribed_circle_right_triangle;
+=> nrel_possible_answer:
+    section_2_test_1_question_7_answer_1;
+    section_2_test_1_question_7_answer_2;
+    section_2_test_1_question_7_answer_3;
+    section_2_test_1_question_7_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_7_answer_4
+(*
+    => nrel_text: [r = (a + b - c)/2];;
+*);;
+
+section_2_test_1_question_7_answer_1
+=> nrel_text: [r = (a + b + c)/2];;
+
+section_2_test_1_question_7_answer_2
+=> nrel_text: [r = c/2];;
+
+section_2_test_1_question_7_answer_3
+=> nrel_text: [r = ab/(a + b + c)];;
+
+section_2_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Около какого параллелограмма можно описать окружность?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_inscribed_quadrilateral;
+=> nrel_possible_answer:
+    section_2_test_1_question_8_answer_1;
+    section_2_test_1_question_8_answer_2;
+    section_2_test_1_question_8_answer_3;
+    section_2_test_1_question_8_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_8_answer_4
+(*
+    => nrel_text: [Прямоугольник];;
+*);;
+
+section_2_test_1_question_8_answer_1
+=> nrel_text: [Ромб];;
+
+section_2_test_1_question_8_answer_2
+=> nrel_text: [Квадрат];;
+
+section_2_test_1_question_8_answer_3
+=> nrel_text: [Любой параллелограмм];;
+
+section_2_test_1_question_9
+<- concept_question;
+=> nrel_condition: [В какой четырехугольник можно вписать окружность?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_circumscribed_quadrilateral;
+=> nrel_possible_answer:
+    section_2_test_1_question_9_answer_1;
+    section_2_test_1_question_9_answer_2;
+    section_2_test_1_question_9_answer_3;
+    section_2_test_1_question_9_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_9_answer_2
+(*
+    => nrel_text: [Ромб];;
+*);;
+
+section_2_test_1_question_9_answer_1
+=> nrel_text: [Параллелограмм];;
+
+section_2_test_1_question_9_answer_3
+=> nrel_text: [Прямоугольник];;
+
+section_2_test_1_question_9_answer_4
+=> nrel_text: [Любой четырехугольник];;
+
+section_2_test_1_question_10
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется площадь треугольника через радиус вписанной окружности?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_inscribed_circle;
+=> nrel_possible_answer:
+    section_2_test_1_question_10_answer_1;
+    section_2_test_1_question_10_answer_2;
+    section_2_test_1_question_10_answer_3;
+    section_2_test_1_question_10_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_10_answer_3
+(*
+    => nrel_text: [S = pr];;
+*);;
+
+section_2_test_1_question_10_answer_1
+=> nrel_text: [S = abc/4R];;
+
+section_2_test_1_question_10_answer_2
+=> nrel_text: [S = r²π];;
+
+section_2_test_1_question_10_answer_4
+=> nrel_text: [S = Rr];;
+
+section_2_test_1_question_11
+<- concept_question;
+=> nrel_condition: [Где находится центр окружности, описанной около прямоугольного треугольника?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_circumscribed_circle_right_triangle;
+=> nrel_possible_answer:
+    section_2_test_1_question_11_answer_1;
+    section_2_test_1_question_11_answer_2;
+    section_2_test_1_question_11_answer_3;
+    section_2_test_1_question_11_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_11_answer_4
+(*
+    => nrel_text: [На середине гипотенузы];;
+*);;
+
+section_2_test_1_question_11_answer_1
+=> nrel_text: [В точке пересечения медиан];;
+
+section_2_test_1_question_11_answer_2
+=> nrel_text: [В точке пересечения биссектрис];;
+
+section_2_test_1_question_11_answer_3
+=> nrel_text: [В точке пересечения высот];;
+
+section_2_test_1_question_12
+<- concept_question;
+=> nrel_condition: [Около какой трапеции можно описать окружность?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_inscribed_quadrilateral;
+=> nrel_possible_answer:
+    section_2_test_1_question_12_answer_1;
+    section_2_test_1_question_12_answer_2;
+    section_2_test_1_question_12_answer_3;
+    section_2_test_1_question_12_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_12_answer_4
+(*
+    => nrel_text: [Равнобедренной];;
+*);;
+
+section_2_test_1_question_12_answer_1
+=> nrel_text: [Прямоугольной];;
+
+section_2_test_1_question_12_answer_2
+=> nrel_text: [Произвольной];;
+
+section_2_test_1_question_12_answer_3
+=> nrel_text: [Никакой];;
+
+section_2_test_1_question_13
+<- concept_question;
+=> nrel_condition: [В равнобедренную трапецию с основаниями 6 и 10 вписана окружность. Чему равна боковая сторона?];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_circumscribed_quadrilateral;
+=> nrel_possible_answer:
+    section_2_test_1_question_13_answer_1;
+    section_2_test_1_question_13_answer_2;
+    section_2_test_1_question_13_answer_3;
+    section_2_test_1_question_13_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_13_answer_2
+(*
+    => nrel_text: [8];;
+*);;
+
+section_2_test_1_question_13_answer_1
+=> nrel_text: [6];;
+
+section_2_test_1_question_13_answer_3
+=> nrel_text: [10];;
+
+section_2_test_1_question_13_answer_4
+=> nrel_text: [4];;
+
+section_2_test_1_question_14
+<- concept_question;
+=> nrel_condition: [Чему равен радиус окружности, вписанной в равносторонний треугольник со стороной 6?];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_inscribed_circle;
+=> nrel_possible_answer:
+    section_2_test_1_question_14_answer_1;
+    section_2_test_1_question_14_answer_2;
+    section_2_test_1_question_14_answer_3;
+    section_2_test_1_question_14_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_14_answer_3
+(*
+    => nrel_text: [√3];;
+*);;
+
+section_2_test_1_question_14_answer_1
+=> nrel_text: [3];;
+
+section_2_test_1_question_14_answer_2
+=> nrel_text: [2√3];;
+
+section_2_test_1_question_14_answer_4
+=> nrel_text: [6];;
+
+section_2_test_1_question_15
+<- concept_question;
+=> nrel_condition: [Чему равен радиус окружности, описанной около равностороннего треугольника со стороной 4√3?];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_circumscribed_circle;
+=> nrel_possible_answer:
+    section_2_test_1_question_15_answer_1;
+    section_2_test_1_question_15_answer_2;
+    section_2_test_1_question_15_answer_3;
+    section_2_test_1_question_15_answer_4;
+=> nrel_correct_answer: section_2_test_1_question_15_answer_2
+(*
+    => nrel_text: [4];;
+*);;
+
+section_2_test_1_question_15_answer_1
+=> nrel_text: [2√3];;
+
+section_2_test_1_question_15_answer_3
+=> nrel_text: [6];;
+
+section_2_test_1_question_15_answer_4
+=> nrel_text: [4√3];;

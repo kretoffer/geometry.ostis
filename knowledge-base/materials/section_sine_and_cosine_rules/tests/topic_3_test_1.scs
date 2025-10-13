@@ -1,0 +1,30 @@
+section_3_test_1
+<- concept_test;
+=> nrel_description:
+    [Тест на знание раздела "Теорема синусов, теорема косинусов"]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_themes: { 
+    subsection_sine_rule;
+    subsection_cosine_rule;
+    subsection_herons_formula_and_solving_triangles
+};
+=> nrel_decomposition: <
+    section_3_test_1_question_1;
+    section_3_test_1_question_2;
+    section_3_test_1_question_3;
+    section_3_test_1_question_4;
+    section_3_test_1_question_5;
+    section_3_test_1_question_6;
+    section_3_test_1_question_7;
+    section_3_test_1_question_8;
+    section_3_test_1_question_9;
+    section_3_test_1_question_10;
+    section_3_test_1_question_11;
+    section_3_test_1_question_12;
+    section_3_test_1_question_13;
+    section_3_test_1_question_14;
+    section_3_test_1_question_15
+>;
+=> nrel_difficulty: [2];;

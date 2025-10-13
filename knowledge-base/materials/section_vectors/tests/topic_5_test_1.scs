@@ -1,0 +1,26 @@
+section_5_test_1
+<- concept_test;
+=> nrel_description: 
+    [Тест по разделу "Векторы"]
+    (* <- lang_ru;; *);
+=> nrel_themes: {
+    subsection_types_of_vectors;
+    subsection_vector_operations;
+    subsection_vector_coords;
+    subsection_scaalar_product_of_vectors;
+    subsection_coordinate_vector_method;
+    subsection_transformations_of_plane_figures
+};
+=> nrel_decomposition: <
+    section_5_test_1_question_1;
+    section_5_test_1_question_2;
+    section_5_test_1_question_3;
+    section_5_test_1_question_4;
+    section_5_test_1_question_5;
+    section_5_test_1_question_6;
+    section_5_test_1_question_7;
+    section_5_test_1_question_8;
+    section_5_test_1_question_9;
+    section_5_test_1_question_10
+>;
+=> nrel_difficulty: [1];;

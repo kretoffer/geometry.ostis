@@ -1,0 +1,12 @@
+theme_2_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [разбор по учебнику (6 мин) && https://youtu.be/LrBMk2C539M?feature=shared]
+>;
+=> nrel_task: theme_2_task_1;
+=> nrel_test: theme_2_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

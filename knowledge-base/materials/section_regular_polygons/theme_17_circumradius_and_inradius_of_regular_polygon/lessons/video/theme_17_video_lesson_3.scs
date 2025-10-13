@@ -1,0 +1,12 @@
+theme_17_video_lesson_3
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [окружность, вписанная в правильный многоугольник (6 мин) && https://youtu.be/ARyuFQzd_KA?feature=shared]
+>;
+=> nrel_task: theme_17_task_1;
+=> nrel_test: theme_17_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

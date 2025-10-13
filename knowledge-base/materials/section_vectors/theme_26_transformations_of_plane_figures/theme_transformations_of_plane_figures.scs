@@ -1,0 +1,54 @@
+theme_transformations_of_plane_figures
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 26. Преобразование фигур на плоскости]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 26]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_vector_section;
+=> nrel_key_concepts: {
+    concept_vector;
+    definition_of_vector;
+    concept_collinear_vector;
+    definition_of_angle_between_vectors;
+    definition_of_central_symmetry; // определение центральной симметрии
+    definition_of_axial_symmetry; // определение осевой симметрии
+    parallel_translation; // параллельный перенос
+    rotation; // поворот
+    theorem_on_axial_symmetry; // теорема о осевой симметрии
+    theorem_on_parallel_translation; // теорема о параллельном переносе
+    properties_of_motions; // свойства движений
+    homothety; // гомотетия
+    similarity; // подобие
+    theorem_on_homothety; // теорема о гомотетии
+    theorem_on_similarity_transformation // теорема о преобразовании подобия
+};
+=> nrel_lessons: {
+    theme_26_video_lesson_1;
+    theme_26_video_lesson_2;
+    theme_26_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_26_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_26_test_1
+};
+
+
+<= nrel_themes_before_this: {
+    theme_types_of_vectors;
+   theme_vector_operations;
+   theme_vector_coords;
+   theme_scaalar_product_of_vectors;
+   theme_coordinate_vector_method
+};;
