@@ -1,0 +1,12 @@
+theme_4_video_lesson_5
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [тригонометрические значения тупых углов (3 мин) && https://youtu.be/7NoW1m-VYEU?feature=shared]
+>;
+=> nrel_task: theme_4_task_1;
+=> nrel_test: theme_4_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

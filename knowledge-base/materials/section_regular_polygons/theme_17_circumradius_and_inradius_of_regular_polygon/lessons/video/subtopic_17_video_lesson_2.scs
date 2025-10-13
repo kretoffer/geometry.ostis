@@ -1,9 +1,0 @@
-theme_17_video_lesson_2
-<- concept_lesson;
-<- concept_video_lesson;
-=> nrel_lesson_content: [радиус вписанной окружности многоугольника-2 (13 мин) && https://youtu.be/PRnOt-aBEdY?feature=shared];
-=> nrel_task: theme_17_task_1;
-=> nrel_test: theme_17_test_1;
-<= nrel_is_available_for: {
-    visibility_disorder
-};;
