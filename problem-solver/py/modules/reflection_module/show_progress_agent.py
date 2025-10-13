@@ -50,20 +50,20 @@ class ShowProgressAgent(ScAgentClassic):
         underrated_themes_names = self.get_themes_names(underrated_themes)
         
         if len(studied_themes_names) != 0:
-            message += "Вы уже изучили следующие темы: "
-            message += ', '.join(studied_themes_names)
+            message += "Вы уже изучили следующие темы: \n"
+            message += '\n'.join(studied_themes_names)
             message += '\n\n'
         else:
             message += 'На данный момент Вы не изучали никаких новых тем.\n'
         
         if len(overrated_themes_names) != 0:
-            message += "Вам стоит отнестись серьёзнее к следующим темам: "
-            message += ', '.join(overrated_themes_names)
+            message += "Вам стоит отнестись серьёзнее к следующим темам:\n"
+            message += '\n'.join(overrated_themes_names)
             message += '\n\n'
 
         if len(underrated_themes_names) != 0:
-            message += "Обратите внимание, что вы хорошо знаете данные темы: "
-            message += ', '.join(underrated_themes_names)
+            message += "Обратите внимание, что вы хорошо знаете данные темы:\n"
+            message += '\n'.join(underrated_themes_names)
             message += '\n\n'
 
         create_action_result(action_node, generate_link(message))
@@ -144,7 +144,7 @@ class ShowProgressAgent(ScAgentClassic):
                 sc_type.VAR_COMMON_ARC,
                 (sc_type.VAR_NODE_LINK, "_link"),
                 sc_type.VAR_PERM_POS_ARC,
-                ScKeynodes.resolve("nrel_name", sc_type.CONST_NODE_NON_ROLE)
+                ScKeynodes.resolve("nrel_main_idtf", sc_type.CONST_NODE_NON_ROLE)
             )
 
             search_results = search_by_template(themeTempl)  

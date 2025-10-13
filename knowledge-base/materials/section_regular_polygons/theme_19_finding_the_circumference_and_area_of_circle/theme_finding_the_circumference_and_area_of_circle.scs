@@ -1,0 +1,42 @@
+theme_regular_triangle_quadrilateral_and_hexagon
+=> nrel_main_idtf:
+    [Параграф 18. Правильный треугольник, четырёхугольник, шестиугольник]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 18]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_regular_polygons_section;
+=> nrel_key_concepts: {
+    concept_circle;
+    concept_circular_sector;
+    concept_circular_segment;
+    concept_circular_arc;
+    formula_for_area_of_circle;
+    circumference_formula // формула длины окружности
+
+};
+=> nrel_lessons: {
+    theme_18_video_lesson_1;
+    theme_18_video_lesson_2;
+    theme_18_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_18_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_18_test_1
+};
+
+
+<= nrel_themes_before_this: {
+    theme_regular_polygons;
+   theme_circumradius_and_inradius_of_regular_polygon
+};;

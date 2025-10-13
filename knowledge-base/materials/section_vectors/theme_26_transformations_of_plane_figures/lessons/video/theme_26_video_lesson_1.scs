@@ -1,0 +1,12 @@
+theme_26_video_lesson_1
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [преобразование фигур в пространстве (10 мин) && https://youtu.be/MEQ_TaOYB_s?feature=shared]
+>;
+=> nrel_task: theme_26_task_1;
+=> nrel_test: theme_26_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

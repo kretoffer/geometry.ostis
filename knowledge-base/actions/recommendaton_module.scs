@@ -1,0 +1,10 @@
+action
+->
+    action_form_theme_recommendations_for_user_to_study;
+    action_form_task_from_centralized_testing_recommendations;
+    action_form_task_from_olimpiad_recommendations;
+    action_form_task_recommendations_for_user;
+    action_form_test_from_centralised_testing_recommendations;
+    action_form_test_recommendations_for_user;
+    action_form_theme_recommendations_for_user_to_solve_test_or_task;
+    action_get_lesson_on_theme;;

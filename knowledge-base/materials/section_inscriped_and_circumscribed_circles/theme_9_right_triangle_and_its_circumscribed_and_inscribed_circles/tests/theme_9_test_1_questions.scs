@@ -1,0 +1,239 @@
+theme_9_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Где находится центр описанной окружности прямоугольного треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_1_answer_1;
+    theme_9_test_1_question_1_answer_2;
+    theme_9_test_1_question_1_answer_3;
+    theme_9_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_1_answer_2
+(*
+    => nrel_text: [На середине гипотенузы];;
+*);;
+
+theme_9_test_1_question_1_answer_1
+=> nrel_text: [В точке пересечения высот];;
+
+theme_9_test_1_question_1_answer_3
+=> nrel_text: [В точке пересечения биссектрис];;
+
+theme_9_test_1_question_1_answer_4
+=> nrel_text: [В точке пересечения медиан];;
+
+theme_9_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Чему равен радиус описанной окружности прямоугольного треугольника с гипотенузой c?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_2_answer_1;
+    theme_9_test_1_question_2_answer_2;
+    theme_9_test_1_question_2_answer_3;
+    theme_9_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_2_answer_3
+(*
+    => nrel_text: [c/2];;
+*);;
+
+theme_9_test_1_question_2_answer_1
+=> nrel_text: [c];;
+
+theme_9_test_1_question_2_answer_2
+=> nrel_text: [2c];;
+
+theme_9_test_1_question_2_answer_4
+=> nrel_text: [c/4];;
+
+theme_9_test_1_question_3
+<- concept_question;
+=> nrel_condition: [По какой формуле вычисляется радиус вписанной окружности прямоугольного треугольника?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_3_answer_1;
+    theme_9_test_1_question_3_answer_2;
+    theme_9_test_1_question_3_answer_3;
+    theme_9_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_3_answer_2
+(*
+    => nrel_text: [r = (a + b - c)/2];;
+*);;
+
+theme_9_test_1_question_3_answer_1
+=> nrel_text: [r = (a + b + c)/2];;
+
+theme_9_test_1_question_3_answer_3
+=> nrel_text: [r = (c - a - b)/2];;
+
+theme_9_test_1_question_3_answer_4
+=> nrel_text: [r = ab/c];;
+
+theme_9_test_1_question_4
+<- concept_question;
+=> nrel_condition: [Чему равен радиус вписанной окружности прямоугольного треугольника с катетами 3 и 4?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_4_answer_1;
+    theme_9_test_1_question_4_answer_2;
+    theme_9_test_1_question_4_answer_3;
+    theme_9_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_4_answer_2
+(*
+    => nrel_text: [1];;
+*);;
+
+theme_9_test_1_question_4_answer_1
+=> nrel_text: [2];;
+
+theme_9_test_1_question_4_answer_3
+=> nrel_text: [0.5];;
+
+theme_9_test_1_question_4_answer_4
+=> nrel_text: [1.5];;
+
+theme_9_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Чему равен радиус описанной окружности прямоугольного треугольника с катетами 12 и 16?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_5_answer_1;
+    theme_9_test_1_question_5_answer_2;
+    theme_9_test_1_question_5_answer_3;
+    theme_9_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_5_answer_3
+(*
+    => nrel_text: [10];;
+*);;
+
+theme_9_test_1_question_5_answer_1
+=> nrel_text: [8];;
+
+theme_9_test_1_question_5_answer_2
+=> nrel_text: [14];;
+
+theme_9_test_1_question_5_answer_4
+=> nrel_text: [20];;
+
+theme_9_test_1_question_6
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике один из катетов равен 6, радиус вписанной окружности равен 2. Найдите радиус описанной окружности.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_6_answer_1;
+    theme_9_test_1_question_6_answer_2;
+    theme_9_test_1_question_6_answer_3;
+    theme_9_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_6_answer_3
+(*
+    => nrel_text: [5];;
+*);;
+
+theme_9_test_1_question_6_answer_1
+=> nrel_text: [4];;
+
+theme_9_test_1_question_6_answer_2
+=> nrel_text: [6];;
+
+theme_9_test_1_question_6_answer_4
+=> nrel_text: [8];;
+
+theme_9_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Гипотенуза прямоугольного треугольника c = 18, радиус вписанной окружности r = 2. Найдите площадь треугольника.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_7_answer_1;
+    theme_9_test_1_question_7_answer_2;
+    theme_9_test_1_question_7_answer_3;
+    theme_9_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_7_answer_4
+(*
+    => nrel_text: [40];;
+*);;
+
+theme_9_test_1_question_7_answer_1
+=> nrel_text: [36];;
+
+theme_9_test_1_question_7_answer_2
+=> nrel_text: [38];;
+
+theme_9_test_1_question_7_answer_3
+=> nrel_text: [42];;
+
+theme_9_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Площадь прямоугольного треугольника равна 24, радиус описанной окружности равен 5. Найдите радиус вписанной окружности.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_8_answer_1;
+    theme_9_test_1_question_8_answer_2;
+    theme_9_test_1_question_8_answer_3;
+    theme_9_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_8_answer_1
+(*
+    => nrel_text: [2];;
+*);;
+
+theme_9_test_1_question_8_answer_2
+=> nrel_text: [3];;
+
+theme_9_test_1_question_8_answer_3
+=> nrel_text: [4];;
+
+theme_9_test_1_question_8_answer_4
+=> nrel_text: [1];;
+
+theme_9_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Высота прямоугольного треугольника делит гипотенузу на отрезки 9 и 16. Найдите радиус вписанной окружности.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_9_answer_1;
+    theme_9_test_1_question_9_answer_2;
+    theme_9_test_1_question_9_answer_3;
+    theme_9_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_9_answer_2
+(*
+    => nrel_text: [5];;
+*);;
+
+theme_9_test_1_question_9_answer_1
+=> nrel_text: [4];;
+
+theme_9_test_1_question_9_answer_3
+=> nrel_text: [6];;
+
+theme_9_test_1_question_9_answer_4
+=> nrel_text: [3];;
+
+theme_9_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Точка касания вписанной окружности делит гипотенузу на отрезки m и n. По какой формуле можно найти площадь треугольника?];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_right_triangle_and_its_circumscribed_and_inscribed_circles;
+=> nrel_possible_answer:
+    theme_9_test_1_question_10_answer_1;
+    theme_9_test_1_question_10_answer_2;
+    theme_9_test_1_question_10_answer_3;
+    theme_9_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_9_test_1_question_10_answer_4
+(*
+    => nrel_text: [S = mn];;
+*);;
+
+theme_9_test_1_question_10_answer_1
+=> nrel_text: [S = 2mn];;
+
+theme_9_test_1_question_10_answer_2
+=> nrel_text: [S = ½mn];;
+
+theme_9_test_1_question_10_answer_3
+=> nrel_text: [S = (m + n)²];;

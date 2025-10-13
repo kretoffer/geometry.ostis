@@ -1,0 +1,8 @@
+nrel_current_test
+<- sc_node_non_role_relation;
+=> nrel_main_idtf: 
+	[Текущий тест* ] 
+	(* <- lang_ru;; *);
+=> nrel_main_idtf: 
+	[Current test* ] 
+	(* <- lang_en;; *);;

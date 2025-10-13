@@ -1,0 +1,12 @@
+theme_14_video_lesson_4
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [решение треугольников (5 мин) && https://youtu.be/dP3ABbYrfQA?feature=shared]
+>;
+=> nrel_task: theme_14_task_1;
+=> nrel_test: theme_14_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

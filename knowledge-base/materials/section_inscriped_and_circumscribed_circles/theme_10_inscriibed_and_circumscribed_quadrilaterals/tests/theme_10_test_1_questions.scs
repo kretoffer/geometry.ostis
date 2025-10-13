@@ -1,0 +1,239 @@
+theme_10_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Какое условие необходимо для того, чтобы четырехугольник был вписанным в окружность?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_1_answer_1;
+    theme_10_test_1_question_1_answer_2;
+    theme_10_test_1_question_1_answer_3;
+    theme_10_test_1_question_1_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_1_answer_2
+(*
+    => nrel_text: [Сумма противоположных углов равна 180°];;
+*);;
+
+theme_10_test_1_question_1_answer_1
+=> nrel_text: [Сумма соседних углов равна 180°];;
+
+theme_10_test_1_question_1_answer_3
+=> nrel_text: [Диагонали равны];;
+
+theme_10_test_1_question_1_answer_4
+=> nrel_text: [Все стороны равны];;
+
+theme_10_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Какое условие необходимо для того, чтобы четырехугольник был описанным около окружности?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_2_answer_1;
+    theme_10_test_1_question_2_answer_2;
+    theme_10_test_1_question_2_answer_3;
+    theme_10_test_1_question_2_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_2_answer_3
+(*
+    => nrel_text: [Суммы противоположных сторон равны];;
+*);;
+
+theme_10_test_1_question_2_answer_1
+=> nrel_text: [Суммы соседних сторон равны];;
+
+theme_10_test_1_question_2_answer_2
+=> nrel_text: [Диагонали перпендикулярны];;
+
+theme_10_test_1_question_2_answer_4
+=> nrel_text: [Все углы равны];;
+
+theme_10_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Около какого параллелограмма можно описать окружность?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_3_answer_1;
+    theme_10_test_1_question_3_answer_2;
+    theme_10_test_1_question_3_answer_3;
+    theme_10_test_1_question_3_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_3_answer_2
+(*
+    => nrel_text: [Прямоугольника];;
+*);;
+
+theme_10_test_1_question_3_answer_1
+=> nrel_text: [Ромба];;
+
+theme_10_test_1_question_3_answer_3
+=> nrel_text: [Квадрата];;
+
+theme_10_test_1_question_3_answer_4
+=> nrel_text: [Любого параллелограмма];;
+
+theme_10_test_1_question_4
+<- concept_question;
+=> nrel_condition: [В какой параллелограмм можно вписать окружность?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_4_answer_1;
+    theme_10_test_1_question_4_answer_2;
+    theme_10_test_1_question_4_answer_3;
+    theme_10_test_1_question_4_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_4_answer_1
+(*
+    => nrel_text: [Ромба];;
+*);;
+
+theme_10_test_1_question_4_answer_2
+=> nrel_text: [Прямоугольника];;
+
+theme_10_test_1_question_4_answer_3
+=> nrel_text: [Квадрата];;
+
+theme_10_test_1_question_4_answer_4
+=> nrel_text: [Любого параллелограмма];;
+
+theme_10_test_1_question_5
+<- concept_question;
+=> nrel_condition: [Периметр описанного четырехугольника равен 48 см. Чему равна сумма длин двух противоположных сторон?];
+=> nrel_difficulty: [1];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_5_answer_1;
+    theme_10_test_1_question_5_answer_2;
+    theme_10_test_1_question_5_answer_3;
+    theme_10_test_1_question_5_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_5_answer_3
+(*
+    => nrel_text: [24 см];;
+*);;
+
+theme_10_test_1_question_5_answer_1
+=> nrel_text: [12 см];;
+
+theme_10_test_1_question_5_answer_2
+=> nrel_text: [16 см];;
+
+theme_10_test_1_question_5_answer_4
+=> nrel_text: [48 см];;
+
+theme_10_test_1_question_6
+<- concept_question;
+=> nrel_condition: [В ромб с периметром 24 см и острым углом 45° вписана окружность. Найдите ее радиус.];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_6_answer_1;
+    theme_10_test_1_question_6_answer_2;
+    theme_10_test_1_question_6_answer_3;
+    theme_10_test_1_question_6_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_6_answer_2
+(*
+    => nrel_text: [3√2/2 см];;
+*);;
+
+theme_10_test_1_question_6_answer_1
+=> nrel_text: [3 см];;
+
+theme_10_test_1_question_6_answer_3
+=> nrel_text: [2√2 см];;
+
+theme_10_test_1_question_6_answer_4
+=> nrel_text: [4 см];;
+
+theme_10_test_1_question_7
+<- concept_question;
+=> nrel_condition: [В прямоугольную трапецию вписана окружность. Точка касания делит большую боковую сторону на отрезки 1 см и 4 см. Площадь трапеции равна...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_7_answer_1;
+    theme_10_test_1_question_7_answer_2;
+    theme_10_test_1_question_7_answer_3;
+    theme_10_test_1_question_7_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_7_answer_4
+(*
+    => nrel_text: [18];;
+*);;
+
+theme_10_test_1_question_7_answer_1
+=> nrel_text: [12];;
+
+theme_10_test_1_question_7_answer_2
+=> nrel_text: [15];;
+
+theme_10_test_1_question_7_answer_3
+=> nrel_text: [20];;
+
+theme_10_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Диагонали ромба равны 30 см и 40 см. Радиус вписанной окружности равен...];
+=> nrel_difficulty: [2];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_8_answer_1;
+    theme_10_test_1_question_8_answer_2;
+    theme_10_test_1_question_8_answer_3;
+    theme_10_test_1_question_8_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_8_answer_2
+(*
+    => nrel_text: [12 см];;
+*);;
+
+theme_10_test_1_question_8_answer_1
+=> nrel_text: [10 см];;
+
+theme_10_test_1_question_8_answer_3
+=> nrel_text: [15 см];;
+
+theme_10_test_1_question_8_answer_4
+=> nrel_text: [20 см];;
+
+theme_10_test_1_question_9
+<- concept_question;
+=> nrel_condition: [В выпуклом четырехугольнике ABCD ∠A + ∠C = 180°. Докажите, что ∠BAC = ∠BDC. Какое свойство используется в доказательстве?];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_9_answer_1;
+    theme_10_test_1_question_9_answer_2;
+    theme_10_test_1_question_9_answer_3;
+    theme_10_test_1_question_9_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_9_answer_3
+(*
+    => nrel_text: [Четырехугольник вписанный];;
+*);;
+
+theme_10_test_1_question_9_answer_1
+=> nrel_text: [Четырехугольник описанный];;
+
+theme_10_test_1_question_9_answer_2
+=> nrel_text: [Диагонали равны];;
+
+theme_10_test_1_question_9_answer_4
+=> nrel_text: [Противоположные стороны равны];;
+
+theme_10_test_1_question_10
+<- concept_question;
+=> nrel_condition: [В трапеции ABCD основания AD = 12, BC = 4, боковая сторона AB = 5, ∠BAC = ∠CDB. Площадь трапеции равна...];
+=> nrel_difficulty: [3];
+=> nrel_theme: theme_inscribed_and_circumscribed_quadrilaterals;
+=> nrel_possible_answer:
+    theme_10_test_1_question_10_answer_1;
+    theme_10_test_1_question_10_answer_2;
+    theme_10_test_1_question_10_answer_3;
+    theme_10_test_1_question_10_answer_4;
+=> nrel_correct_answer: theme_10_test_1_question_10_answer_2
+(*
+    => nrel_text: [32];;
+*);;
+
+theme_10_test_1_question_10_answer_1
+=> nrel_text: [24];;
+
+theme_10_test_1_question_10_answer_3
+=> nrel_text: [36];;
+
+theme_10_test_1_question_10_answer_4
+=> nrel_text: [40];;

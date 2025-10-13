@@ -1,0 +1,12 @@
+theme_22_video_lesson_7
+<- concept_lesson;
+<- concept_video_lesson;
+=> nrel_lesson_content: <
+    [вычитание векторов: практика (10 мин) && https://youtu.be/c1xXgh7n4fA?feature=shared]
+>;
+=> nrel_task: theme_22_task_1;
+=> nrel_test: theme_22_test_1;
+<= nrel_is_available_for: {
+    visibility_disorder
+};;
+

@@ -107,8 +107,8 @@ class GetNextQuestionAgent(ScAgentClassic):
             if next_question.is_valid(): 
                 question_arc: ScAddr = generate_connector(sc_type.CONST_PERM_POS_ARC, passing_test_history, next_question)
                 arc = generate_connector(sc_type.CONST_COMMON_ARC, search_result.get("_last_arc"), question_arc)
-                generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_basic_sequence", sc_type.VAR_NODE_NON_ROLE), arc)
-                generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.VAR_NODE_ROLE), question_arc)
+                generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_basic_sequence", sc_type.CONST_NODE_NON_ROLE), arc)
+                generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_last", sc_type.CONST_NODE_ROLE), question_arc)
             else:
                 create_action("action_finish_test", user, test)
 

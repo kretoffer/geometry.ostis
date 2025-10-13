@@ -1,0 +1,39 @@
+theme_right_triangle_and_its_circumscribed_and_inscribed_circles
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 9. Прямоугольный треугольник и его описанная и вписанная окружности]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 9]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_inscriped_and_circumscribed_circles_section;
+=> nrel_key_concepts: {
+    inscriped_circle; // вписанная окружность
+    circumscribed_circle; // описанная окружность
+    theorem_on_the_inradius_of_right_triange; // теорема о радиусе окружности, вписанной в прямоуг. треугольник
+    theorem_on_the_circumcircle_of_right_triangle // теорема о центре окружности, описанной около прямоуг. треугольника
+};
+=> nrel_lessons: {
+    theme_9_video_lesson_1;
+    theme_9_video_lesson_2;
+    theme_9_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_9_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_9_test_1
+};
+
+
+<= nrel_themes_before_this: {
+    theme_circumscribed_and_inscribed_circles_of_triangle
+};;

@@ -1,0 +1,56 @@
+theme_regular_triangle_quadrilateral_and_hexagon
+<- concept_theme;
+=> nrel_main_idtf:
+    [Параграф 18. Правильный треугольник, четырёхугольник, шестиугольник]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_idtf:
+    [Параграф 18]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_regular_polygons_section;
+=> nrel_key_concepts: {
+    concept_polygon;
+    concept_right_polygon;
+    concept_square;
+    concept_regular_triangle;
+    concept_regular_hexagon;
+    definition_of_regular_polygon; // определение правильного многоугольника
+    property_of_incircle_and_circumcircle_regular_polygons; // свойство о оп. и вп. окружностях в правильный n-угольник
+    concept_circumscribed_circle;
+    concept_inscriped_circle;
+    formula_for_the_inradius_of_square;
+    formula_for_the_circumradius_of_square;
+    formula_for_the_inradius_of_regular_triangle;
+    formula_for_the_circumradius_of_regular_pentagon;
+    formula_for_the_inradius_of_regular_hexagon;
+    formula_for_the_circumradius_of_regular_hexagon;
+    formula_for_the_area_of_square;
+    formula_for_the_area_of_regular_hexagon;
+    formula_for_the_area_of_regular_triangle
+
+};
+=> nrel_lessons: {
+    theme_18_video_lesson_1;
+    theme_18_video_lesson_2;
+    theme_18_video_lesson_3
+};
+
+=> nrel_tasks: {
+    theme_19_task_1
+};
+
+
+
+=> nrel_tests: {
+    theme_19_test_1
+};
+
+
+<= nrel_themes_before_this: {
+    theme_regular_polygons;
+   theme_circumradius_and_inradius_of_regular_polygon;
+   theme_finding_the_circumference_and_area_of_circle
+};;

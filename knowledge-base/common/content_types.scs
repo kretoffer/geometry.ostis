@@ -1,0 +1,29 @@
+concept_video_lesson
+<- concept_content_type;
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Видеоурок]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+concept_audio_lesson
+<- concept_content_type;
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Аудиоурок]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+concept_text_lesson
+<- concept_content_type;
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Урок]
+    (*
+        <- lang_ru;;
+    *);;
+

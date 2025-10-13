@@ -1,0 +1,8 @@
+test_recommendations
+=> nrel_main_idtf:
+    [test-recommendations];;
+
+
+task_recommendations
+=> nrel_main_idtf:
+    [task-recommendations];;

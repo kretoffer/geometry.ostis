@@ -1,0 +1,404 @@
+section_1_test_1_question_1
+<- concept_question;
+=> nrel_condition: [Чему равен tg 45°?];
+=> nrel_difficulty: [1];
+=> nrel_theme: subsection_trigonometric_ratios;
+=> nrel_possible_answer:
+    section_1_test_1_question_1_answer_1;
+    section_1_test_1_question_1_answer_2;
+    section_1_test_1_question_1_answer_3;
+    section_1_test_1_question_1_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_1_answer_3
+(*
+    => nrel_text: [1];;
+*);;
+
+section_1_test_1_question_1_answer_1
+=> nrel_text: [0];;
+
+section_1_test_1_question_1_answer_2
+=> nrel_text: [√3/3];;
+
+section_1_test_1_question_1_answer_3
+=> nrel_text: [1];;
+
+section_1_test_1_question_1_answer_4
+=> nrel_text: [√3];;
+
+section_1_test_1_question_2
+<- concept_question;
+=> nrel_condition: [Найдите tg 60°.];
+=> nrel_difficulty: [1];
+=> nrel_theme: subsection_trigonometric_ratios;
+=> nrel_possible_answer:
+    section_1_test_1_question_2_answer_1;
+    section_1_test_1_question_2_answer_2;
+    section_1_test_1_question_2_answer_3;
+    section_1_test_1_question_2_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_2_answer_4
+(*
+    => nrel_text: [√3];;
+*);;
+
+section_1_test_1_question_2_answer_1
+=> nrel_text: [1];;
+
+section_1_test_1_question_2_answer_2
+=> nrel_text: [√3/3];;
+
+section_1_test_1_question_2_answer_3
+=> nrel_text: [1/2];;
+
+section_1_test_1_question_2_answer_4
+=> nrel_text: [√3];;
+
+section_1_test_1_question_3
+<- concept_question;
+=> nrel_condition: [Какое из следующих равенств является верным?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_trigonometric_identities;
+=> nrel_possible_answer:
+    section_1_test_1_question_3_answer_1;
+    section_1_test_1_question_3_answer_2;
+    section_1_test_1_question_3_answer_3;
+    section_1_test_1_question_3_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_3_answer_4
+(*
+    => nrel_text: [sin²α + cos²α = 1];;
+*);;
+
+section_1_test_1_question_3_answer_1
+=> nrel_text: [sinα + cosα = 1];;
+
+section_1_test_1_question_3_answer_2
+=> nrel_text: [tgα = sinα + cosα];;
+
+section_1_test_1_question_3_answer_3
+=> nrel_text: [sin2α = 2sinα];;
+
+section_1_test_1_question_3_answer_4
+=> nrel_text: [sin²α + cos²α = 1];;
+
+section_1_test_1_question_4
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике ABC с прямым углом C известны катеты: AC = 6, BC = 8. Найдите sin угла A.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_trigonometric_ratios;
+=> nrel_possible_answer:
+    section_1_test_1_question_4_answer_1;
+    section_1_test_1_question_4_answer_2;
+    section_1_test_1_question_4_answer_3;
+    section_1_test_1_question_4_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_4_answer_2
+(*
+    => nrel_text: [0.8];;
+*);;
+
+section_1_test_1_question_4_answer_1
+=> nrel_text: [0.6];;
+
+section_1_test_1_question_4_answer_2
+=> nrel_text: [0.8];;
+
+section_1_test_1_question_4_answer_3
+=> nrel_text: [0.75];;
+
+section_1_test_1_question_4_answer_4
+=> nrel_text: [1.25];;
+
+section_1_test_1_question_5
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике гипотенуза равна 10, а один из острых углов равен 30°. Найдите катет, противолежащий этому углу.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_solving_right_triangles;
+=> nrel_possible_answer:
+    section_1_test_1_question_5_answer_1;
+    section_1_test_1_question_5_answer_2;
+    section_1_test_1_question_5_answer_3;
+    section_1_test_1_question_5_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_5_answer_1
+(*
+    => nrel_text: [5];;
+*);;
+
+section_1_test_1_question_5_answer_1
+=> nrel_text: [5];;
+
+section_1_test_1_question_5_answer_2
+=> nrel_text: [5√3];;
+
+section_1_test_1_question_5_answer_3
+=> nrel_text: [10√3];;
+
+section_1_test_1_question_5_answer_4
+=> nrel_text: [10];;
+
+section_1_test_1_question_6
+<- concept_question;
+=> nrel_condition: [Катет прямоугольного треугольника равен 5, а прилежащий угол равен 30°. Найдите гипотенузу.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_solving_right_triangles;
+=> nrel_possible_answer:
+    section_1_test_1_question_6_answer_1;
+    section_1_test_1_question_6_answer_2;
+    section_1_test_1_question_6_answer_3;
+    section_1_test_1_question_6_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_6_answer_2
+(*
+    => nrel_text: [10√3/3];;
+*);;
+
+section_1_test_1_question_6_answer_1
+=> nrel_text: [5√3];;
+
+section_1_test_1_question_6_answer_2
+=> nrel_text: [10√3/3];;
+
+section_1_test_1_question_6_answer_3
+=> nrel_text: [10];;
+
+section_1_test_1_question_6_answer_4
+=> nrel_text: [5√3/2];;
+
+section_1_test_1_question_7
+<- concept_question;
+=> nrel_condition: [Найдите cos 120°.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_trigonometric_functions_obtuse_angles;
+=> nrel_possible_answer:
+    section_1_test_1_question_7_answer_1;
+    section_1_test_1_question_7_answer_2;
+    section_1_test_1_question_7_answer_3;
+    section_1_test_1_question_7_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_7_answer_2
+(*
+    => nrel_text: [-0.5];;
+*);;
+
+section_1_test_1_question_7_answer_1
+=> nrel_text: [0.5];;
+
+section_1_test_1_question_7_answer_2
+=> nrel_text: [-0.5];;
+
+section_1_test_1_question_7_answer_3
+=> nrel_text: [-√3/2];;
+
+section_1_test_1_question_7_answer_4
+=> nrel_text: [√3/2];;
+
+section_1_test_1_question_8
+<- concept_question;
+=> nrel_condition: [Чему равно значение выражения sin 150° + cos 180°?];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_trigonometric_functions_obtuse_angles;
+=> nrel_possible_answer:
+    section_1_test_1_question_8_answer_1;
+    section_1_test_1_question_8_answer_2;
+    section_1_test_1_question_8_answer_3;
+    section_1_test_1_question_8_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_8_answer_1
+(*
+    => nrel_text: [-0.5];;
+*);;
+
+section_1_test_1_question_8_answer_1
+=> nrel_text: [-0.5];;
+
+section_1_test_1_question_8_answer_2
+=> nrel_text: [0.5];;
+
+section_1_test_1_question_8_answer_3
+=> nrel_text: [1.5];;
+
+section_1_test_1_question_8_answer_4
+=> nrel_text: [0];;
+
+section_1_test_1_question_9
+<- concept_question;
+=> nrel_condition: [Угол α - острый и sinα = 0.6. Найдите cosα.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_trigonometric_identities;
+=> nrel_possible_answer:
+    section_1_test_1_question_9_answer_1;
+    section_1_test_1_question_9_answer_2;
+    section_1_test_1_question_9_answer_3;
+    section_1_test_1_question_9_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_9_answer_3
+(*
+    => nrel_text: [0.8];;
+*);;
+
+section_1_test_1_question_9_answer_1
+=> nrel_text: [0.4];;
+
+section_1_test_1_question_9_answer_2
+=> nrel_text: [1.2];;
+
+section_1_test_1_question_9_answer_3
+=> nrel_text: [0.8];;
+
+section_1_test_1_question_9_answer_4
+=> nrel_text: [0.75];;
+
+section_1_test_1_question_10
+<- concept_question;
+=> nrel_condition: [Площадь параллелограмма со сторонами 5 и 8 и углом между ними 30° равна:];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_triangle_area_formulas;
+=> nrel_possible_answer:
+    section_1_test_1_question_10_answer_1;
+    section_1_test_1_question_10_answer_2;
+    section_1_test_1_question_10_answer_3;
+    section_1_test_1_question_10_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_10_answer_4
+(*
+    => nrel_text: [20];;
+*);;
+
+section_1_test_1_question_10_answer_1
+=> nrel_text: [40];;
+
+section_1_test_1_question_10_answer_2
+=> nrel_text: [20√3];;
+
+section_1_test_1_question_10_answer_3
+=> nrel_text: [10];;
+
+section_1_test_1_question_10_answer_4
+=> nrel_text: [20];;
+
+section_1_test_1_question_11
+<- concept_question;
+=> nrel_condition: [В треугольнике две стороны равны 7 и 10, а площадь равна 35. Найдите синус угла между этими сторонами.];
+=> nrel_difficulty: [2];
+=> nrel_theme: subsection_triangle_area_formulas;
+=> nrel_possible_answer:
+    section_1_test_1_question_11_answer_1;
+    section_1_test_1_question_11_answer_2;
+    section_1_test_1_question_11_answer_3;
+    section_1_test_1_question_11_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_11_answer_2
+(*
+    => nrel_text: [1];;
+*);;
+
+section_1_test_1_question_11_answer_1
+=> nrel_text: [0.5];;
+
+section_1_test_1_question_11_answer_2
+=> nrel_text: [1];;
+
+section_1_test_1_question_11_answer_3
+=> nrel_text: [0.7];;
+
+section_1_test_1_question_11_answer_4
+=> nrel_text: [0.8];;
+
+section_1_test_1_question_12
+<- concept_question;
+=> nrel_condition: [В треугольнике две стороны равны 6 и 8, а угол между ними равен 60°. Найдите третью сторону.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_triangle_area_formulas;
+=> nrel_possible_answer:
+    section_1_test_1_question_12_answer_1;
+    section_1_test_1_question_12_answer_2;
+    section_1_test_1_question_12_answer_3;
+    section_1_test_1_question_12_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_12_answer_3
+(*
+    => nrel_text: [2√13];;
+*);;
+
+section_1_test_1_question_12_answer_1
+=> nrel_text: [7];;
+
+section_1_test_1_question_12_answer_2
+=> nrel_text: [10];;
+
+section_1_test_1_question_12_answer_3
+=> nrel_text: [2√13];;
+
+section_1_test_1_question_12_answer_4
+=> nrel_text: [12];;
+
+section_1_test_1_question_13
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике катеты равны 6 и 8. Найдите радиус вписанной окружности.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_geometric_mean;
+=> nrel_possible_answer:
+    section_1_test_1_question_13_answer_1;
+    section_1_test_1_question_13_answer_2;
+    section_1_test_1_question_13_answer_3;
+    section_1_test_1_question_13_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_13_answer_2
+(*
+    => nrel_text: [2];;
+*);;
+
+section_1_test_1_question_13_answer_1
+=> nrel_text: [3];;
+
+section_1_test_1_question_13_answer_2
+=> nrel_text: [2];;
+
+section_1_test_1_question_13_answer_3
+=> nrel_text: [4];;
+
+section_1_test_1_question_13_answer_4
+=> nrel_text: [5];;
+
+section_1_test_1_question_14
+<- concept_question;
+=> nrel_condition: [В прямоугольном треугольнике проекции катетов на гипотенузу равны 4 и 9. Найдите высоту, проведенную к гипотенузе.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_geometric_mean;
+=> nrel_possible_answer:
+    section_1_test_1_question_14_answer_1;
+    section_1_test_1_question_14_answer_2;
+    section_1_test_1_question_14_answer_3;
+    section_1_test_1_question_14_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_14_answer_4
+(*
+    => nrel_text: [6];;
+*);;
+
+section_1_test_1_question_14_answer_1
+=> nrel_text: [5];;
+
+section_1_test_1_question_14_answer_2
+=> nrel_text: [√13];;
+
+section_1_test_1_question_14_answer_3
+=> nrel_text: [2√13];;
+
+section_1_test_1_question_14_answer_4
+=> nrel_text: [6];;
+
+section_1_test_1_question_15
+<- concept_question;
+=> nrel_condition: [Высота прямоугольного треугольника, проведенная к гипотенузе, делит ее на отрезки 3 и 12. Найдите эту высоту.];
+=> nrel_difficulty: [3];
+=> nrel_theme: subsection_geometric_mean;
+=> nrel_possible_answer:
+    section_1_test_1_question_15_answer_1;
+    section_1_test_1_question_15_answer_2;
+    section_1_test_1_question_15_answer_3;
+    section_1_test_1_question_15_answer_4;
+=> nrel_correct_answer: section_1_test_1_question_15_answer_3
+(*
+    => nrel_text: [6];;
+*);;
+
+section_1_test_1_question_15_answer_1
+=> nrel_text: [5];;
+
+section_1_test_1_question_15_answer_2
+=> nrel_text: [4√3];;
+
+section_1_test_1_question_15_answer_3
+=> nrel_text: [6];;
+
+section_1_test_1_question_15_answer_4
+=> nrel_text: [3√5];;
