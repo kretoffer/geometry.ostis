@@ -74,10 +74,6 @@ class GetNextQuestionAgent(ScAgentClassic):
             passing_test_history = get_user_passing_test_history(user, test)
             question_answer = self.get_user_question_answer(question)
 
-        else:
-            passing_test_history = self.initialize_user_passing_test_history(user, test)
-            first_question = self.get_first_question(test)
-
         templ = ScTemplate()
         templ.quintuple(
             question,
@@ -88,7 +84,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         )
         question_ref = search_by_template(templ)[0].get("_question")
         
-        next_question: ScAddr = self.get_next_question(user, test, question_ref, is_question_answer_correct(question_answer, question_ref))
+        next_question: ScAddr = self.get_next_question(user, test, question_ref, is_question_answer_correct(question_answer, question_ref), passing_test_history)
 
 
         templ = ScTemplate()
@@ -200,30 +196,6 @@ class GetNextQuestionAgent(ScAgentClassic):
 
         generate_results = generate_by_template(templ)
         return generate_results.get("_user_passing_test_history")
-    
-
-    def get_first_question(test: ScAddr) -> ScAddr:
-        templ = ScTemplate()
-        templ.quintuple(
-            test,
-            sc_type.VAR_COMMON_ARC,
-            (sc_type.VAR_NODE, "_questions"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("nrel_decomposition", sc_type.CONST_NODE_NON_ROLE)
-        )
-
-        templ.quintuple(
-            "_questions",
-            sc_type.VAR_PERM_POS_ARC,
-            (sc_type.VAR_NODE, "_first_question"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.resolve("rrel_1", sc_type.CONST_NODE_ROLE)            
-        )
-
-        search_results = search_by_template(templ)
-        if search_results:
-            return search_results.get("_first_question")
-        return ScAddr()
         
 
     def get_harder_question(self, questions_set: ScAddr, question: ScAddr) -> ScAddr:
@@ -299,7 +271,7 @@ class GetNextQuestionAgent(ScAgentClassic):
         return more_simple_question
 
 
-    def get_next_question(self, user: ScAddr, test: ScAddr, question: ScAddr, question_is_correct: bool) -> ScAddr:
+    def get_next_question(self, user: ScAddr, test: ScAddr, question: ScAddr, question_is_correct: bool, passing_test_hitory) -> ScAddr:
         templ = ScTemplate()
         templ.quintuple(
             test,
@@ -310,13 +282,33 @@ class GetNextQuestionAgent(ScAgentClassic):
         )
         questions_set = search_by_template(templ)[0].get("_set")
 
-        if question_is_correct:
-            correct_question = self.get_harder_question(questions_set, question)
-        else: 
-            correct_question = self.get_simplier_question(questions_set, question)
+        correct_question = None
+        while correct_question is None:
+            if question_is_correct:
+                next_question = self.get_harder_question(questions_set, question)
+            else: 
+                next_question = self.get_simplier_question(questions_set, question)
+            
+            if not next_question.is_valid():
+                return ScAddr()
+            question = next_question
+            
+            templ = ScTemplate()
+            templ.triple(
+                passing_test_hitory,
+                sc_type.VAR_PERM_POS_ARC,
+                (sc_type.VAR_NODE, "element")
+            )
+            templ.quintuple(
+                "element",
+                sc_type.VAR_PERM_POS_ARC,
+                next_question,
+                sc_type.VAR_PERM_POS_ARC,
+                ScKeynodes.resolve("rrel_test_question", sc_type.VAR_NODE_ROLE)
+            )
 
-        if not correct_question.is_valid():
-            return ScAddr()
+            if not search_by_template(templ):
+                correct_question = next_question
         
         new_question = generate_node(sc_type.CONST_NODE)
         user_connector = generate_connector(sc_type.CONST_PERM_POS_ARC, new_question, user)

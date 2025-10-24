@@ -5,6 +5,7 @@ from sc_client.client import search_by_template, generate_elements
 from sc_client.client import delete_elements
 
 from sc_kpm import ScAgentClassic, ScResult
+from sc_kpm.sc_sets.sc_oriented_set import ScOrientedSet
 from sc_kpm.utils.action_utils import (
     finish_action_with_status,
     get_action_arguments,
@@ -48,14 +49,16 @@ class StartTestAgent(ScAgentClassic):
             sc_type.VAR_PERM_POS_ARC,
             ScKeynodes.resolve("nrel_decomposition", sc_type.VAR_NODE_NON_ROLE)
         )
-        templ.quintuple(
-            "questions_set",
-            sc_type.VAR_PERM_POS_ARC,
-            (sc_type.VAR_NODE, "first_question"),
-            sc_type.VAR_PERM_POS_ARC,
-            ScKeynodes.rrel_index(1)
-        )
-        first_question = search_by_template(templ)[0].get("first_question")
+        
+        set_node = search_by_template(templ)[0].get("questions_set")
+        set = ScOrientedSet(set_node=set_node)
+        questions = set.elements_list
+        if len(questions) >= 3:
+            question = questions[2]
+        elif len(questions) == 0:
+            return ScResult.ERROR
+        else:
+            question = question[-1]
 
         constr = ScConstruction()
 
@@ -68,7 +71,7 @@ class StartTestAgent(ScAgentClassic):
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("nrel_user_passing_test_history", sc_type.CONST_NODE_NON_ROLE), "arc_to_passing_test_history")
 
         constr.generate_node(sc_type.CONST_NODE, "question")
-        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "question", first_question, "arc_to_first_question")
+        constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "question", question, "arc_to_first_question")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.resolve("rrel_test_question", sc_type.CONST_NODE_ROLE), "arc_to_first_question")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, "passing_test_history", "question", "arc_from_pth2q")
         constr.generate_connector(sc_type.CONST_PERM_POS_ARC, ScKeynodes.rrel_index(1), "arc_from_pth2q")
